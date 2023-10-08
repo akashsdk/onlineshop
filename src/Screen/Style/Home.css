@@ -1,0 +1,66 @@
+.homeBody{
+    height: auto;
+    width: 100%;
+
+}
+.homeTopBox{
+    height: 80px;
+    width: 100%;
+    background-color: aquamarine;
+}
+.homeMedBox{
+
+}
+.homeBottomBox{
+    display: none;
+}
+.homeBottomBoxButton1{
+    color: rgb(0, 255, 247);
+} 
+.homeBottomBoxButton2{
+    color: rgb(0, 255, 247);
+} 
+
+.homeBottomBoxButtonIcon{
+    font-size: 30px;
+    margin-top: -15px;
+} 
+.homeBottomBoxButtonText{
+    font-size: 20px;
+    margin-top: -5px;
+    color: #ffffff;
+}
+.homeBottomBoxButtonText:hover{
+    color: rgb(0, 255, 247);
+} 
+
+
+@media only screen and (max-width: 1000px) {
+    .homeTopBox{
+        height: 80px;
+        width: 100%;
+        background-color: aquamarine;
+    }
+    .homeBottomBox{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80px;
+        width: 100%;
+        background-color: rgb(8, 8, 8);
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .homeBottomBoxButtonIcon{
+        font-size: 25px;
+        margin-top: -15px;
+    } 
+    .homeBottomBoxButtonText{
+        font-size: 16px;
+        margin-top: -5px;
+    }
+    .homeBottomBoxButton2{
+        margin-left: -13px;
+    } 
+  }
