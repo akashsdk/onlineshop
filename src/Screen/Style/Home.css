@@ -6,7 +6,27 @@
 .homeTopBox{
     height: 80px;
     width: 100%;
-    background-color: aquamarine;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homeTopBoxMenu{
+    display: none;
+   
+}
+.homeTopBoxSearch{
+    display: none;
+   
+}
+
+.homeTopBoxSearchDiv{
+    flex: 1;
+}
+.homeTopBoxLeftDiv{
+    flex: 2;
+    display: flex;
+
 }
 .homeMedBox{
 
@@ -35,12 +55,10 @@
 } 
 
 
+
+
 @media only screen and (max-width: 1000px) {
-    .homeTopBox{
-        height: 80px;
-        width: 100%;
-        background-color: aquamarine;
-    }
+    
     .homeBottomBox{
         display: flex;
         justify-content: center;
@@ -48,6 +66,26 @@
         height: 80px;
         width: 100%;
         background-color: rgb(8, 8, 8);
+    }
+    .homeTopBoxLeftDiv{
+        display: none;
+    }
+    .homeTopBoxSearchDiv{
+        display: none;
+    }
+    .homeTopBoxMenu{
+        display: flow-root;
+        background-color: black;
+        border: none;
+        color: #ffffff;
+        flex: 1;
+    }
+    .homeTopBoxSearch{
+        display: flow-root;
+        background-color: black;
+        border: none;
+        color: rgb(0, 255, 247);
+        flex: 1;
     }
   }
 
