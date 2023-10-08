@@ -13,7 +13,9 @@ import {
 export default function Home() {
   return (
     <div className="homeBody">
+      {/* BottomBox */}
       <div className="homeTopBox"></div>
+      {/* BottomBox */}
       <div className="homeMedBox">akash</div>
       {/* BottomBox */}
       <div className="homeBottomBox">
