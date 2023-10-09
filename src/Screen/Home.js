@@ -149,6 +149,40 @@ export default function Home() {
         <div className="homeMedContent">
           content
           <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          <h1>jjkjkj</h1>
+          
         </div>
       </div>
       {/* BottomBox */}
