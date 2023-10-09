@@ -99,6 +99,7 @@ export default function Home() {
       </div>
       {/* MidBox */}
       <div className="homeMedBox">
+      {/* homeMedTopBox */}
         <div className="homeMedTopBox">
           <Button type="text" className="homeMedTopButton0" block>
             Phones &<br />
@@ -142,7 +143,10 @@ export default function Home() {
             Cover & <br /> Glass
           </Button>
         </div>
-        <div>jhjhjhjhjh</div>
+        <div className="homeMedContent">
+        content
+
+        </div>
       </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
