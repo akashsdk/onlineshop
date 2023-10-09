@@ -42,7 +42,6 @@ const items = [
   },
 ];
 export default function Home() {
-
   return (
     <div className="homeBody">
       {/* TopBox */}
@@ -99,7 +98,7 @@ export default function Home() {
       </div>
       {/* MidBox */}
       <div className="homeMedBox">
-      {/* homeMedTopBox */}
+        {/* homeMedTopBox */}
         <div className="homeMedTopBox">
           <Button type="text" className="homeMedTopButton0" block>
             Phones &<br />
@@ -119,7 +118,11 @@ export default function Home() {
             Airpods
           </Button>
           <Button type="text" className="homeMedTopButton" block>
-            <Menu mode="horizontal" items={items}  className="homeMedTopButtonMenu"/>
+            <Menu
+              mode="horizontal"
+              items={items}
+              className="homeMedTopButtonMenu"
+            />
           </Button>
           <Button type="text" className="homeMedTopButton" block>
             Speakers
@@ -144,8 +147,8 @@ export default function Home() {
           </Button>
         </div>
         <div className="homeMedContent">
-        content
-
+          content
+          <h1>jjkjkj</h1>
         </div>
       </div>
       {/* BottomBox */}
