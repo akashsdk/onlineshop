@@ -22,9 +22,19 @@ export default function Home() {
     <div className="homeBody">
       {/* TopBox */}
       <div className="homeTopBox">
-      <Button  className="homeTopBoxMenu" shape="circle" size="large" icon={<PicCenterOutlined/>} />
+        <Button
+          className="homeTopBoxMenu"
+          shape="circle"
+          size="large"
+          icon={<PicCenterOutlined />}
+        />
         <h1 style={{ color: "#ffffff", flex: "1" }}>Logo&Name</h1>
-        <Button  className="homeTopBoxSearch" shape="circle" size="large" icon={<SearchOutlined />} />
+        <Button
+          className="homeTopBoxSearch"
+          shape="circle"
+          size="large"
+          icon={<SearchOutlined />}
+        />
         <div className="homeTopBoxSearchDiv">
           <Search
             placeholder="Search"
@@ -63,7 +73,58 @@ export default function Home() {
         </div>
       </div>
       {/* MidBox */}
-      <div className="homeMedBox">akash</div>
+      <div className="homeMedBox">
+        <div className="homeMedTopBox">
+          <Button type="text" className="homeMedTopButton0" block>
+            Phones &<br />
+            Tablets
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Power <br></br>
+            Adapter
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            <p>MacBook</p>
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Smart <br /> Watch
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Airpods
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Headphones
+          </Button>
+          {/* <Button type="text" className="homeMedTopButton" block>
+            Wired Headphone Overhead
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Wireless Headphone
+          </Button> */}
+          <Button type="text" className="homeMedTopButton" block>
+            Speakers
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Cable & <br /> Interconnects
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Power Bank
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Wireless <br/> Charger
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Hubs & <br/> Docks
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Keyboard
+          </Button>
+          <Button type="text" className="homeMedTopButton" block>
+            Cover & <br/> Glass
+          </Button>
+        </div>
+        <div>akjhbghb</div>
+      </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
         <Button type="link" block className="homeBottomBoxButton1">

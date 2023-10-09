@@ -54,6 +54,19 @@
     color: rgb(0, 255, 247);
 } 
 
+.homeMedTopBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(17, 18, 20, 0.1) 0px 15px 10px -10px;
+}
+.homeMedTopButton0{
+   height: 60px;
+}
+.homeMedTopButton{
+    height: 60px;
+    margin-left: -15px;
+ }
 
 
 
@@ -87,6 +100,10 @@
         color: rgb(0, 255, 247);
         flex: 1;
     }
+    .homeMedTopBox{
+        display: none;
+    }
+    
   }
 
   @media only screen and (max-width: 600px) {
