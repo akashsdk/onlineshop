@@ -250,8 +250,8 @@ export default function Home() {
           </div>
           {/* Category */}
           <div>
-            <p>FEATURED CATEGORIES</p>
-            <p>Get your desired product from featured category</p>
+            <p className="homeMedContentCategoryHeadText">FEATURED CATEGORIES</p>
+            <p className="homeMedContentCategoryText">Get your desired product from featured category</p>
             <div>
               <Category categoryImg={phone} categoryFastText='Phones & ' categoryScendText='Tablets'/>
               <Category categoryImg={macBook} categoryFastText='MacBook ' categoryScendText='Computer'/>

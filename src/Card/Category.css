@@ -22,3 +22,41 @@
     font-size: 20px;
     margin-top: -25px;
 }
+
+
+@media only screen and (max-width: 1000px) {
+    .categoryBody{
+        height: 180px;
+        width: 130px;
+    }
+    .categoryImg{
+        height: 55px;
+    }
+    .categoryText1{
+        font-size: 18px;
+        margin-top: 0px;
+    }
+    .categoryText2{
+        font-size: 18px;
+        margin-top: -20px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .categoryBody{
+        height: 150px;
+        width: 100px;
+        margin: 10px;
+    }
+    .categoryImg{
+        height: 45px;
+    }
+    .categoryText1{
+        font-size: 16px;
+        margin-top: 0px;
+    }
+    .categoryText2{
+        font-size: 16px;
+        margin-top: -15px;
+        margin-left: -10px;
+    }
+}

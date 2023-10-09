@@ -28,9 +28,6 @@
     display: flex;
 
 }
-.homeMedBox{
-
-}
 .homeBottomBox{
     display: none;
 }
@@ -86,6 +83,14 @@
     width: 90%;
     height: 450px;
 }
+.homeMedContentCategoryHeadText{
+    font-size: 25px;
+}
+.homeMedContentCategoryText{
+    margin-top: -20px;
+    opacity: .5;
+    margin-bottom: 30px;
+}
 
 @media only screen and (max-width: 1000px) {
     
@@ -126,6 +131,9 @@
     .homeMedContentSliderImg{
         width: 98%;
         height: 350px;
+    }
+    .homeMedContentCategoryHeadText{
+        font-size: 20px;
     }
     
   }
