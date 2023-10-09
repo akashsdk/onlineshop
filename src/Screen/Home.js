@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Style/Home.css";
 
-import { Button, Space, Input } from "antd";
+import { Button, Space, Input, Menu } from "antd";
 import {
   GiftOutlined,
   ShoppingCartOutlined,
@@ -11,13 +11,38 @@ import {
   AudioOutlined,
   PicCenterOutlined,
   SearchOutlined,
+  AppstoreOutlined,
+  MailOutlined,
+  SettingOutlined,
 } from "@ant-design/icons";
+import { hover } from "@testing-library/user-event/dist/hover";
 
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
 
+const items = [
+  {
+    label: "Headphones",
+    key: "SubMenu",
+    children: [
+      {
+        label: "Overhead Headphone ",
+        key: "headphone:1",
+      },
+      {
+        label: "Wired Headphone ",
+        key: "headphone:2",
+      },
+      {
+        label: "Wireless Headphone",
+        key: "headphone:3",
+      },
+    ],
+  },
+];
 export default function Home() {
+
   return (
     <div className="homeBody">
       {/* TopBox */}
@@ -93,7 +118,7 @@ export default function Home() {
             Airpods
           </Button>
           <Button type="text" className="homeMedTopButton" block>
-            Headphones
+            <Menu mode="horizontal" items={items}  className="homeMedTopButtonMenu"/>
           </Button>
           {/* <Button type="text" className="homeMedTopButton" block>
             Wired Headphone Overhead
@@ -111,19 +136,19 @@ export default function Home() {
             Power Bank
           </Button>
           <Button type="text" className="homeMedTopButton" block>
-            Wireless <br/> Charger
+            Wireless <br /> Charger
           </Button>
           <Button type="text" className="homeMedTopButton" block>
-            Hubs & <br/> Docks
+            Hubs & <br /> Docks
           </Button>
           <Button type="text" className="homeMedTopButton" block>
             Keyboard
           </Button>
           <Button type="text" className="homeMedTopButton" block>
-            Cover & <br/> Glass
+            Cover & <br /> Glass
           </Button>
         </div>
-        <div>akjhbghb</div>
+        <div>jhjhjhjhjh</div>
       </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
