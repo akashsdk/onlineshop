@@ -2,6 +2,23 @@
     height: 200px;
     width: 150px;
     border-radius: 15px;
-    background-color: aliceblue;
+    background-color: rgb(246, 246, 246);
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border: none;
+    margin: 20px;
+}
+.categoryHover:hover{
+    color: rgb(0, 255, 247);
+    
+}
+.categoryImg{
+    height: 65px;
+}
+.categoryText1{
+    font-size: 20px;
+    margin-top: 5px;
+}
+.categoryText2{
+    font-size: 20px;
+    margin-top: -25px;
 }

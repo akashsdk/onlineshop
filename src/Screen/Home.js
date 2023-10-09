@@ -17,6 +17,26 @@ import {
 
 import Category from "../Card/Category";
 
+import phone from '../Icon/tablet.png';
+import macBook from '../Icon/computer.png'
+import adapter from '../Icon/adapter.png'
+import watch from '../Icon/smart-watch.png';
+import airpods from '../Icon/airpods.png';
+import camera from '../Icon/camera.png';
+import headphone1 from '../Icon/headphone.png';
+import headphone2 from '../Icon/headphones (1).png';
+import headphone3 from '../Icon/headphones.png';
+import keyboard from '../Icon/keyboard.png';
+import cable from '../Icon/micro-usb.png';
+import mouse from '../Icon/mouse.png';
+import powerbank from '../Icon/power-bank.png';
+import speaker from '../Icon/speaker.png';
+import hub from '../Icon/usb-hub.png';
+import wipe from '../Icon/wipe.png';
+import wirelesscharging from '../Icon/wireless-charging.png';
+
+
+
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -233,7 +253,23 @@ export default function Home() {
             <p>FEATURED CATEGORIES</p>
             <p>Get your desired product from featured category</p>
             <div>
-              <Category />
+              <Category categoryImg={phone} categoryFastText='Phones & ' categoryScendText='Tablets'/>
+              <Category categoryImg={macBook} categoryFastText='MacBook ' categoryScendText='Computer'/>
+              <Category categoryImg={adapter} categoryFastText='Power & ' categoryScendText='Adapter'/>
+              <Category categoryImg={watch} categoryFastText='Smart ' categoryScendText='Watch'/>
+              <Category categoryImg={airpods} categoryFastText='Airpods ' categoryScendText='Headphones'/>
+              <Category categoryImg={speaker} categoryFastText='Sound ' categoryScendText='Speakers'/>
+              <Category categoryImg={headphone1} categoryFastText='Wireless ' categoryScendText='Headphones'/>
+              <Category categoryImg={headphone2} categoryFastText='Wired ' categoryScendText='Headphones'/>
+              <Category categoryImg={headphone3} categoryFastText='Overhead' categoryScendText='Headphones'/>
+              <Category categoryImg={cable} categoryFastText='Cable &' categoryScendText='Interconnects'/>
+              <Category categoryImg={powerbank} categoryFastText='Power' categoryScendText='Bank'/>
+              <Category categoryImg={wirelesscharging} categoryFastText='Wireless' categoryScendText='Charger'/>
+              <Category categoryImg={hub} categoryFastText='Hubs & ' categoryScendText='Docks'/>
+              <Category categoryImg={keyboard} categoryFastText='Keyboard' categoryScendText='Accessories'/>
+              <Category categoryImg={mouse} categoryFastText='Mouse' categoryScendText='Accessories'/>
+              <Category categoryImg={wipe} categoryFastText='Cover &' categoryScendText='Glass'/>
+              <Category categoryImg={camera} categoryFastText='Camera' categoryScendText='Accessories'/>
             </div>
             <div style={{height:'300px'}}/>
           </div>
