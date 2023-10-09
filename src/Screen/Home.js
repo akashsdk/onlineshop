@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, Component} from "react";
 import "./Style/Home.css";
 
 import { Button, Space, Input, Menu } from "antd";
@@ -148,41 +148,6 @@ export default function Home() {
         </div>
         <div className="homeMedContent">
           content
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          <h1>jjkjkj</h1>
-          
         </div>
       </div>
       {/* BottomBox */}
