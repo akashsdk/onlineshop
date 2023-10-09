@@ -120,12 +120,6 @@ export default function Home() {
           <Button type="text" className="homeMedTopButton" block>
             <Menu mode="horizontal" items={items}  className="homeMedTopButtonMenu"/>
           </Button>
-          {/* <Button type="text" className="homeMedTopButton" block>
-            Wired Headphone Overhead
-          </Button>
-          <Button type="text" className="homeMedTopButton" block>
-            Wireless Headphone
-          </Button> */}
           <Button type="text" className="homeMedTopButton" block>
             Speakers
           </Button>
