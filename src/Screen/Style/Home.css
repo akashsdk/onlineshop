@@ -76,7 +76,16 @@
     width: 100%;
     overflow: auto;
 }
-
+.homeMedContentSliderBox{
+    height: auto;
+    width: 100%;
+    margin-top: 20px;
+}
+.homeMedContentSliderImg{
+    border-radius: 10px;
+    width: 90%;
+    height: 450px;
+}
 
 @media only screen and (max-width: 1000px) {
     
@@ -113,6 +122,10 @@
     }
     .homeMedContent{
         height: calc(100vh - 160px);
+    }
+    .homeMedContentSliderImg{
+        width: 98%;
+        height: 350px;
     }
     
   }

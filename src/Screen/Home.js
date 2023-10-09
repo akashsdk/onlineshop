@@ -11,9 +11,8 @@ import {
   AudioOutlined,
   PicCenterOutlined,
   SearchOutlined,
-  AppstoreOutlined,
-  MailOutlined,
-  SettingOutlined,
+  LeftOutlined,
+  RightOutlined,
 } from "@ant-design/icons";
 
 const { Search } = Input;
@@ -42,15 +41,14 @@ const items = [
 ];
 
 const images = [
-  "https://img.freepik.com/free-photo/wide-angle-shot-singletree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
-  "https://thumbs.dreamstime.com/b/lone-tree-meadow-sunriseidyllic-fabulous-landscapes-39659821.jpg",
-  "https://encryptedtbn0.gstatic.com/images?q=tbn:ANd9GcSprPgYofGmXXPfuEDcZ_XI294n0bME5dTX9TGvINmPiA&s",
-  "https://img.freepik.com/free-photo/wide-angle-shot-singletree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
-  "https://img.freepik.com/free-photo/wide-angle-shot-singletree-growing-clouded-sky-during-sunset-surrounded-by-grass_181624-22807.jpg",
-
+  "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",
+  "https://images.unsplash.com/opengraph/1x1.png?auto=format&fit=crop&w=1200&h=630&q=60&mark-w=64&mark-align=top%2Cleft&mark-pad=50&blend-w=1&mark=https%3A%2F%2Fimages.unsplash.com%2Fopengraph%2Flogo.png&blend=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1668834860184-69ebc6d0756d%3Fcrop%3Dfaces%252Cedges%26cs%3Dtinysrgb%26fit%3Dcrop%26fm%3Djpg%26ixid%3DM3wxMjA3fDB8MXxzZWFyY2h8MXx8Z29vZ2xlJTIwcGl4ZWwlMjA3JTIwcHJvfGVufDB8fHx8MTY5NTcwMDA5MXww%26ixlib%3Drb-4.0.3%26q%3D60%26w%3D1200%26auto%3Dformat%26h%3D630%26mark-w%3D750%26mark-align%3Dmiddle%252Ccenter%26blend-mode%3Dnormal%26blend-alpha%3D10%26mark%3Dhttps%253A%252F%252Fimages.unsplash.com%252Fopengraph%252Fsearch-input.png%253Fauto%253Dformat%2526fit%253Dcrop%2526w%253D750%2526h%253D84%2526q%253D60%2526txt-color%253D000000%2526txt-size%253D40%2526txt-align%253Dmiddle%25252Cleft%2526txt-pad%253D80%2526txt-width%253D660%2526txt-clip%253Dellipsis%2526txt%253Dgoogle%252520pixel%2525207%252520pro%26blend%3D000000",
+  "https://soyacincau.com/wp-content/uploads/2022/09/220915-gopro-hero-11-black-mini-hero-02.jpg",
+  "https://i.ytimg.com/vi/p1hjrdPuMGo/maxresdefault.jpg",
+  "https://ispace.ge/blog/wp-content/uploads/2022/01/BLG_FB_MRCH-6-1440x720.png",
+  "https://blog-media.lifepal.co.id/wp-content/uploads/2018/12/03175525/shutterstock_676210375-1.jpg",
 ];
 export default function Home() {
-  
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   // Function to handle next slide
@@ -188,19 +186,48 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <h1>Image Slider</h1>
-            <div className="slider-container">
-              <button onClick={handlePrev}>Previous</button>
+            <div className="homeMedContentSliderBox">
               <img
+                className="homeMedContentSliderImg"
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
-              />
-              <button onClick={handleNext}>Next</button>
+              ></img>
+              <div style={{
+                display:'flex',
+                justifyContent:'center',
+                alignItems:'center',
+                marginTop:'-60px',
+                marginBottom:'60px',
+              }}>
+                <Button
+                  style={{
+                    color: "white",
+                    backgroundColor: "transparent",
+
+                  }}
+                  onClick={handlePrev}
+                  shape="circle"
+                  icon={<LeftOutlined />}
+                />
+                <h2 style={{color:'rgb(0, 255, 247)', marginLeft:'20px'}}>
+                {currentImageIndex + 1} of {images.length}
+                </h2>
+                   
+                <Button
+                  style={{
+                    color: "white",
+                    backgroundColor: "transparent",
+                    marginLeft:'20px'
+                  }}
+                  onClick={handleNext}
+                  shape="circle"
+                  icon={<RightOutlined />}
+                />
+              </div>
             </div>
-            <p>Image {currentImageIndex + 1} of {images.length}</p>
           </div>
 
-          <h1>bbbb</h1>
+          <h1>bbbb1</h1>
           <h1>bbbb</h1>
           <h1>bbbb</h1>
           <h1>bbbb</h1>
