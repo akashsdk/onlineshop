@@ -15,6 +15,8 @@ import {
   RightOutlined,
 } from "@ant-design/icons";
 
+import Category from "../Card/Category";
+
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -226,17 +228,15 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          <h1>bbbb1</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
-          <h1>bbbb</h1>
+          {/* Category */}
+          <div>
+            <p>FEATURED CATEGORIES</p>
+            <p>Get your desired product from featured category</p>
+            <div>
+              <Category />
+            </div>
+            <div style={{height:'300px'}}/>
+          </div>
         </div>
       </div>
       {/* BottomBox */}
