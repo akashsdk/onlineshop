@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Offers.css";
 import OffersCard from "../Card/OffersCard";
 
@@ -10,12 +10,23 @@ import macbookPro from "../Image/macbook pro.jpeg";
 import joyroom from "../Image/Joyroom JR-W020.jpeg";
 
 
-
 export default function Offers() {
-    
+  
+  const [scrollPosition, setScrollPosition] = useState(0);
+  
 
+  const handleScrollLeft = () => {
+    setScrollPosition(scrollPosition + 20);
+  };
+
+  const handleScrollRight = () => {
+    setScrollPosition(scrollPosition - 20);
+  };
   return (
-    <div>
+    <div className="offersBody" style={{ overflowX: "scroll" }}>
+    <div  
+    style={{display:'flex',overflowX:'scroll', width: "100%", transform: `translateX(${scrollPosition}px)` }}>
+     <OffersCard />
       <OffersCard
         name="Iphone 15 Pro"
         Img={iphone}
@@ -53,7 +64,21 @@ export default function Offers() {
       <OffersCard name="Iphone 15 Pro" Img={iphone} percentage="14" />
       <OffersCard name="Iphone 15 Pro" percentage="14" number="125000" />
      
+
+      <OffersCard />
+
       
+    </div>
+
+      
+      <div className="buttons">
+        <button onClick={handleScrollLeft} >Scroll Left</button>
+        <button onClick={handleScrollRight}>Scroll Right</button>
+      </div>
+
+
+      
+
     </div>
   );
 }
