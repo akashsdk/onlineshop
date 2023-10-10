@@ -252,7 +252,7 @@ export default function Home() {
            {/* Offers */}
           <div>
           <p className="homeMedContentCategoryHeadText">Best for Order 🔥</p>
-            <p className="homeMedContentCategoryText">Get your desired product from featured category</p>
+            <p className="homeMedContentCategoryText">Get your best offer from the featured category</p>
             <Offers />
           </div>
           {/* Category */}
