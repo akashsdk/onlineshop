@@ -1,63 +1,70 @@
-.OffersCardBody{
-    height: 300px;
-    width: 200px;
-    border-radius: 15px;
-    margin: 20px;
-    border: 1px solid aqua;
-
+.OffersCardBody {
+  height: 300px;
+  width: 200px;
+  border-radius: 15px;
+  margin: 20px;
+  border: 1px solid aqua;
 }
 
-.OffersCardBody:hover{
-    color: rgb(0, 255, 247);
-    box-shadow: rgb(137, 255, 251) 0px 3px 8px;
-    border: none;
+.OffersCardBody:hover {
+  color: rgb(0, 255, 247);
+  box-shadow: rgb(137, 255, 251) 0px 3px 8px;
+  border: none;
 }
-.OffersCardOffDiv{
-    background-color: rgb(247, 150, 24);
-    width: 60px;
-    border-radius: 4px;
-    color: #fff;
-    margin-top: -160px;
-    margin-left: 120px;
+.OffersCardOffDiv {
+  background-color: rgb(247, 150, 24);
+  width: 60px;
+  border-radius: 4px;
+  color: #fff;
+  margin-top: -160px;
+  margin-left: 120px;
 }
-.OffersCardImgDiv{
-
-    height: 100px;
-    width: 100px;
-    margin-left: 35px;
-
+.OffersCardImgDiv {
+  height: 100px;
+  width: 100px;
+  margin-left: 35px;
 }
-.OffersCardImg{
-    border-radius: 10px;
+.OffersCardImg {
+  border-radius: 10px;
+  height: 100px;
+  width: 100px;
 }
-.OffersCardTextBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.OffersCardTextBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
-.OffersCardBuyButton{
-    width: 80px;
+.OffersCardBuyButton {
+  width: 80px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(0, 255, 247);
-    color: #000;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 255, 247);
+  color: #000;
 }
-.OffersCardCartButton{
+.OffersCardCartButton {
+  width: 80px;
 
-    width: 80px;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #000;
-    margin-left: 12px;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  margin-left: 12px;
 }
-
+.OffersCardTextResult {
+  color: #000;
+  margin-top: -24px;
+  font-size: 17px;
+}
+.OffersCardTextPrice {
+  color: #ff0000;
+  margin-top: -8px;
+  font-size: 17px;
+  margin-left: 10px;
+  text-decoration: line-through;
+}
 @media only screen and (max-width: 1000px) {
 }
 @media only screen and (max-width: 600px) {
