@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import "./Offers.css";
 import OffersCard from "../Card/OffersCard";
 
 import iphone from "../Image/iphone15-pro-64.webp";
@@ -8,7 +9,11 @@ import airpodsPro from "../Image/airpods pro.jpeg";
 import macbookPro from "../Image/macbook pro.jpeg";
 import joyroom from "../Image/Joyroom JR-W020.jpeg";
 
+
+
 export default function Offers() {
+    
+
   return (
     <div>
       <OffersCard
@@ -47,6 +52,8 @@ export default function Offers() {
       <OffersCard name="Iphone 15 Pro" Img={iphone} />
       <OffersCard name="Iphone 15 Pro" Img={iphone} percentage="14" />
       <OffersCard name="Iphone 15 Pro" percentage="14" number="125000" />
+     
+      
     </div>
   );
 }
