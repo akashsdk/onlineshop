@@ -34,6 +34,7 @@ import speaker from '../Icon/speaker.png';
 import hub from '../Icon/usb-hub.png';
 import wipe from '../Icon/wipe.png';
 import wirelesscharging from '../Icon/wireless-charging.png';
+import Offers from "../Components/Offers";
 
 
 
@@ -248,6 +249,12 @@ export default function Home() {
               </div>
             </div>
           </div>
+           {/* Offers */}
+          <div>
+          <p className="homeMedContentCategoryHeadText">Best for Order 🔥</p>
+            <p className="homeMedContentCategoryText">Get your desired product from featured category</p>
+            <Offers />
+          </div>
           {/* Category */}
           <div>
             <p className="homeMedContentCategoryHeadText">FEATURED CATEGORIES</p>
@@ -273,6 +280,7 @@ export default function Home() {
             </div>
             <div style={{height:'300px'}}/>
           </div>
+          
         </div>
       </div>
       {/* BottomBox */}
