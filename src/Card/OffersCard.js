@@ -29,9 +29,11 @@ export default function OffersCard({ percentage, number, Img, name}) {
       </div>
       <div className="OffersCardImgDiv">
         <Image
+        height={100}
           className="OffersCardImg"
           src={Img}
         />
+        <div/>
         <div className="OffersCardTextBox">
           <h3 style={{ color: "black" }}>{name}</h3>
           <div style={{ display: "flex" }}>

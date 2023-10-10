@@ -1,7 +1,7 @@
 import React, { useState, Component, useEffect } from "react";
 import "./Style/Home.css";
 
-import { Button, Space, Input, Menu } from "antd";
+import { Button, Space, Input, Menu, Image } from "antd";
 import {
   GiftOutlined,
   ShoppingCartOutlined,
@@ -36,7 +36,10 @@ import wipe from '../Icon/wipe.png';
 import wirelesscharging from '../Icon/wireless-charging.png';
 import Offers from "../Components/Offers";
 
-
+import productIngPs5 from '../Image/PS5-Middle-Banner-6251.jpg'
+import productIngQ20 from '../Image/Anker-Life-Q20.jpeg';
+import productIngIphone15Pro from '../Image/Iphone 15 pro.jpeg';
+import productIngGoPro11 from '../Image/go pro 11.jpeg';
 
 const { Search } = Input;
 
@@ -278,8 +281,17 @@ export default function Home() {
               <Category categoryImg={wipe} categoryFastText='Cover &' categoryScendText='Glass'/>
               <Category categoryImg={camera} categoryFastText='Camera' categoryScendText='Accessories'/>
             </div>
-            <div style={{height:'300px'}}/>
           </div>
+          {/* Prodect Image */}
+          <div className="homeMedContentProductImgBox">
+            <Image width='45%' src={productIngQ20} />
+            <Image width='45%' style={{marginLeft:'5%'}} src={productIngPs5} />
+          </div>
+          <div className="homeMedContentProductImgBox2">
+            <Image width='45%' src={productIngIphone15Pro} />
+            <Image width='45%' style={{marginLeft:'5%'}} src={productIngGoPro11} />
+          </div>
+          <div style={{height:'300px'}}/>
           
         </div>
       </div>

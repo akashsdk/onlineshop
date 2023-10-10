@@ -26,7 +26,6 @@ export default function Offers() {
     <div className="offersBody" style={{ overflowX: "scroll" }}>
     <div  
     style={{display:'flex',overflowX:'scroll', width: "100%", transform: `translateX(${scrollPosition}px)` }}>
-     <OffersCard />
       <OffersCard
         name="Iphone 15 Pro"
         Img={iphone}
@@ -71,10 +70,10 @@ export default function Offers() {
     </div>
 
       
-      <div className="buttons">
+      {/* <div className="buttons">
         <button onClick={handleScrollLeft} >Scroll Left</button>
         <button onClick={handleScrollRight}>Scroll Right</button>
-      </div>
+      </div> */}
 
 
       
