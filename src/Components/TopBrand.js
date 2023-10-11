@@ -7,6 +7,7 @@ import ProductsCard from "../Card/ProductsCard";
 
 export default function TopBrand() {
     const [page, setPage] = useState(1);
+    const number = 4;
   return (
     <div className="topBrandBody">
       <Space wrap>
@@ -96,7 +97,7 @@ export default function TopBrand() {
         )}
       </div>
       <div style={{display:'flex'}}>
-        <ProductsCard/>
+        <ProductsCard number={number}/>
         <ProductsCard/>
         <ProductsCard/>
         <ProductsCard/>

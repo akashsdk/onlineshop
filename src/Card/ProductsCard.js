@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import "./ProductsCard.css";
 
 import { Image, Button } from "antd";
@@ -7,7 +7,9 @@ import walletMen from "../Image/Leather wallet for men.jpeg";
 import taka from "../Icon/taka (1).png";
 import taka2 from "../Icon/taka.png";
 
-export default function ProductsCard() {
+export default function ProductsCard({ number }) {
+   
+
   return (
     <Button className="ProductsCardBody">
       <Image
@@ -31,7 +33,7 @@ export default function ProductsCard() {
           <p className="ProductsCardPrice2">115</p>
           <p className="ProductsCardPrice3">-20%</p>
         </div>
-
+        
       </div>
     </Button>
   );
