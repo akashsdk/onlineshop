@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import "./ProductsCard.css";
 
 import { Image, Button } from "antd";
@@ -7,8 +7,43 @@ import walletMen from "../Image/Leather wallet for men.jpeg";
 import taka from "../Icon/taka (1).png";
 import taka2 from "../Icon/taka.png";
 
-export default function ProductsCard({ number }) {
-   
+export default function ProductsCard({
+  rating,
+  percentage,
+  number,
+  Img,
+  name,
+}) {
+  const [result, setResult] = useState("");
+
+  useEffect(() => {
+    if (percentage === "" || number === "") {
+      setResult("");
+      return;
+    }
+
+    const percent = parseFloat(percentage);
+    const num = parseFloat(number);
+
+    if (isNaN(percent) || isNaN(num)) {
+      setResult("");
+      return;
+    }
+
+    const calculatedResult = Math.round(num - (percent / 100) * num);
+    setResult(calculatedResult);
+  }, [percentage, number]);
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span key={i} className={`star ${i <= rating ? "filled" : "empty"}`}>
+          &#9733;
+        </span>
+      );
+    }
+    return stars;
+  };
 
   return (
     <Button className="ProductsCardBody">
@@ -20,20 +55,32 @@ export default function ProductsCard({ number }) {
       />
       <div className="ProductsCardTextDiv">
         <p className="ProductsCardText">
-          High quality Artificial <br /> Leather wallet for men
+          {name} <br /> Leather wallet for men
         </p>
       </div>
       <div className="ProductsCardBox">
-        <div style={{display:'flex'}}>
-          <img height={15} width={15} className="ProductsCardPriceIcon" src={taka} />
-          <p className="ProductsCardPrice">115</p>
+        <div style={{ display: "flex" }}>
+          <img
+            height={15}
+            width={15}
+            className="ProductsCardPriceIcon"
+            src={taka}
+          />
+          <p className="ProductsCardPrice">
+              {result !== "" ? <p> {result}</p> : <p>Enter Price</p>}
+          </p>
         </div>
-        <div style={{display:'flex', marginTop:'-25px'}}>
-          <img height={13} width={13} className="ProductsCardPriceIcon2" src={taka2} />
-          <p className="ProductsCardPrice2">115</p>
-          <p className="ProductsCardPrice3">-20%</p>
+        <div style={{ display: "flex", marginTop: "-35px" }}>
+          <img
+            height={13}
+            width={13}
+            className="ProductsCardPriceIcon2"
+            src={taka2}
+          />
+          <p className="ProductsCardPrice2">{number}</p>
+          <p className="ProductsCardPrice3">-{percentage}%</p>
         </div>
-        
+        <div className="star-rating">{renderStars(rating)}</div>
       </div>
     </Button>
   );
