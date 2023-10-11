@@ -3,6 +3,8 @@ import "./TopBrand.css";
 
 import { Button, Space } from "antd";
 
+import ProductsCard from "../Card/ProductsCard";
+
 export default function TopBrand() {
     const [page, setPage] = useState(1);
   return (
@@ -92,6 +94,9 @@ export default function TopBrand() {
         ) : (
             <h1> Error page</h1>
         )}
+      </div>
+      <div>
+        <ProductsCard/>
       </div>
     </div>
   );
