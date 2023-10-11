@@ -16,34 +16,35 @@ import {
   SyncOutlined,
   QuestionCircleOutlined,
   CustomerServiceOutlined,
-  BellOutlined
+  BellOutlined,
 } from "@ant-design/icons";
 
 import Category from "../Card/Category";
 
-import phone from '../Icon/tablet.png';
-import macBook from '../Icon/computer.png'
-import adapter from '../Icon/adapter.png'
-import watch from '../Icon/smart-watch.png';
-import airpods from '../Icon/airpods.png';
-import camera from '../Icon/camera.png';
-import headphone1 from '../Icon/headphone.png';
-import headphone2 from '../Icon/headphones (1).png';
-import headphone3 from '../Icon/headphones.png';
-import keyboard from '../Icon/keyboard.png';
-import cable from '../Icon/micro-usb.png';
-import mouse from '../Icon/mouse.png';
-import powerbank from '../Icon/power-bank.png';
-import speaker from '../Icon/speaker.png';
-import hub from '../Icon/usb-hub.png';
-import wipe from '../Icon/wipe.png';
-import wirelesscharging from '../Icon/wireless-charging.png';
+import phone from "../Icon/tablet.png";
+import macBook from "../Icon/computer.png";
+import adapter from "../Icon/adapter.png";
+import watch from "../Icon/smart-watch.png";
+import airpods from "../Icon/airpods.png";
+import camera from "../Icon/camera.png";
+import headphone1 from "../Icon/headphone.png";
+import headphone2 from "../Icon/headphones (1).png";
+import headphone3 from "../Icon/headphones.png";
+import keyboard from "../Icon/keyboard.png";
+import cable from "../Icon/micro-usb.png";
+import mouse from "../Icon/mouse.png";
+import powerbank from "../Icon/power-bank.png";
+import speaker from "../Icon/speaker.png";
+import hub from "../Icon/usb-hub.png";
+import wipe from "../Icon/wipe.png";
+import wirelesscharging from "../Icon/wireless-charging.png";
 import Offers from "../Components/Offers";
 
-import productIngPs5 from '../Image/PS5-Middle-Banner-6251.jpg'
-import productIngQ20 from '../Image/Anker-Life-Q20.jpeg';
-import productIngIphone15Pro from '../Image/Iphone 15 pro.jpeg';
-import productIngGoPro11 from '../Image/go pro 11.jpeg';
+import productIngPs5 from "../Image/PS5-Middle-Banner-6251.jpg";
+import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
+import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
+import productIngGoPro11 from "../Image/go pro 11.jpeg";
+import TopBrand from "../Components/TopBrand";
 
 const { Search } = Input;
 
@@ -222,32 +223,33 @@ export default function Home() {
                 src={images[currentImageIndex]}
                 alt={`Image ${currentImageIndex + 1}`}
               ></img>
-              <div style={{
-                display:'flex',
-                justifyContent:'center',
-                alignItems:'center',
-                marginTop:'-60px',
-                marginBottom:'60px',
-              }}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  marginTop: "-60px",
+                  marginBottom: "60px",
+                }}
+              >
                 <Button
                   style={{
                     color: "white",
                     backgroundColor: "transparent",
-
                   }}
                   onClick={handlePrev}
                   shape="circle"
                   icon={<LeftOutlined />}
                 />
-                <h2 style={{color:'rgb(0, 255, 247)', marginLeft:'20px'}}>
-                {currentImageIndex + 1} of {images.length}
+                <h2 style={{ color: "rgb(0, 255, 247)", marginLeft: "20px" }}>
+                  {currentImageIndex + 1} of {images.length}
                 </h2>
-                   
+
                 <Button
                   style={{
                     color: "white",
                     backgroundColor: "transparent",
-                    marginLeft:'20px'
+                    marginLeft: "20px",
                   }}
                   onClick={handleNext}
                   shape="circle"
@@ -256,50 +258,134 @@ export default function Home() {
               </div>
             </div>
           </div>
-           {/* Offers */}
+          {/* Offers */}
           <div>
-          <p className="homeMedContentCategoryHeadText">Best for Order 🔥</p>
-            <p className="homeMedContentCategoryText">Get your best offer from the featured category</p>
+            <p className="homeMedContentCategoryHeadText">Best for Order 🔥</p>
+            <p className="homeMedContentCategoryText">
+              Get your best offer from the featured category
+            </p>
             <Offers />
           </div>
           {/* Category */}
           <div>
-            <p className="homeMedContentCategoryHeadText">FEATURED CATEGORIES</p>
-            <p className="homeMedContentCategoryText">Get your desired product from featured category</p>
+            <p className="homeMedContentCategoryHeadText">
+              FEATURED CATEGORIES
+            </p>
+            <p className="homeMedContentCategoryText">
+              Get your desired product from featured category
+            </p>
             <div>
-              <Category categoryImg={phone} categoryFastText='Phones & ' categoryScendText='Tablets'/>
-              <Category categoryImg={macBook} categoryFastText='MacBook ' categoryScendText='Computer'/>
-              <Category categoryImg={adapter} categoryFastText='Power & ' categoryScendText='Adapter'/>
-              <Category categoryImg={watch} categoryFastText='Smart ' categoryScendText='Watch'/>
-              <Category categoryImg={airpods} categoryFastText='Airpods ' categoryScendText='Headphones'/>
-              <Category categoryImg={speaker} categoryFastText='Sound ' categoryScendText='Speakers'/>
-              <Category categoryImg={headphone1} categoryFastText='Wireless ' categoryScendText='Headphones'/>
-              <Category categoryImg={headphone2} categoryFastText='Wired ' categoryScendText='Headphones'/>
-              <Category categoryImg={headphone3} categoryFastText='Overhead' categoryScendText='Headphones'/>
-              <Category categoryImg={cable} categoryFastText='Cable &' categoryScendText='Interconnects'/>
-              <Category categoryImg={powerbank} categoryFastText='Power' categoryScendText='Bank'/>
-              <Category categoryImg={wirelesscharging} categoryFastText='Wireless' categoryScendText='Charger'/>
-              <Category categoryImg={hub} categoryFastText='Hubs & ' categoryScendText='Docks'/>
-              <Category categoryImg={keyboard} categoryFastText='Keyboard' categoryScendText='Accessories'/>
-              <Category categoryImg={mouse} categoryFastText='Mouse' categoryScendText='Accessories'/>
-              <Category categoryImg={wipe} categoryFastText='Cover &' categoryScendText='Glass'/>
-              <Category categoryImg={camera} categoryFastText='Camera' categoryScendText='Accessories'/>
+              <Category
+                categoryImg={phone}
+                categoryFastText="Phones & "
+                categoryScendText="Tablets"
+              />
+              <Category
+                categoryImg={macBook}
+                categoryFastText="MacBook "
+                categoryScendText="Computer"
+              />
+              <Category
+                categoryImg={adapter}
+                categoryFastText="Power & "
+                categoryScendText="Adapter"
+              />
+              <Category
+                categoryImg={watch}
+                categoryFastText="Smart "
+                categoryScendText="Watch"
+              />
+              <Category
+                categoryImg={airpods}
+                categoryFastText="Airpods "
+                categoryScendText="Headphones"
+              />
+              <Category
+                categoryImg={speaker}
+                categoryFastText="Sound "
+                categoryScendText="Speakers"
+              />
+              <Category
+                categoryImg={headphone1}
+                categoryFastText="Wireless "
+                categoryScendText="Headphones"
+              />
+              <Category
+                categoryImg={headphone2}
+                categoryFastText="Wired "
+                categoryScendText="Headphones"
+              />
+              <Category
+                categoryImg={headphone3}
+                categoryFastText="Overhead"
+                categoryScendText="Headphones"
+              />
+              <Category
+                categoryImg={cable}
+                categoryFastText="Cable &"
+                categoryScendText="Interconnects"
+              />
+              <Category
+                categoryImg={powerbank}
+                categoryFastText="Power"
+                categoryScendText="Bank"
+              />
+              <Category
+                categoryImg={wirelesscharging}
+                categoryFastText="Wireless"
+                categoryScendText="Charger"
+              />
+              <Category
+                categoryImg={hub}
+                categoryFastText="Hubs & "
+                categoryScendText="Docks"
+              />
+              <Category
+                categoryImg={keyboard}
+                categoryFastText="Keyboard"
+                categoryScendText="Accessories"
+              />
+              <Category
+                categoryImg={mouse}
+                categoryFastText="Mouse"
+                categoryScendText="Accessories"
+              />
+              <Category
+                categoryImg={wipe}
+                categoryFastText="Cover &"
+                categoryScendText="Glass"
+              />
+              <Category
+                categoryImg={camera}
+                categoryFastText="Camera"
+                categoryScendText="Accessories"
+              />
             </div>
           </div>
           {/* Prodect Image */}
           <div className="homeMedContentProductImgBox">
-            <Image width='45%' src={productIngQ20} />
-            <Image width='45%' style={{marginLeft:'5%'}} src={productIngPs5} />
+            <Image width="45%" src={productIngQ20} />
+            <Image
+              width="45%"
+              style={{ marginLeft: "5%" }}
+              src={productIngPs5}
+            />
           </div>
           <div className="homeMedContentProductImgBox2">
-            <Image width='45%' src={productIngIphone15Pro} />
-            <Image width='45%' style={{marginLeft:'5%'}} src={productIngGoPro11} />
+            <Image width="45%" src={productIngIphone15Pro} />
+            <Image
+              width="45%"
+              style={{ marginLeft: "5%" }}
+              src={productIngGoPro11}
+            />
           </div>
-          <div style={{height:'300px'}}/>
-          
+          {/* TopBrand */}
+          <div style={{ marginTop: "100px" }}>
+            <p className="homeMedContentCategoryHeadText">Top Brand Products</p>
+            <TopBrand />
+          </div>
+          <div style={{ height: "300px" }} />
         </div>
-      
-
       </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
@@ -328,24 +414,23 @@ export default function Home() {
           <p className="homeBottomBoxButtonText">Account</p>
         </Button>
       </div>
-      
-   
-    <FloatButton.Group shape="circle">
-    <FloatButton
-        badge={{
-          count: 123,
-          overflowCount: 999,
-        }}
-        icon={<BellOutlined />}
-      />
-      <FloatButton
-        badge={{
-          count: 0,
-        }}
-        icon={<CustomerServiceOutlined />}
-      />
-      <FloatButton.BackTop visibilityHeight={0}/>
-    </FloatButton.Group>
+
+      <FloatButton.Group shape="circle">
+        <FloatButton
+          badge={{
+            count: 123,
+            overflowCount: 999,
+          }}
+          icon={<BellOutlined />}
+        />
+        <FloatButton
+          badge={{
+            count: 0,
+          }}
+          icon={<CustomerServiceOutlined />}
+        />
+        <FloatButton.BackTop visibilityHeight={0} />
+      </FloatButton.Group>
     </div>
   );
 }
