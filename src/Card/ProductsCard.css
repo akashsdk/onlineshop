@@ -23,16 +23,42 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
 }
 .ProductsCardText{
-    font-size: 20px;
+    font-size: 18px;
+    color: #000;
 }
 .ProductsCardBox{
     height: 90px;
     width: 210px;
     display: flex;
+    flex-direction: column;
 }
 .ProductsCardPrice{
-    color: #ff0000;
+    color: #f50505;
+    font-size: 16px;
+    margin-top: 10px;
+}
+.ProductsCardPriceIcon{
+    margin-top: 15px;
+    margin-left: 20px;
+
+}
+.ProductsCardPrice2{
+    color: #000000;
+    font-size: 13px;
+    margin-top: 10px;
+    text-decoration: line-through;
+    opacity: .5;
+}
+.ProductsCardPriceIcon2{
+    margin-top: 14px;
+    margin-left: 20px;
+    opacity: .5;
+
+}
+.ProductsCardPrice3{
+    color: #000000;
+    font-size: 13px;
+    margin-top: 10px;
 }
