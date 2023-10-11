@@ -13,7 +13,10 @@ import {
   SearchOutlined,
   LeftOutlined,
   RightOutlined,
-  SyncOutlined
+  SyncOutlined,
+  QuestionCircleOutlined,
+  CustomerServiceOutlined,
+  BellOutlined
 } from "@ant-design/icons";
 
 import Category from "../Card/Category";
@@ -295,6 +298,8 @@ export default function Home() {
           <div style={{height:'300px'}}/>
           
         </div>
+      
+
       </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
@@ -323,7 +328,24 @@ export default function Home() {
           <p className="homeBottomBoxButtonText">Account</p>
         </Button>
       </div>
-      <FloatButton icon={<SyncOutlined />} />
+      
+   
+    <FloatButton.Group shape="circle">
+    <FloatButton
+        badge={{
+          count: 123,
+          overflowCount: 999,
+        }}
+        icon={<BellOutlined />}
+      />
+      <FloatButton
+        badge={{
+          count: 0,
+        }}
+        icon={<CustomerServiceOutlined />}
+      />
+      <FloatButton.BackTop visibilityHeight={0}/>
+    </FloatButton.Group>
     </div>
   );
 }
