@@ -5,6 +5,8 @@ import { Button, Space } from "antd";
 
 import ProductsCard from "../Card/ProductsCard";
 
+import walletMen from '../Image/Leather wallet for men.jpeg'
+
 export default function TopBrand() {
   const [page, setPage] = useState(1);
 
@@ -125,7 +127,7 @@ export default function TopBrand() {
         )}
       </div>
       <div style={{ display: "flex" }}>
-        <ProductsCard rating="4" percentage="3" number="122" Img="" name="High quality Artificial" />
+        <ProductsCard rating="4" percentage="3" number="122" Img={walletMen} name="High quality Artificial" details='ahbhb schsvcjhs jbs ghsvcg' />
         <ProductsCard rating="5" percentage="20" number="100" Img="" name="High quality Artificial" />
         <ProductsCard rating="1" />
         <ProductsCard rating="0" />

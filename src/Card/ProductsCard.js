@@ -13,6 +13,7 @@ export default function ProductsCard({
   number,
   Img,
   name,
+  details,
 }) {
   const [result, setResult] = useState("");
 
@@ -51,12 +52,14 @@ export default function ProductsCard({
         height={170}
         width="90%"
         className="ProductsCardImage"
-        src={walletMen}
+        src={Img}
       />
       <div className="ProductsCardTextDiv">
         <p className="ProductsCardText">
-          {name} <br /> Leather wallet for men
+          {name} 
         </p>
+        <p className="ProductsCardTextDetails"> {details}</p>
+       
       </div>
       <div className="ProductsCardBox">
         <div style={{ display: "flex" }}>

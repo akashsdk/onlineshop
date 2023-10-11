@@ -23,10 +23,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .ProductsCardText{
     font-size: 18px;
     color: #000;
+}
+.ProductsCardTextDetails{
+    color: #000;
+    margin-top: -20px;
+    width: 220px;
+    opacity: .5;
 }
 .ProductsCardBox{
     height: 90px;
