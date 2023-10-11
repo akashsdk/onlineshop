@@ -95,7 +95,18 @@ export default function TopBrand() {
             <h1> Error page</h1>
         )}
       </div>
-      <div>
+      <div style={{display:'flex'}}>
+        <ProductsCard/>
+        <ProductsCard/>
+        <ProductsCard/>
+        <ProductsCard/>
+        <ProductsCard/>
+        <ProductsCard/>
+      </div>
+      <div style={{display:'flex'}}>
+        <ProductsCard/>
+        <ProductsCard/>
+        <ProductsCard/>
         <ProductsCard/>
       </div>
     </div>

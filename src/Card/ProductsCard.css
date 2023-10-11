@@ -1,0 +1,38 @@
+.ProductsCardBody {
+  height: auto;
+  width: 220px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  margin-top: 20px;
+  margin-left: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+}
+.ProductsCardBody:hover{
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}
+.ProductsCardImage{
+
+}
+.ProductsCardTextDiv{
+    height: 50px;
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+.ProductsCardText{
+    font-size: 20px;
+}
+.ProductsCardBox{
+    height: 90px;
+    width: 210px;
+    display: flex;
+}
+.ProductsCardPrice{
+    color: #ff0000;
+}
