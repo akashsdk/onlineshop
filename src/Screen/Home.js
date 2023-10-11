@@ -1,7 +1,7 @@
 import React, { useState, Component, useEffect } from "react";
 import "./Style/Home.css";
 
-import { Button, Space, Input, Menu, Image } from "antd";
+import { Button, Space, Input, Menu, Image, FloatButton } from "antd";
 import {
   GiftOutlined,
   ShoppingCartOutlined,
@@ -13,6 +13,7 @@ import {
   SearchOutlined,
   LeftOutlined,
   RightOutlined,
+  SyncOutlined
 } from "@ant-design/icons";
 
 import Category from "../Card/Category";
@@ -322,6 +323,7 @@ export default function Home() {
           <p className="homeBottomBoxButtonText">Account</p>
         </Button>
       </div>
+      <FloatButton icon={<SyncOutlined />} />
     </div>
   );
 }
