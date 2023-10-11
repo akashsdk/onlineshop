@@ -10,7 +10,10 @@ import walletMen from '../Image/Leather wallet for men.jpeg';
 import iphone15 from '../Image/Iphone 15 pro.jpeg';
 import iphone15pro from '../Image/iphone15-pro-64.webp';
 import airpod from '../Image/airpods pro.jpeg';
-import macbook from '../Image/macbook pro.jpeg'
+import macbook from '../Image/macbook pro.jpeg';
+import s23 from '../Image/samsung s23 ultra.webp';
+import goPro from '../Image/go pro 11.jpeg';
+import goPro2 from '../Image/hero12blackheader.jpeg'
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -131,14 +134,15 @@ export default function TopBrand() {
           <h1> Error page</h1>
         )}
       </div>
+      {/* Other's */}
       <div style={{ display: "flex" }}>
         <ProductsCard rating="4" percentage="3" sells='23' number="122" Img={walletMen} name="High quality Artificial" details='Some think about this products' />
-        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
-        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="5" percentage="4" sells='33' number="25000" Img={goPro2} name="Go Pro 12" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="4" sells='33' number="22000" Img={goPro} name="Go Pro 11" details='Some think about this products' />
         <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
         <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
       </div>
-
+       {/* Apple */}
       <div style={{ display: "flex" }}>
         <ProductsCard rating="5" percentage="14" sells='20' number="125000" Img={iphone15pro} name="Iphone 15 Pro" details='Some think about this products' />
         <ProductsCard rating="4" percentage="15" sells='4' number="210000" Img={iphone15} name="Iphone 15 Pro Max" details='Some think about this products' />
@@ -146,7 +150,14 @@ export default function TopBrand() {
         <ProductsCard rating="2" percentage="14" sells='9' number="250000" Img={macbook} name="Macbook Pro 2023" details='Some think about this products' />
         <ProductsCard rating="1" percentage="10" sells='29' number="" Img={iphone15pro} name="Iphone 13 Pro Max" details='Some think about this products' />
       </div>
-
+      {/* Samsung */}
+      <div style={{ display: "flex" }}>
+        <ProductsCard rating="5" percentage="25" sells='21' number="100000" Img={s23} name="Samsung s23 ultra" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="3" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="2" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="1" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+      </div>
       
     </div>
   );

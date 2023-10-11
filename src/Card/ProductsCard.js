@@ -3,7 +3,6 @@ import "./ProductsCard.css";
 
 import { Image, Button } from "antd";
 
-import walletMen from "../Image/Leather wallet for men.jpeg";
 import taka from "../Icon/taka (1).png";
 import taka2 from "../Icon/taka.png";
 
