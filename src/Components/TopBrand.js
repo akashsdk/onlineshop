@@ -5,7 +5,12 @@ import { Button, Space } from "antd";
 
 import ProductsCard from "../Card/ProductsCard";
 
-import walletMen from '../Image/Leather wallet for men.jpeg'
+import walletMen from '../Image/Leather wallet for men.jpeg';
+
+import iphone15 from '../Image/Iphone 15 pro.jpeg';
+import iphone15pro from '../Image/iphone15-pro-64.webp';
+import airpod from '../Image/airpods pro.jpeg';
+import macbook from '../Image/macbook pro.jpeg'
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -127,19 +132,22 @@ export default function TopBrand() {
         )}
       </div>
       <div style={{ display: "flex" }}>
-        <ProductsCard rating="4" percentage="3" number="122" Img={walletMen} name="High quality Artificial" details='ahbhb schsvcjhs jbs ghsvcg' />
-        <ProductsCard rating="5" percentage="20" number="100" Img="" name="High quality Artificial" />
-        <ProductsCard rating="1" />
-        <ProductsCard rating="0" />
-        <ProductsCard rating="3" />
-        <ProductsCard rating="1" />
+        <ProductsCard rating="4" percentage="3" sells='23' number="122" Img={walletMen} name="High quality Artificial" details='Some think about this products' />
+        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
       </div>
+
       <div style={{ display: "flex" }}>
-        <ProductsCard />
-        <ProductsCard />
-        <ProductsCard />
-        <ProductsCard />
+        <ProductsCard rating="5" percentage="14" sells='20' number="125000" Img={iphone15pro} name="Iphone 15 Pro" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="15" sells='4' number="210000" Img={iphone15} name="Iphone 15 Pro Max" details='Some think about this products' />
+        <ProductsCard rating="3" percentage="15" sells='120' number="45000" Img={airpod} name="Airpods Pro" details='Some think about this products' />
+        <ProductsCard rating="2" percentage="14" sells='9' number="250000" Img={macbook} name="Macbook Pro 2023" details='Some think about this products' />
+        <ProductsCard rating="1" percentage="10" sells='29' number="" Img={iphone15pro} name="Iphone 13 Pro Max" details='Some think about this products' />
       </div>
+
+      
     </div>
   );
 }

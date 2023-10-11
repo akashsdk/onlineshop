@@ -14,6 +14,7 @@ export default function ProductsCard({
   Img,
   name,
   details,
+  sells,
 }) {
   const [result, setResult] = useState("");
 
@@ -70,7 +71,7 @@ export default function ProductsCard({
             src={taka}
           />
           <p className="ProductsCardPrice">
-              {result !== "" ? <p> {result}</p> : <p>Enter Price</p>}
+              {result !== "" ? <p> {result}</p> : <p>Sold Out</p>}
           </p>
         </div>
         <div style={{ display: "flex", marginTop: "-35px" }}>
@@ -82,6 +83,7 @@ export default function ProductsCard({
           />
           <p className="ProductsCardPrice2">{number}</p>
           <p className="ProductsCardPrice3">-{percentage}%</p>
+          <p className="ProductsCardPrice4">Sell's ({sells})</p>
         </div>
         <div className="star-rating">{renderStars(rating)}</div>
       </div>

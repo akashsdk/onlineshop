@@ -69,7 +69,12 @@
     font-size: 13px;
     margin-top: 10px;
 }
-
+.ProductsCardPrice4{
+    color: #66ec0c;
+    font-size: 13px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
 .star-rating {
     font-size: 8px;
     margin-top: -8px;
@@ -89,3 +94,10 @@
     color: gold;
   }
   
+
+  @media only screen and (max-width: 1000px) {
+    
+  }
+  @media only screen and (max-width: 600px) {
+    
+  }
