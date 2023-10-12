@@ -125,7 +125,6 @@ export default function TopBrand() {
           Anker
         </Button>
       </Flex>
-
       <div>
         {page === 1 ? (
           <Flex wrap="wrap" gap="small" justify="center" align="center">
