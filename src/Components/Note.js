@@ -16,14 +16,14 @@ export default function Note() {
         <h2 style={{color:'aqua'}}>Note: </h2>
       <h3>This website is under maintenance,</h3>
       <h3>Sorry! for the temporary inconvenience.</h3>
-      <h3>UI/UX Design: 70% done</h3>
-      <h3>Front End: 15% done</h3>
-      <h3>Back End: 0% done</h3>
-      <h3>Admin Dashboard: 0% done</h3>
-      <h3>Security: Processing... 0%</h3>
-      <h3>QA Testing: Processing... 0%</h3>
-      <h3 style={{color:'red'}}>Status: Front End Developing</h3>
-      <h4>Projer Time: 3 month.. </h4>
+      {/* <p>UI/UX Design: 70% done</p>
+      <p>Front End: 15% done</p>
+      <p>Back End: 0% done</p>
+      <p>Admin Dashboard: 0% done</p>
+      <p>Security: Processing... 0%</p>
+      <p>QA Testing: Processing... 0%</p> */}
+      <p style={{color:'red'}}>Status: Front End Developing</p>
+      <p>Projer Time: 3 month.. </p>
       <div style={{width:'50%',marginLeft:'25%'}}>
         <p>Total Process...</p>
       <Progress  percent={9.0} strokeColor={twoColors} />
