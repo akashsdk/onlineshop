@@ -41,11 +41,20 @@ const items = [
 
 export default function HomeHeader() {
   const [open, setOpen] = useState(false);
+  const [open2, setOpen2] = useState(false);
+
   const showDrawer = () => {
     setOpen(true);
   };
   const onClose = () => {
     setOpen(false);
+  };
+
+  const showDrawer2 = () => {
+    setOpen2(true);
+  };
+  const onClose2 = () => {
+    setOpen2(false);
   };
   return (
     <div className="homeBody">
@@ -53,10 +62,61 @@ export default function HomeHeader() {
       <div className="homeTopBox">
         <Button
           className="homeTopBoxMenu"
+          onClick={showDrawer2}
           shape="circle"
           size="large"
           icon={<PicCenterOutlined />}
         />
+        <Drawer placement="left" 
+        onClose={onClose2}
+         open={open2}
+         style={{
+
+         }}>
+          <div className="homeTopBoxMenuDrawer">
+            <div className="homeTopBoxMenuDrawerBox">
+            <Button type="text" className="homeMedTopButton1" block>
+              Phones & Tablets
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Power Adapter
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              MacBook
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Smart Watch
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Airpods
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+            Headphones
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Speakers
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Cable & Interconnects
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Power Bank
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Wireless Charger
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Hubs & Docks
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Keyboard
+            </Button>
+            <Button type="text" className="homeMedTopButton1" block>
+              Cover & Glass
+            </Button>
+            </div>
+          </div>
+        </Drawer>
         <h1 style={{ color: "#ffffff", flex: "1" }}>Logo&Name</h1>
         <Button
           className="homeTopBoxSearch"

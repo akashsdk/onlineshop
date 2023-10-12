@@ -1,0 +1,16 @@
+.homeTopBoxMenuDrawer{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.homeTopBoxMenuDrawerBox{
+  width: 200px;
+  
+}
+.homeMedTopButton1{
+display: flex;
+align-items: center;
+font-size: large;
+height: 50px;
+}
