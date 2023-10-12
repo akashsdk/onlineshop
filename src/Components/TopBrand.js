@@ -24,6 +24,7 @@ import Xiaomimi from '../Image/download.png';
 import OnePlus8 from '../Image/oneplus-8-5g-12gb-256gb-dual-sim-glow.webp';
 import OnePlus from '../Image/OnePlus_Logo.png';
 import jbl  from '../Image/Logo_of_JBL.svg.png';
+import anker from '../Image/Anker logo.jpeg';
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -192,13 +193,13 @@ export default function TopBrand() {
         <ProductsCard rating="0" percentage="10" sells='99' number="" Img={jbl} name="JBL Products" details='Some think about this products' />
         <ProductsCard rating="0" percentage="9" sells='0' number="49000" Img={jbl} name="JBL Products" details='Some think about this products' />
       </div>
-       {/* JBL */}
+       {/* Anker */}
        <div style={{ display: "flex" }}>
-        <ProductsCard rating="0" percentage="25" sells='21' number="" Img={jbl} name="OnePlus" details='Some think about this products' />
-        <ProductsCard rating="0" percentage="10" sells='25' number="" Img={jbl} name="OnePlus" details='Some think about this products' />
-        <ProductsCard rating="5" percentage="8" sells='101' number="52000" Img={jbl} name="OnePlus 8 - 8GB & 128GB" details='Some think about this products' />
-        <ProductsCard rating="0" percentage="10" sells='99' number="" Img={jbl} name="OnePlus" details='Some think about this products' />
-        <ProductsCard rating="0" percentage="9" sells='0' number="49000" Img={jbl} name="OnePlus" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="25" sells='21' number="" Img={anker} name="Anker Products" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="10" sells='25' number="" Img={anker} name="Anker Products" details='Some think about this products' />
+        <ProductsCard rating="5" percentage="8" sells='101' number="52000" Img={anker} name="Anker Products" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="10" sells='99' number="" Img={anker} name="Anker Products" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="9" sells='0' number="49000" Img={anker} name="Anker Products" details='Some think about this products' />
       </div>
       
     </div>
