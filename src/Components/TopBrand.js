@@ -20,6 +20,9 @@ import budsPro from '../Image/galaxy-buds-pro-03-500x500.webp';
 import budspro2 from '../Image/Galaxy Buds2.jpeg';
 import A52 from '../Image/Samsung-Galaxy-A52-6.jpg';
 import mi11 from '../Image/xiaomi-mi11-ultra-5g-k1-1.jpg';
+import Xiaomimi from '../Image/download.png';
+import OnePlus8 from '../Image/oneplus-8-5g-12gb-256gb-dual-sim-glow.webp';
+import OnePlus from '../Image/OnePlus_Logo.png';
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -166,11 +169,19 @@ export default function TopBrand() {
       </div>
       {/* Xiaomi */}
       <div style={{ display: "flex" }}>
-        <ProductsCard rating="5" percentage="25" sells='21' number="100000" Img={s23} name="Samsung s23 ultra" details='Some think about this products' />
-        <ProductsCard rating="4" percentage="10" sells='25' number="34999" Img={samsungS20} name="Samsung Galaxy S20" details='Some think about this products' />
-        <ProductsCard rating="3" percentage="4" sells='101' number="" Img={budsPro} name="Samsung Galaxy Buds Pro" details='Some think about this products' />
-        <ProductsCard rating="2" percentage="10" sells='99' number="23000" Img={budspro2} name="Galaxy Buds2" details='Some think about this products' />
+        <ProductsCard rating="5" percentage="25" sells='21' number="100000" Img={Xiaomimi} name="Xiaomi Mi" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="10" sells='25' number="34999" Img={Xiaomimi} name="Xiaomi Mi" details='Some think about this products' />
+        <ProductsCard rating="3" percentage="4" sells='101' number="" Img={Xiaomimi} name="Xiaomi Mi" details='Some think about this products' />
+        <ProductsCard rating="2" percentage="10" sells='99' number="23000" Img={Xiaomimi} name="Xiaomi Mi" details='Some think about this products' />
         <ProductsCard rating="" percentage="9" sells='0' number="49000" Img={mi11} name="Xiaomi Mi 11 Ultra" details='Some think about this products' />
+      </div>
+      {/* OnePlus */}
+      <div style={{ display: "flex" }}>
+        <ProductsCard rating="0" percentage="25" sells='21' number="" Img={OnePlus} name="OnePlus" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="10" sells='25' number="" Img={OnePlus} name="OnePlus" details='Some think about this products' />
+        <ProductsCard rating="5" percentage="8" sells='101' number="52000" Img={OnePlus8} name="OnePlus 8 - 8GB & 128GB" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="10" sells='99' number="" Img={OnePlus} name="OnePlus" details='Some think about this products' />
+        <ProductsCard rating="0" percentage="9" sells='0' number="49000" Img={OnePlus} name="OnePlus" details='Some think about this products' />
       </div>
       
     </div>
