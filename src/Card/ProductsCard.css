@@ -14,9 +14,7 @@
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
     rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-.ProductsCardImage{
 
-}
 .ProductsCardTextDiv{
     height: 50px;
     width: 210px;
@@ -96,6 +94,15 @@
   
 
   @media only screen and (max-width: 1000px) {
+    .ProductsCardBody {
+        height: auto;
+        width: 200px;
+        margin-top: 0px;
+        margin-left: 0px;
+      }
+      .ProductsCardTextDetails{
+        font-size: 12px;
+    }
     
   }
   @media only screen and (max-width: 600px) {

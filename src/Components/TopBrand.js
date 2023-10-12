@@ -31,7 +31,7 @@ export default function TopBrand() {
 
   return (
     <div className="topBrandBody">
-      <Space wrap>
+      <Flex wrap="wrap" gap="small" justify="center" align="center">
         <Button
           type="text"
           danger
@@ -124,7 +124,7 @@ export default function TopBrand() {
         >
           Anker
         </Button>
-      </Space>
+      </Flex>
 
       <div>
         {page === 1 ? (

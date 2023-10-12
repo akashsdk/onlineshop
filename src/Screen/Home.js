@@ -163,7 +163,7 @@ export default function Home() {
       {/* MidBox */}
       <div className="homeMedBox">
         {/* homeMedTopBox */}
-        <div className="homeMedTopBox">
+        <div  className="homeMedTopBox">
           <Button type="text" className="homeMedTopButton0" block>
             Phones &<br />
             Tablets
@@ -219,7 +219,7 @@ export default function Home() {
               alignItems: "center",
             }}
           >
-            <div className="homeMedContentSliderBox">
+            <div id="Top" className="homeMedContentSliderBox">
               <img
                 className="homeMedContentSliderImg"
                 src={images[currentImageIndex]}
@@ -434,6 +434,10 @@ export default function Home() {
           icon={<CustomerServiceOutlined />}
         />
         <FloatButton.BackTop visibilityHeight={0} />
+        {/* <a key={"part-1"} href="" className="mainHeaderTopDivButton">
+                Home
+              </a> */}
+        
       </FloatButton.Group>
     </div>
   );

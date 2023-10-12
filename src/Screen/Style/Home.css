@@ -1,167 +1,168 @@
-.homeBody{
-    height: auto;
-    width: 100%;
-
+.homeBody {
+  height: auto;
+  width: 100%;
 }
-.homeTopBox{
-    height: 80px;
-    width: 100%;
-    background-color: rgb(0, 0, 0);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.homeTopBox {
+  height: 80px;
+  width: 100%;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.homeTopBoxMenu{
-    display: none;
-   
+.homeTopBoxMenu {
+  display: none;
 }
-.homeTopBoxSearch{
-    display: none;
-   
+.homeTopBoxSearch {
+  display: none;
 }
 
-.homeTopBoxSearchDiv{
-    flex: 1;
+.homeTopBoxSearchDiv {
+  flex: 1;
 }
-.homeTopBoxLeftDiv{
-    flex: 2;
-    display: flex;
+.homeTopBoxLeftDiv {
+  flex: 2;
+  display: flex;
+}
+.homeBottomBox {
+  display: none;
+}
+.homeBottomBoxButton1 {
+  color: rgb(0, 255, 247);
+}
+.homeBottomBoxButton2 {
+  color: rgb(0, 255, 247);
+}
 
+.homeBottomBoxButtonIcon {
+  font-size: 30px;
+  margin-top: -15px;
 }
-.homeBottomBox{
-    display: none;
+.homeBottomBoxButtonText {
+  font-size: 20px;
+  margin-top: -5px;
+  color: #ffffff;
 }
-.homeBottomBoxButton1{
-    color: rgb(0, 255, 247);
-} 
-.homeBottomBoxButton2{
-    color: rgb(0, 255, 247);
-} 
+.homeBottomBoxButtonText:hover {
+  color: rgb(0, 255, 247);
+}
 
-.homeBottomBoxButtonIcon{
-    font-size: 30px;
-    margin-top: -15px;
-} 
-.homeBottomBoxButtonText{
-    font-size: 20px;
-    margin-top: -5px;
-    color: #ffffff;
+.homeMedTopBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(17, 18, 20, 0.1) 0px 15px 10px -10px;
 }
-.homeBottomBoxButtonText:hover{
-    color: rgb(0, 255, 247);
-} 
+.homeMedTopButton0 {
+  height: 60px;
+}
+.homeMedTopButton {
+  height: 60px;
+  margin-left: -15px;
+}
 
-.homeMedTopBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: rgba(17, 18, 20, 0.1) 0px 15px 10px -10px;
+.homeMedTopButtonMenu {
+  border: none;
 }
-.homeMedTopButton0{
-   height: 60px;
+.homeMedContent {
+  height: calc(100vh - 140px);
+  width: 100%;
+  overflow: auto;
 }
-.homeMedTopButton{
-    height: 60px;
-    margin-left: -15px;
- }
-
-.homeMedTopButtonMenu{
-    border: none;
+.homeMedContentSliderBox {
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
 }
-.homeMedContent{
-    height: calc(100vh - 140px);
-    width: 100%;
-    overflow: auto;
+.homeMedContentSliderImg {
+  border-radius: 10px;
+  width: 90%;
+  height: 450px;
 }
-.homeMedContentSliderBox{
-    height: auto;
-    width: 100%;
-    margin-top: 20px;
+.homeMedContentCategoryHeadText {
+  font-size: 25px;
 }
-.homeMedContentSliderImg{
-    border-radius: 10px;
-    width: 90%;
-    height: 450px;
+.homeMedContentCategoryText {
+  margin-top: -20px;
+  opacity: 0.5;
+  margin-bottom: 30px;
 }
-.homeMedContentCategoryHeadText{
-    font-size: 25px;
+.homeMedContentProductImgBox {
+  height: auto;
+  width: auto;
+  margin-top: 50px;
 }
-.homeMedContentCategoryText{
-    margin-top: -20px;
-    opacity: .5;
-    margin-bottom: 30px;
-}
-.homeMedContentProductImgBox{
-    height: auto;
-    width: auto;
-    margin-top: 50px;
-}
-.homeMedContentProductImgBox2{
-    height: auto;
-    width: auto;
-    margin-top: 50px;
+.homeMedContentProductImgBox2 {
+  height: auto;
+  width: auto;
+  margin-top: 50px;
 }
 
 @media only screen and (max-width: 1000px) {
-    
-    .homeBottomBox{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 80px;
-        width: 100%;
-        background-color: rgb(8, 8, 8);
-    }
-    .homeTopBoxLeftDiv{
-        display: none;
-    }
-    .homeTopBoxSearchDiv{
-        display: none;
-    }
-    .homeTopBoxMenu{
-        display: flow-root;
-        background-color: black;
-        border: none;
-        color: #ffffff;
-        flex: 1;
-    }
-    .homeTopBoxSearch{
-        display: flow-root;
-        background-color: black;
-        border: none;
-        color: rgb(0, 255, 247);
-        flex: 1;
-    }
-    .homeMedTopBox{
-        display: none;
-    }
-    .homeMedContent{
-        height: calc(100vh - 160px);
-    }
-    .homeMedContentSliderImg{
-        width: 98%;
-        height: 350px;
-    }
-    .homeMedContentCategoryHeadText{
-        font-size: 20px;
-    }
-    .homeMedContentProductImgBox2{
-        
-        margin-top: 20px;
-    }
-    
+  .homeBottomBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
   }
+  .homeTopBoxLeftDiv {
+    display: none;
+  }
+  .homeTopBoxSearchDiv {
+    display: none;
+  }
+  .homeTopBoxMenu {
+    display: flow-root;
+    background-color: black;
+    border: none;
+    color: #000000;
+    flex: 1;
+  }
+  .homeTopBoxSearch {
+    display: flow-root;
+    background-color: black;
+    border: none;
+    color: rgb(0, 255, 247);
+    flex: 1;
+  }
+  .homeMedTopBox {
+    display: none;
+  }
+  .homeMedContent {
+    height: calc(100vh - 160px);
+  }
+  .homeMedContentSliderImg {
+    width: 98%;
+    height: 350px;
+  }
+  .homeMedContentCategoryHeadText {
+    font-size: 20px;
+  }
+  .homeMedContentProductImgBox2 {
+    margin-top: 20px;
+  }
+}
 
-  @media only screen and (max-width: 600px) {
-    .homeBottomBoxButtonIcon{
-        font-size: 25px;
-        margin-top: -15px;
-    } 
-    .homeBottomBoxButtonText{
-        font-size: 16px;
-        margin-top: -5px;
-    }
-    .homeBottomBoxButton2{
-        margin-left: -13px;
-    } 
+@media only screen and (max-width: 600px) {
+  .homeBottomBoxButtonIcon {
+    font-size: 25px;
+    margin-top: -15px;
   }
+  .homeBottomBoxButtonText {
+    font-size: 16px;
+    margin-top: -5px;
+  }
+  .homeBottomBoxButton2 {
+    margin-left: -13px;
+  }
+  .homeBottomBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    background-color: rgb(8, 8, 8);
+  }
+}
