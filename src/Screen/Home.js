@@ -45,6 +45,8 @@ import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
 import TopBrand from "../Components/TopBrand";
+import Note from "../Components/Note";
+import Footer from "../Components/Footer";
 
 const { Search } = Input;
 
@@ -384,8 +386,10 @@ export default function Home() {
             <p className="homeMedContentCategoryHeadText">Top Brand Products</p>
             <TopBrand />
           </div>
-          <div style={{ height: "300px" }} />
+          <Note/>
+          <Footer/>
         </div>
+       
       </div>
       {/* BottomBox */}
       <div className="homeBottomBox">
