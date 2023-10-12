@@ -117,7 +117,7 @@
     display: flow-root;
     background-color: black;
     border: none;
-    color: #000000;
+    color: rgb(0, 255, 247);
     flex: 1;
   }
   .homeTopBoxSearch {
