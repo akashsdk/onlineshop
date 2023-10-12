@@ -24,7 +24,7 @@ export default function Note() {
       <h3>QA Testing: Processing... 0%</h3>
       <h3 style={{color:'red'}}>Status: Front End Developing</h3>
       <h4>Projer Time: 3 month.. </h4>
-      <div style={{width:'70%',marginLeft:'15%'}}>
+      <div style={{width:'50%',marginLeft:'25%'}}>
         <p>Total Process...</p>
       <Progress  percent={9.0} strokeColor={twoColors} />
 
