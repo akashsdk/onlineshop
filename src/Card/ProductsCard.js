@@ -70,7 +70,7 @@ export default function ProductsCard({
             src={taka}
           />
           <p className="ProductsCardPrice">
-              {result !== "" ? <p> {result}</p> : <p>Sold Out</p>}
+              {result !== "" ? <p> {result}</p> : <p>Out of Stock</p>}
           </p>
         </div>
         <div style={{ display: "flex", marginTop: "-35px" }}>

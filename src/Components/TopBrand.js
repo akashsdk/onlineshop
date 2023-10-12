@@ -17,6 +17,7 @@ import goPro2 from '../Image/hero12blackheader.jpeg';
 import samsungS20 from '../Image/samsung-galaxy-s20-1.jpg';
 import budsPro from '../Image/galaxy-buds-pro-03-500x500.webp';
 import budspro2 from '../Image/Galaxy Buds2.jpeg';
+import A52 from '../Image/Samsung-Galaxy-A52-6.jpg';
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -157,9 +158,17 @@ export default function TopBrand() {
       <div style={{ display: "flex" }}>
         <ProductsCard rating="5" percentage="25" sells='21' number="100000" Img={s23} name="Samsung s23 ultra" details='Some think about this products' />
         <ProductsCard rating="4" percentage="10" sells='25' number="34999" Img={samsungS20} name="Samsung Galaxy S20" details='Some think about this products' />
-        <ProductsCard rating="3" percentage="4" sells='101' number="1999" Img={budsPro} name="Samsung Galaxy Buds Pro" details='Some think about this products' />
+        <ProductsCard rating="3" percentage="4" sells='101' number="" Img={budsPro} name="Samsung Galaxy Buds Pro" details='Some think about this products' />
         <ProductsCard rating="2" percentage="10" sells='99' number="23000" Img={budspro2} name="Galaxy Buds2" details='Some think about this products' />
-        <ProductsCard rating="1" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="1" percentage="9" sells='10' number="37500" Img={A52} name="Samsung Galaxy A52" details='Some think about this products' />
+      </div>
+      {/* Xiaomi */}
+      <div style={{ display: "flex" }}>
+        <ProductsCard rating="5" percentage="25" sells='21' number="100000" Img={s23} name="Samsung s23 ultra" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="10" sells='25' number="34999" Img={samsungS20} name="Samsung Galaxy S20" details='Some think about this products' />
+        <ProductsCard rating="3" percentage="4" sells='101' number="" Img={budsPro} name="Samsung Galaxy Buds Pro" details='Some think about this products' />
+        <ProductsCard rating="2" percentage="10" sells='99' number="23000" Img={budspro2} name="Galaxy Buds2" details='Some think about this products' />
+        <ProductsCard rating="1" percentage="9" sells='10' number="2" Img={A52} name="MD Abir" details='Some think about this products' />
       </div>
       
     </div>
