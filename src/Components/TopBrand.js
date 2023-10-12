@@ -125,7 +125,7 @@ export default function TopBrand() {
           Anker
         </Button>
       </Flex>
-      <div>
+      <div style={{marginTop:'50px'}}>
         {page === 1 ? (
           <Flex wrap="wrap" gap="small" justify="center" align="center">
             <ProductsCard
