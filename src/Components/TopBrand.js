@@ -6,6 +6,7 @@ import { Button, Space } from "antd";
 import ProductsCard from "../Card/ProductsCard";
 
 import walletMen from '../Image/Leather wallet for men.jpeg';
+import HavitM3 from '../Image/Havit M3 Portable Bluetooth Speaker.jpeg';
 
 import iphone15 from '../Image/Iphone 15 pro.jpeg';
 import iphone15pro from '../Image/iphone15-pro-64.webp';
@@ -18,6 +19,7 @@ import samsungS20 from '../Image/samsung-galaxy-s20-1.jpg';
 import budsPro from '../Image/galaxy-buds-pro-03-500x500.webp';
 import budspro2 from '../Image/Galaxy Buds2.jpeg';
 import A52 from '../Image/Samsung-Galaxy-A52-6.jpg';
+import mi11 from '../Image/xiaomi-mi11-ultra-5g-k1-1.jpg';
 
 export default function TopBrand() {
   const [page, setPage] = useState(1);
@@ -143,7 +145,7 @@ export default function TopBrand() {
         <ProductsCard rating="4" percentage="3" sells='23' number="122" Img={walletMen} name="High quality Artificial" details='Some think about this products' />
         <ProductsCard rating="5" percentage="4" sells='33' number="25000" Img={goPro2} name="Go Pro 12" details='Some think about this products' />
         <ProductsCard rating="4" percentage="4" sells='33' number="22000" Img={goPro} name="Go Pro 11" details='Some think about this products' />
-        <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
+        <ProductsCard rating="4" percentage="10" sells='300' number="1500" Img={HavitM3} name="Havit M3 Portable Speaker" details='Some think about this products' />
         <ProductsCard rating="" percentage="" sells='' number="" Img={''} name="" details='Some think about this products' />
       </div>
        {/* Apple */}
@@ -168,7 +170,7 @@ export default function TopBrand() {
         <ProductsCard rating="4" percentage="10" sells='25' number="34999" Img={samsungS20} name="Samsung Galaxy S20" details='Some think about this products' />
         <ProductsCard rating="3" percentage="4" sells='101' number="" Img={budsPro} name="Samsung Galaxy Buds Pro" details='Some think about this products' />
         <ProductsCard rating="2" percentage="10" sells='99' number="23000" Img={budspro2} name="Galaxy Buds2" details='Some think about this products' />
-        <ProductsCard rating="1" percentage="9" sells='10' number="2" Img={A52} name="MD Abir" details='Some think about this products' />
+        <ProductsCard rating="" percentage="9" sells='0' number="49000" Img={mi11} name="Xiaomi Mi 11 Ultra" details='Some think about this products' />
       </div>
       
     </div>
