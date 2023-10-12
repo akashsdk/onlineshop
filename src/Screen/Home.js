@@ -6,6 +6,8 @@ import { CustomerServiceOutlined, BellOutlined } from "@ant-design/icons";
 
 import HomeIndex from "./HomeIndex";
 
+import messager from "../Icon/messenger.png";
+
 export default function Home() {
   return (
     <div className="homeBody">
@@ -25,7 +27,15 @@ export default function Home() {
           badge={{
             count: 0,
           }}
-          icon={<CustomerServiceOutlined />}
+          icon={
+            <img
+              src={messager}
+              style={{
+                height: "25px",
+                marginLeft: "-3px",
+                marginTop: "2px",
+              }} />
+          }
         />
         <FloatButton.BackTop visibilityHeight={0} />
         {/* <a key={"part-1"} href="" className="mainHeaderTopDivButton">
