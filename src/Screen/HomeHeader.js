@@ -1,5 +1,6 @@
-import React from "react";
+import React, { Component, useState, useRef, useEffect } from "react";
 import "./Style/Home.css";
+import "./Style/HomeHeader.css";
 
 import { Button, Input, Menu } from "antd";
 import {
@@ -62,8 +63,8 @@ export default function HomeHeader() {
             onSearch={onSearch}
             style={{
               width: 250,
-              backgroundColor:'white',
-              borderRadius:'6px'
+              backgroundColor: "white",
+              borderRadius: "6px",
             }}
             // addonAfter={<AudioOutlined />}
           />
@@ -76,7 +77,7 @@ export default function HomeHeader() {
 
           <Button type="link" block className="homeBottomBoxButton2">
             <ShoppingCartOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Cart</p>
+            <p className="homeBottomBoxButtonText">Cart(0)</p>
           </Button>
 
           <Button type="link" block className="homeBottomBoxButton2">
