@@ -32,6 +32,7 @@ import productIngPs5 from "../Image/PS5-Middle-Banner-6251.jpg";
 import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
+import FeaturedProducts from "../Components/FeaturedProducts";
 
 const images = [
   "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",
@@ -218,6 +219,11 @@ export default function HomeIndex() {
               categoryScendText="Accessories"
             />
           </div>
+        </div>
+        {/* Featured Products */}
+        <div style={{ marginTop: "100px" }}>
+          <p className="homeMedContentCategoryHeadText">Featured Products</p>
+          <FeaturedProducts />
         </div>
         {/* Prodect Image */}
         <div className="homeMedContentProductImgBox">
