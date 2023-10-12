@@ -2,7 +2,7 @@ import React, { Component, useState, useRef, useEffect } from "react";
 import "./Style/Home.css";
 import "./Style/HomeHeader.css";
 
-import { Button, Input, Menu } from "antd";
+import { Button, Input, Menu, Drawer, Radio, Space } from "antd";
 import {
   GiftOutlined,
   ShoppingCartOutlined,
@@ -40,6 +40,13 @@ const items = [
 ];
 
 export default function HomeHeader() {
+  const [open, setOpen] = useState(false);
+  const showDrawer = () => {
+    setOpen(true);
+  };
+  const onClose = () => {
+    setOpen(false);
+  };
   return (
     <div className="homeBody">
       {/* TopBox */}
@@ -53,10 +60,33 @@ export default function HomeHeader() {
         <h1 style={{ color: "#ffffff", flex: "1" }}>Logo&Name</h1>
         <Button
           className="homeTopBoxSearch"
+          onClick={showDrawer}
           shape="circle"
           size="large"
           icon={<SearchOutlined />}
         />
+        <Drawer
+          placement="top"
+          closable={false}
+          onClose={onClose}
+          open={open}
+          height={70}
+          style={{
+            marginTop: "20px",
+            width: "86%",
+            marginLeft: "7%",
+            borderRadius: "20px",
+            backgroundColor: "transparent",
+          }}
+        >
+          <Search
+            placeholder="input search text"
+            allowClear
+            enterButton="Search"
+            size="large"
+            onSearch={onSearch}
+          />
+        </Drawer>
         <div className="homeTopBoxSearchDiv">
           <Search
             placeholder="Search"
