@@ -7,7 +7,7 @@ const deadline = Date.now() + 250 * 60 * 60 * 24 * 2 + 1000 * 30; // Dayjs is al
 
 export default function FlashSale() {
   return (
-    <div>
+    <div className='flashSaleBody'>
         <div className='flashSaleLine'/>
         <Flex  justify='space-evenly' align='flex-start' style={{ marginTop:'-7px',}}>
             <h2 style={{color:'red'}}>On Sale Now</h2>

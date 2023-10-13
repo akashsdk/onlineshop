@@ -8,6 +8,9 @@ import Category from "../Card/Category";
 import TopBrand from "../Components/TopBrand";
 import Note from "../Components/Note";
 import Footer from "../Components/Footer";
+import FeaturedProducts from "../Components/FeaturedProducts";
+import FlashSale from "../Components/FlashSale";
+import Title from "../Components/Title";
 
 import phone from "../Icon/tablet.png";
 import macBook from "../Icon/computer.png";
@@ -32,8 +35,7 @@ import productIngPs5 from "../Image/PS5-Middle-Banner-6251.jpg";
 import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
-import FeaturedProducts from "../Components/FeaturedProducts";
-import FlashSale from "../Components/FlashSale";
+
 
 const images = [
   "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",
@@ -119,8 +121,11 @@ export default function HomeIndex() {
             </div>
           </div>
         </div>
+        {/* Title */}
+        <Title/>
+
         {/* FlashSale */}
-        <div>
+        <div style={{marginTop:'100px'}}>
           <p className="homeMedContentCategoryHeadText">FlashSale 😍</p>
           <FlashSale />
         </div>
