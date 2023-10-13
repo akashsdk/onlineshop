@@ -4,6 +4,10 @@ import { Button, Flex } from "antd";
 
 export default function Title() {
   return (
-    <div className='titleBody'>Title nbcnbnbnbnn  hbhb  nbn </div>
+    <div className='titleBody'>
+        <div className='titleBox'>
+            ok
+        </div>
+         </div>
   )
 }
