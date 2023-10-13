@@ -25,5 +25,91 @@
   margin: 10px;
 }
 
+.box-box1 {
+  display: flex;
+}
+.box-box2 {
+  display: none;
+}
+.box-box3 {
+  display: none;
+}
+
 @media only screen and (max-width: 1000px) {
+  .box-box1 {
+    display: none;
+  }
+  .box-box3 {
+    display: none;
+  }
+  .box-box2 {
+    display: flex;
+  }
+  .titleDiv-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .titleBody2 {
+    height: auto;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .titleBox2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    margin-top: -5px;
+  }
+  .titleLine2 {
+    height: 43px;
+    width: 1px;
+    background-color: rgb(157, 155, 155);
+    margin: 10px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .box-box1 {
+    display: none;
+  }
+  .box-box2 {
+    display: none;
+  }
+  .box-box3 {
+    display: flex;
+  }
+
+  .titleBody3 {
+    height: 130px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+  }
+  .titleBox3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: -5px;
+  }
+  .titleLine3 {
+    height: 80px;
+    width: 1px;
+    background-color: rgb(157, 155, 155);
+    margin: 10px;
+  }
+  .titleText3 {
+    margin-left: 10px;
+  }
 }

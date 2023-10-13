@@ -122,7 +122,10 @@ export default function HomeIndex() {
           </div>
         </div>
         {/* Title */}
-        <Title/>
+        <div className="homeMedBody-Title">
+        <Title />
+        </div>
+       
 
         {/* FlashSale */}
         <div style={{marginTop:'100px'}}>
