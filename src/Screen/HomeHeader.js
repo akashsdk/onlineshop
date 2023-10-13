@@ -140,11 +140,15 @@ export default function HomeHeader() {
           }}
         >
           <Search
-            placeholder="input search text"
+            placeholder="search"
             allowClear
             enterButton="Search"
             size="large"
             onSearch={onSearch}
+            style={{
+              backgroundColor: "white",
+              borderRadius: "6px",
+            }}
           />
         </Drawer>
         <div className="homeTopBoxSearchDiv">
