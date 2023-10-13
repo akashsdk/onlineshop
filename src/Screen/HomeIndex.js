@@ -33,6 +33,7 @@ import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
 import FeaturedProducts from "../Components/FeaturedProducts";
+import FlashSale from "../Components/FlashSale";
 
 const images = [
   "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",
@@ -118,8 +119,13 @@ export default function HomeIndex() {
             </div>
           </div>
         </div>
-        {/* Offers */}
+        {/* FlashSale */}
         <div>
+          <p className="homeMedContentCategoryHeadText">FlashSale 😍</p>
+          <FlashSale />
+        </div>
+        {/* Offers */}
+        <div  style={{marginTop:'100px'}}>
           <p className="homeMedContentCategoryHeadText">Best for Order 🔥</p>
           <p className="homeMedContentCategoryText">
             Get your best offer from the featured category
