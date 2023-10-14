@@ -6,20 +6,29 @@ import { Flex, Radio, Button } from "antd";
 import phoneLogo from "../Icon/phone-call.png";
 import location from "../Icon/google-maps.png";
 
+import {
+  FacebookOutlined,
+  InstagramOutlined,
+  YoutubeOutlined,
+  WhatsAppOutlined,
+} from "@ant-design/icons";
+
 export default function Footer() {
   return (
     <div>
       <div className="footerFlex">
         <div className="footerBox">
           <p className="footerBoxText">SUPPORT</p>
-          <Button type="text" block className="footerBoxButton">
-            <img height={30} src={phoneLogo} />
-            <p className="footerNumberText"> 017** ******</p>
-          </Button>
-          <Button type="text" block className="footerBoxButton">
-            <img height={30} src={location} />
-            <p className="footerNumberText">Map View</p>
-          </Button>
+          <div style={{ margin: "20px" }}>
+            <Button type="text" block className="footerBoxButton">
+              <img height={30} src={phoneLogo} />
+              <p className="footerNumberText"> 017** ******</p>
+            </Button>
+            <Button type="text" block className="footerBoxButton">
+              <img height={30} src={location} />
+              <p className="footerNumberText">Map View</p>
+            </Button>
+          </div>
           <div>
             <p style={{ color: "#ffff" }}>
               Shop & Display Center Address: <br /> <br />
@@ -79,7 +88,28 @@ export default function Footer() {
           </div>
         </div>
         <div className="footerBox">
-          
+          <p className="footerBoxText">EASY ACCESS</p>
+          <Button className="footerBox2DivButton" type="text" block>
+            <p className="footerBox2DivButtonText"> Account </p>
+          </Button>
+          <Button className="footerBox2DivButton" type="text" block>
+            <p className="footerBox2DivButtonText"> Contact </p>
+          </Button>
+          <Button className="footerBox2DivButton" type="text" block>
+            <p className="footerBox2DivButtonText"> Pre-Order </p>
+          </Button>
+          <Button className="footerBox2DivButton" type="text" block>
+            <p className="footerBox2DivButtonText"> Cart() </p>
+          </Button>
+          <Button className="footerBox2DivButton" type="text" block>
+            <p className="footerBox2DivButtonText"> Offers</p>
+          </Button>
+          <div style={{marginTop:"20px", marginBottom:'20px'}}>
+            <Button style={{backgroundColor:'black', color:'#3b5998', borderColor:'aqua'}} icon={<FacebookOutlined />} href="" />
+            <Button style={{backgroundColor:'black', color:'#d62976', borderColor:'aqua', marginLeft:'10px'}}  icon={<InstagramOutlined />} href="" />
+            <Button style={{backgroundColor:'black', color:'#CD201F', borderColor:'aqua', marginLeft:'10px'}}  icon={<YoutubeOutlined />} href="" />
+            <Button style={{backgroundColor:'black', color:'#075e54', borderColor:'aqua', marginLeft:'10px'}}  icon={<WhatsAppOutlined />} href="" />
+          </div>
         </div>
       </div>
       <footer className="footer">

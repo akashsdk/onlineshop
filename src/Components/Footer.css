@@ -21,7 +21,7 @@
   background-color: #100f0f;
 }
 .footerBox{
-
+flex: 1;
 }
 .footerBoxText{
   color: #0cebef;
