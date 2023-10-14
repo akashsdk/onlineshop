@@ -44,6 +44,21 @@
   color: #ffffff;
   margin-left: 10px;
 }
+.footerBox2Div{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.footerBox2DivButton{
+  color: #ffffff;
+}
+.footerBox2DivButtonText{
+  margin-top: -0px;
+}
+.footerBox2DivButtonText:hover{
+  color: aqua;
+}
 
 @media  only screen and (max-width: 1000px) {
   .footerFlex{
