@@ -15,11 +15,10 @@
 }
 
 .footerFlex{
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  background-color: #100f0f;
+
+  
 }
+
 .footerBox{
 flex: 1;
 }
@@ -59,7 +58,19 @@ flex: 1;
 .footerBox2DivButtonText:hover{
   color: aqua;
 }
-
+.box {
+  
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  background-color: #100f0f;
+}
+.box2 {
+  display: none;
+}
+.box3 {
+  display: none;
+}
 @media  only screen and (max-width: 1000px) {
   .footerFlex{
    display: flex;
@@ -67,7 +78,34 @@ flex: 1;
    justify-content: center;
    align-items: center;
   }
+  .box2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100f0f;
+  }
+  .box1 {
+    display: none;
+  }
+  .box3 {
+    display: none;
+  }
+  
+
 }
 @media only screen and (max-width: 600px) {
-    
+  .box3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #100f0f;
+    flex-direction: column;
+  }
+  .box2 {
+    display: none;
+  }
+  .box1 {
+    display: none;
+  }
 }
+
