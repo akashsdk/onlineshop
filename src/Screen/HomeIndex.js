@@ -37,6 +37,7 @@ import productIngPs5 from "../Image/PS5-Middle-Banner-6251.jpg";
 import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
+import { Link } from "react-router-dom";
 
 const images = [
   "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",
@@ -147,91 +148,140 @@ export default function HomeIndex() {
             Get your desired product from featured category
           </p>
           <div>
-            <Category
-              categoryImg={phone}
-              categoryFastText="Phones & "
-              categoryScendText="Tablets"
-            />
-            <Category
-              categoryImg={macBook}
-              categoryFastText="MacBook "
-              categoryScendText="Computer"
-            />
-            <Category
-              categoryImg={adapter}
-              categoryFastText="Power & "
-              categoryScendText="Adapter"
-            />
+            <Link to="/Category/Phones-Tablets">
+              <Category
+                categoryImg={phone}
+                categoryFastText="Phones & "
+                categoryScendText="Tablets"
+              />
+            </Link>
+
+            <Link to="/Category/Computer-and-Laptop">
+              <Category
+                categoryImg={macBook}
+                categoryFastText="MacBook "
+                categoryScendText="Computer"
+              />
+            </Link>
+
+            <Link to="/Category/Power-Adapter">
+              <Category
+                categoryImg={adapter}
+                categoryFastText="Power & "
+                categoryScendText="Adapter"
+              />
+            </Link>
+
+            <Link></Link>
             <Category
               categoryImg={watch}
               categoryFastText="Smart "
               categoryScendText="Watch"
             />
-            <Category
-              categoryImg={airpods}
-              categoryFastText="Airpods "
-              categoryScendText="Headphones"
-            />
-            <Category
-              categoryImg={speaker}
-              categoryFastText="Sound "
-              categoryScendText="Speakers"
-            />
-            <Category
-              categoryImg={headphone1}
-              categoryFastText="Wireless "
-              categoryScendText="Headphones"
-            />
-            <Category
-              categoryImg={headphone2}
-              categoryFastText="Wired "
-              categoryScendText="Headphones"
-            />
-            <Category
-              categoryImg={headphone3}
-              categoryFastText="Overhead"
-              categoryScendText="Headphones"
-            />
-            <Category
-              categoryImg={cable}
-              categoryFastText="Cable &"
-              categoryScendText="Interconnects"
-            />
-            <Category
-              categoryImg={powerbank}
-              categoryFastText="Power"
-              categoryScendText="Bank"
-            />
-            <Category
-              categoryImg={wirelesscharging}
-              categoryFastText="Wireless"
-              categoryScendText="Charger"
-            />
-            <Category
-              categoryImg={hub}
-              categoryFastText="Hubs & "
-              categoryScendText="Docks" 
-            />
-            <Category
-              categoryImg={keyboard}
-              categoryFastText="Keyboard"
-              categoryScendText="Accessories"
-            />
-            <Category
-              categoryImg={mouse}
-              categoryFastText="Mouse"
-              categoryScendText="Accessories"
-            />
-            <Category
-              categoryImg={wipe}
-              categoryFastText="Cover &"
-              categoryScendText="Glass"
-            />
-            <Category
-              categoryImg={camera}
-              categoryFastText="Camera"
-              categoryScendText="Accessories"
-            />
+
+            <Link to="/Category/Headphones">
+              <Category
+                categoryImg={airpods}
+                categoryFastText="Airpods "
+                categoryScendText="Headphones"
+              />
+            </Link>
+
+            <Link to="/Category/Speakers">
+              <Category
+                categoryImg={speaker}
+                categoryFastText="Sound "
+                categoryScendText="Speakers"
+              />
+            </Link>
+
+            <Link to="/Category/Headphones">
+              <Category
+                categoryImg={headphone1}
+                categoryFastText="Wireless "
+                categoryScendText="Headphones"
+              />
+            </Link>
+
+            <Link to="/Category/Headphones">
+              <Category
+                categoryImg={headphone2}
+                categoryFastText="Wired "
+                categoryScendText="Headphones"
+              />
+            </Link>
+
+            <Link to="/Category/Headphones">
+              <Category
+                categoryImg={headphone3}
+                categoryFastText="Overhead"
+                categoryScendText="Headphones"
+              />
+            </Link>
+
+            <Link to="/Category/Cable-and-Interconnects">
+              <Category
+                categoryImg={cable}
+                categoryFastText="Cable &"
+                categoryScendText="Interconnects"
+              />
+            </Link>
+
+            <Link to="/Category/Power-Bank">
+              <Category
+                categoryImg={powerbank}
+                categoryFastText="Power"
+                categoryScendText="Bank"
+              />
+            </Link>
+
+            <Link to="/Category/Wireless-Charger">
+              <Category
+                categoryImg={wirelesscharging}
+                categoryFastText="Wireless"
+                categoryScendText="Charger"
+              />
+            </Link>
+
+            <Link to="/Category/Hubs-Docks">
+              <Category
+                categoryImg={hub}
+                categoryFastText="Hubs & "
+                categoryScendText="Docks"
+              />
+            </Link>
+
+            <Link to="/Category/Keyboard">
+              <Category
+                categoryImg={keyboard}
+                categoryFastText="Keyboard"
+                categoryScendText="Accessories"
+              />
+            </Link>
+
+            <Link to="/Category/Mouse">
+              <Category
+                categoryImg={mouse}
+                categoryFastText="Mouse"
+                categoryScendText="Accessories"
+              />
+            </Link>
+
+            <Link to="/Category/Cover&Glass">
+              <Category
+                categoryImg={wipe}
+                categoryFastText="Cover &"
+                categoryScendText="Glass"
+              />
+            </Link>
+
+            <Link to="/Category/Camera&Accessories">
+              <Category
+                categoryImg={camera}
+                categoryFastText="Camera"
+                categoryScendText="Accessories"
+              />
+            </Link>
           </div>
         </div>
         {/* Featured Products */}
@@ -257,12 +307,10 @@ export default function HomeIndex() {
           <p className="homeMedContentCategoryHeadText">Top Brand Products</p>
           <TopBrand />
         </div>
-        
+
         {/* About Us */}
         <div style={{ marginTop: "100px" }}>
-          <p className="homeMedContentCategoryHeadText">
-            About Us
-          </p>
+          <p className="homeMedContentCategoryHeadText">About Us</p>
 
           <div
             style={{
@@ -273,8 +321,8 @@ export default function HomeIndex() {
               alignItems: "flex-start",
             }}
           >
-             <h3 style={{color:'#FE6D02'}}> Unveiling Our Story</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}> Unveiling Our Story</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               Welcome to [Your Shop Name]! We're delighted to share our story
               and introduce ourselves to you. Our journey began with a vision to
               provide exceptional products and outstanding service to our
@@ -282,8 +330,8 @@ export default function HomeIndex() {
               give you a glimpse into who we are, what drives us, and what you
               can expect from your shopping experience.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Roots</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Roots</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               Our story started several years ago when a group of passionate
               individuals came together with a common purpose: to offer an
               online shopping experience like no other. We aimed to create a
@@ -292,35 +340,35 @@ export default function HomeIndex() {
               then, we've continually evolved, but our core values remain
               unwavering.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Mission</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Mission</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               At [Your Shop Name], our mission is simple: to be your one-stop
               destination for high-quality products that enhance your life. We
               strive to make the latest trends and innovative items accessible
               to everyone, ensuring that our customers have access to the best
               products on the market.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Values</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Values</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               1.Quality: We are committed to offering products of the highest
               quality. Our dedicated team carefully selects and tests each item
-              to ensure that it meets our rigorous standards. <br/> 
+              to ensure that it meets our rigorous standards. <br />
               2.Affordability: We believe that everyone should have access to
               top-notch products. We work diligently to keep our prices
-              competitive, making quality accessible. <br/>
+              competitive, making quality accessible. <br />
               3.Customer-Centric: Your satisfaction is our utmost priority.
               We're here to assist you throughout your shopping journey, from
               choosing the right product to post-purchase support.
-              <br/>
+              <br />
               4.Innovation: We're passionate about staying ahead of the curve.
               Our team is constantly on the lookout for the latest trends and
-              innovations to bring to your doorstep. <br/>
+              innovations to bring to your doorstep. <br />
               5.Transparency: We believe in being open and honest with our
               customers. You'll always know what you're getting, from product
               specifications to pricing.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Products</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Products</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               At [Your Shop Name], you'll discover a vast array of products
               designed to cater to your diverse needs and preferences. From
               cutting-edge technology to stylish fashion, home essentials, and
@@ -328,8 +376,8 @@ export default function HomeIndex() {
               standards of quality and value. We take pride in sourcing products
               from reputable suppliers and manufacturers worldwide.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Team</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Team</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               The heart of our operation is our dedicated and diverse team. With
               backgrounds in e-commerce, customer service, and product
               selection, we've come together to create a dynamic and
@@ -337,8 +385,10 @@ export default function HomeIndex() {
               perspective and skill set, but we share a common goal: your
               satisfaction.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Commitment to Sustainability</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>
+              Our Commitment to Sustainability
+            </h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               We're aware of the environmental challenges our world faces, and
               we're committed to making a positive impact. [Your Shop Name] is
               dedicated to sustainability through ethical sourcing, minimizing
@@ -346,8 +396,8 @@ export default function HomeIndex() {
               giving back to our planet and helping create a more sustainable
               future.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Customer-Centric Approach</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Customer-Centric Approach</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               At [Your Shop Name], you're not just a customer; you're a part of
               our community. We're devoted to ensuring that your shopping
               experience is seamless and enjoyable. Our customer support team is
@@ -355,22 +405,22 @@ export default function HomeIndex() {
               may have. We're here to provide you with the assistance you need,
               from product recommendations to order tracking and returns.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Our Pledge</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Our Pledge</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               As a token of our commitment to your satisfaction, we offer a 100%
               satisfaction guarantee. If you're not completely satisfied with
               your purchase, we'll do everything in our power to make it right.
               Your happiness is our success, and we stand by that pledge.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Connect with Us</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Connect with Us</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               We invite you to connect with us on social media to stay updated
               on our latest products, promotions, and community events. Follow
               us on Facebook, Instagram, and Twitter to become a part of the
               [Your Shop Name] family.
             </p>
-            <h3 style={{color:'#FE6D02'}}>Join Our Journey</h3>
-            <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
+            <h3 style={{ color: "#FE6D02" }}>Join Our Journey</h3>
+            <p style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}>
               At [Your Shop Name], we are more than just an online shop. We are
               a community of like-minded individuals who appreciate quality,
               value, and exceptional service. We thank you for choosing us as
