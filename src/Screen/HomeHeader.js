@@ -14,6 +14,8 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 
+import { Link } from "react-router-dom";
+
 const { Search } = Input;
 
 const onSearch = (value, _e, info) => console.log(info?.source, value);
@@ -67,57 +69,54 @@ export default function HomeHeader() {
           size="large"
           icon={<PicCenterOutlined />}
         />
-        <Drawer placement="left" 
-        onClose={onClose2}
-         open={open2}
-         style={{
-
-         }}>
+        <Drawer placement="left" onClose={onClose2} open={open2} style={{}}>
           <div className="homeTopBoxMenuDrawer">
             <div className="homeTopBoxMenuDrawerBox">
-            <Button type="text" className="homeMedTopButton1" block>
-              Phones & Tablets
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Power Adapter
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              MacBook
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Smart Watch
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Airpods
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-            Headphones
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Speakers
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Cable & Interconnects
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Power Bank
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Wireless Charger
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Hubs & Docks
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Keyboard
-            </Button>
-            <Button type="text" className="homeMedTopButton1" block>
-              Cover & Glass
-            </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Phones & Tablets
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Power Adapter
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                MacBook
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Smart Watch
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Airpods
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Headphones
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Speakers
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Cable & Interconnects
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Power Bank
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Wireless Charger
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Hubs & Docks
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Keyboard
+              </Button>
+              <Button type="text" className="homeMedTopButton1" block>
+                Cover & Glass
+              </Button>
             </div>
           </div>
         </Drawer>
+        <Link to="/" style={{flex:'1'}}>
         <h1 style={{ color: "#ffffff", flex: "1" }}>Logo&Name</h1>
+        </Link>
         <Button
           className="homeTopBoxSearch"
           onClick={showDrawer}
@@ -164,30 +163,40 @@ export default function HomeHeader() {
           />
         </div>
         <div className="homeTopBoxLeftDiv">
-          <Button type="link" block className="homeBottomBoxButton1">
-            <GiftOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Offers</p>
-          </Button>
+          <Link to="/My-Offers" style={{ flex: "1" }}>
+            <Button type="link" block className="homeBottomBoxButton1">
+              <GiftOutlined className="homeBottomBoxButtonIcon" />
+              <p className="homeBottomBoxButtonText">Offers</p>
+            </Button>
+          </Link>
 
-          <Button type="link" block className="homeBottomBoxButton2">
-            <ShoppingCartOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Cart(0)</p>
-          </Button>
+          <Link to="/My-Cart" style={{ flex: "1" }}>
+            <Button type="link" block className="homeBottomBoxButton2">
+              <ShoppingCartOutlined className="homeBottomBoxButtonIcon" />
+              <p className="homeBottomBoxButtonText">Cart(0)</p>
+            </Button>
+          </Link>
 
-          <Button type="link" block className="homeBottomBoxButton2">
-            <ShoppingOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Pre-Order</p>
-          </Button>
+          <Link to="/Pre-Order" style={{ flex: "1" }}>
+            <Button type="link" block className="homeBottomBoxButton2">
+              <ShoppingOutlined className="homeBottomBoxButtonIcon" />
+              <p className="homeBottomBoxButtonText">Pre-Order</p>
+            </Button>
+          </Link>
 
-          <Button type="link" block className="homeBottomBoxButton2">
-            <MessageOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Contacts</p>
-          </Button>
+          <Link to="/Contacts" style={{ flex: "1" }}>
+            <Button type="link" block className="homeBottomBoxButton2">
+              <MessageOutlined className="homeBottomBoxButtonIcon" />
+              <p className="homeBottomBoxButtonText">Contacts</p>
+            </Button>
+          </Link>
 
-          <Button type="link" block className="homeBottomBoxButton2">
-            <UserOutlined className="homeBottomBoxButtonIcon" />
-            <p className="homeBottomBoxButtonText">Account</p>
-          </Button>
+          <Link to="/Account" style={{ flex: "1" }}>
+            <Button type="link" block className="homeBottomBoxButton2">
+              <UserOutlined className="homeBottomBoxButtonIcon" />
+              <p className="homeBottomBoxButtonText">Account</p>
+            </Button>
+          </Link>
         </div>
       </div>
       {/* MidBox */}
