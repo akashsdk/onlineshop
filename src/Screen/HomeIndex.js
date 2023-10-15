@@ -257,11 +257,11 @@ export default function HomeIndex() {
           <p className="homeMedContentCategoryHeadText">Top Brand Products</p>
           <TopBrand />
         </div>
-        <Note />
-        {/* Content */}
+        
+        {/* About Us */}
         <div style={{ marginTop: "100px" }}>
           <p className="homeMedContentCategoryHeadText">
-            About Us: Unveiling Our Story
+            About Us
           </p>
 
           <div
@@ -273,6 +273,7 @@ export default function HomeIndex() {
               alignItems: "flex-start",
             }}
           >
+             <h3 style={{color:'#FE6D02'}}> Unveiling Our Story</h3>
             <p style={{textAlign:'left', opacity:'.6', marginTop:'-10px'}}>
               Welcome to [Your Shop Name]! We're delighted to share our story
               and introduce ourselves to you. Our journey began with a vision to
@@ -389,6 +390,7 @@ export default function HomeIndex() {
             </p>
           </div>
         </div>
+        <Note />
         <Footer />
       </div>
     </div>
