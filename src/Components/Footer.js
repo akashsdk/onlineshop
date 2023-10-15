@@ -89,7 +89,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footerBox">
-          <p className="footerBoxText">EASY ACCESS</p>
+          <p className="footerBoxText">QUICK LINKS</p>
           <Button className="footerBox2DivButton" type="text" block>
             <p className="footerBox2DivButtonText"> Account </p>
           </Button>
@@ -238,7 +238,7 @@ export default function Footer() {
             </div>
           </div>
           <div className="footerBox">
-            <p className="footerBoxText">EASY ACCESS</p>
+            <p className="footerBoxText">QUICK LINKS</p>
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> Account </p>
             </Button>
@@ -371,7 +371,7 @@ export default function Footer() {
           </div>
         </div>
         <div className="footerBox">
-          <p className="footerBoxText">EASY ACCESS</p>
+          <p className="footerBoxText">QUICK LINKS</p>
           <Button className="footerBox2DivButton" type="text" block>
             <p className="footerBox2DivButtonText"> Account </p>
           </Button>
