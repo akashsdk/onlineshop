@@ -210,7 +210,7 @@ export default function HomeIndex() {
             <Category
               categoryImg={hub}
               categoryFastText="Hubs & "
-              categoryScendText="Docks"
+              categoryScendText="Docks" 
             />
             <Category
               categoryImg={keyboard}
