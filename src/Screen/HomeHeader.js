@@ -203,51 +203,90 @@ export default function HomeHeader() {
       <div className="homeMedBox">
         {/* homeMedTopBox */}
         <div className="homeMedTopBox">
+          <Link to='/Category/Phones-Tablets' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton0" block>
             Phones &<br />
             Tablets
           </Button>
+          </Link>
+
+          <Link to='/Category/Power-Adapter' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Power <br></br>
             Adapter
           </Button>
+          </Link>
+
+          <Link to='/Category/Computer-and-Laptop' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             <p>MacBook</p>
           </Button>
+          </Link>
+
+          <Link to='/Category/Smart-Watch' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Smart <br /> Watch
           </Button>
+          </Link>
+
+          <Link to='/Category/Headphones' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Airpods
           </Button>
+          </Link>
+
+          <Link to='/Category/Headphones' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
-            <Menu
+            {/* <Menu
               mode="horizontal"
               items={items}
               className="homeMedTopButtonMenu"
-            />
+            /> */}
+            Headphones
           </Button>
+          </Link>
+
+          <Link to='/Category/Speakers' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Speakers
           </Button>
+          </Link>
+
+          <Link to='/Category/Cable-and-Interconnects' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Cable & <br /> Interconnects
           </Button>
+          </Link>
+
+          <Link to='/Category/Power-Bank' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Power Bank
           </Button>
+          </Link>
+
+          <Link to='/Category/Wireless-Charger' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Wireless <br /> Charger
           </Button>
+          </Link>
+
+          <Link to='/Category/Hubs-Docks' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Hubs & <br /> Docks
           </Button>
+          </Link>
+
+          <Link to='/Category/Keyboard' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Keyboard
           </Button>
+          </Link>
+
+          <Link to='/Category/Cover&Glass' style={{flex:'1'}}>
           <Button type="text" className="homeMedTopButton" block>
             Cover & <br /> Glass
           </Button>
+          </Link>
         </div>
       </div>
     </div>
