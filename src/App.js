@@ -7,6 +7,8 @@ import WrongPage from "./Screen/WrongPage";
 import HomeHeader from "./Screen/HomeHeader";
 import HomeFooter from "./Screen/HomeFooter";
 
+import AboutUs from "./OtherLink/AboutUs";
+
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +17,7 @@ function App() {
         <Routes>
           <Route path="*" element={<WrongPage />} />
           <Route path="/" element={<Home />} />
+          <Route path="/AboutUs" element={<AboutUs/>} />
         </Routes>
         <HomeFooter/>
       </div>
