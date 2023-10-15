@@ -184,9 +184,11 @@ export default function Footer() {
           <div className="footerBox">
             <p className="footerBoxText">ABOUT US</p>
             <div className="footerBox2Div">
+            <Link to="/AboutUs">
               <Button className="footerBox2DivButton" type="text" block>
                 <p className="footerBox2DivButtonText"> About Us </p>
               </Button>
+               </Link>
               <Button className="footerBox2DivButton" type="text" block>
                 <p className="footerBox2DivButtonText"> Careers </p>
               </Button>
@@ -326,9 +328,12 @@ export default function Footer() {
         <div className="footerBox">
           <p className="footerBoxText">ABOUT US</p>
           <div className="footerBox2Div">
+          <Link to="/AboutUs">
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> About Us </p>
             </Button>
+            </Link>
+            
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> Careers </p>
             </Button>
