@@ -12,6 +12,7 @@ import {
   YoutubeOutlined,
   WhatsAppOutlined,
 } from "@ant-design/icons";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -42,9 +43,10 @@ export default function Footer() {
         <div className="footerBox">
           <p className="footerBoxText">ABOUT US</p>
           <div className="footerBox2Div">
-            <Button className="footerBox2DivButton" type="text" block>
+            <Link to="/AboutUs"> <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> About Us </p>
-            </Button>
+            </Button></Link>
+            
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> Careers </p>
             </Button>

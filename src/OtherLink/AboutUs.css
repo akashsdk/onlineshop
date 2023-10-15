@@ -2,9 +2,3 @@
     height: auto;
     width: 100%;
 }
-.overflowBox{
-    height: calc(100vh - 140px);
-    width: 100%;
-    overflow: auto;
-    flex-direction: column;
-  }
