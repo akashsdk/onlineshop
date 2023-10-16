@@ -1,11 +1,19 @@
-import React from "react";
+import React, { Component, useState }  from "react";
 import "./Style/Cart.css";
 import Footer from "../Components/Footer";
 
 import { DeleteOutlined } from "@ant-design/icons";
-import { Button, Input } from "antd";
+import { Button, Input, InputNumber } from "antd";
+
+const onChange = (value) => {
+  console.log('changed', value);
+};
+
+
+
 
 export default function Cart() {
+  
   return (
     <div className="overflowBox">
       <div className="cartBody">
@@ -43,7 +51,35 @@ export default function Cart() {
               <p>Model</p>
             </div>
             <div className="cartTopQuantity2">
-              <p>Quantity</p>
+            <InputNumber size="large" min={1} max={100000} defaultValue={1} onChange={onChange} />
+            </div>
+            <div className="cartTopPrice2">
+              <p>Unit Price</p>
+            </div>
+            <div className="cartTopTotal2">
+              <p>3440</p>
+              <Button
+                className="cartTopDeleteButton"
+                shape="circle"
+                icon={
+                  <DeleteOutlined style={{ fontSize: "23px", color: "red" }} />
+                }
+              />
+            </div>
+          </div>
+
+          <div className="cartTopBox2">
+            <div className="cartTopImg2">
+              <p>Image</p>
+            </div>
+            <div className="cartTopText2">
+              <p>Product</p>
+            </div>
+            <div className="cartTopModel2">
+              <p>Model</p>
+            </div>
+            <div className="cartTopQuantity2">
+            <InputNumber size="large" min={1} max={100000} defaultValue={1} onChange={onChange} />
             </div>
             <div className="cartTopPrice2">
               <p>Unit Price</p>
@@ -85,10 +121,14 @@ export default function Cart() {
           </div>
 
           <div className="cartTopBottomDiv">
-            <Input size="large" placeholder="large size" />
-            <Button size={"large"} danger>Danger Default</Button>
-            <Input size="large" placeholder="large size" />
-            <Button size={"large"} danger>Danger Default</Button>
+            <div className="cartTopBottomDiv2">
+            <Input className="cartTopBottomInput" size="large" placeholder="Promo / Coupon Code" />
+            <Button className="cartTopBottomButton" size={"large"} danger>APPLY COUPON</Button>
+            </div>
+            <div className="cartTopBottomDiv2">
+            <Input className="cartTopBottomInput" size="large" placeholder="Gift Voucher" />
+            <Button className="cartTopBottomButton" size={"large"} danger>APPLY VOUCHER</Button>
+            </div>
           </div>
         </div>
       </div>

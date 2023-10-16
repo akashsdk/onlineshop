@@ -1,5 +1,5 @@
 .cartBody {
-  height: 500px;
+  height: auto;
   width: 90%;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
   margin-left: 5%;
@@ -79,7 +79,7 @@
 }
 
 .cartTopMidPriceDiv {
-  height: 150px;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -106,11 +106,27 @@
 .cartTopBottomDiv{
     height: 60px;
     width: 100%;
-    background-color: rgb(221, 255, 255);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+.cartTopBottomDiv2{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartTopBottomInput{
+    background-color: #ffffff;
+    width: 50%;
+}
+.cartTopBottomButton{
+    width: 40%;
+    margin-left: 5%;
 }
 @media (max-width: 1000px) {
   .cartTopModel {
@@ -126,6 +142,22 @@
   .cartTopPrice2 {
     display: none;
   }
+  .cartTopBottomDiv{
+    height: 120px;
+    width: 100%;
+  }
+  .cartTopBottomDiv2{
+    flex-direction: column;
+  }
+  .cartTopBottomInput{
+    background-color: #ffffff;
+    width: 70%;
+}
+.cartTopBottomButton{
+    width: auto;
+    margin-left: 5%;
+    margin-top: 15px;
+}
 }
 
 /* Box 3 - Below 600px */
