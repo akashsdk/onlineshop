@@ -1,4 +1,4 @@
-import React, { Component, useState }  from "react";
+import React, { Component, useState } from "react";
 import "./Style/Cart.css";
 import Footer from "../Components/Footer";
 
@@ -6,14 +6,10 @@ import { DeleteOutlined } from "@ant-design/icons";
 import { Button, Input, InputNumber } from "antd";
 
 const onChange = (value) => {
-  console.log('changed', value);
+  console.log("changed", value);
 };
 
-
-
-
 export default function Cart() {
-  
   return (
     <div className="overflowBox">
       <div className="cartBody">
@@ -51,7 +47,13 @@ export default function Cart() {
               <p>Model</p>
             </div>
             <div className="cartTopQuantity2">
-            <InputNumber size="large" min={1} max={100000} defaultValue={1} onChange={onChange} />
+              <InputNumber
+                size="large"
+                min={1}
+                max={100000}
+                defaultValue={1}
+                onChange={onChange}
+              />
             </div>
             <div className="cartTopPrice2">
               <p>Unit Price</p>
@@ -79,7 +81,13 @@ export default function Cart() {
               <p>Model</p>
             </div>
             <div className="cartTopQuantity2">
-            <InputNumber size="large" min={1} max={100000} defaultValue={1} onChange={onChange} />
+              <InputNumber
+                size="large"
+                min={1}
+                max={100000}
+                defaultValue={1}
+                onChange={onChange}
+              />
             </div>
             <div className="cartTopPrice2">
               <p>Unit Price</p>
@@ -122,16 +130,51 @@ export default function Cart() {
 
           <div className="cartTopBottomDiv">
             <div className="cartTopBottomDiv2">
-            <Input className="cartTopBottomInput" size="large" placeholder="Promo / Coupon Code" />
-            <Button className="cartTopBottomButton" size={"large"} danger>APPLY COUPON</Button>
+              <Input
+                className="cartTopBottomInput"
+                size="large"
+                placeholder="Promo / Coupon Code"
+              />
+              <Button className="cartTopBottomButton" size={"large"} danger>
+                APPLY COUPON
+              </Button>
             </div>
             <div className="cartTopBottomDiv2">
-            <Input className="cartTopBottomInput" size="large" placeholder="Gift Voucher" />
-            <Button className="cartTopBottomButton" size={"large"} danger>APPLY VOUCHER</Button>
+              <Input
+                className="cartTopBottomInput"
+                size="large"
+                placeholder="Gift Voucher"
+              />
+              <Button className="cartTopBottomButton" size={"large"} danger>
+                APPLY VOUCHER
+              </Button>
+            </div>
+          </div>
+
+          <div
+            style={{
+              height: "auto",
+              width: "100%",
+              display: "flex",
+              marginBottom: "70px",
+            }}
+          >
+            <div
+              style={{ display: "flex", width: "50%",  }}
+            >
+              <Button size={"large"} type="dashed" danger>
+                Continue Shopping
+              </Button>
+            </div>
+            <div style={{display:'flex', width:'50%', justifyContent:'flex-end'}}>
+              <Button size={"large"} type="primary" danger>
+                Check Out
+              </Button>
             </div>
           </div>
         </div>
       </div>
+
       <Footer />
     </div>
   );
