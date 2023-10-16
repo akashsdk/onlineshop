@@ -43,10 +43,12 @@ export default function Footer() {
         <div className="footerBox">
           <p className="footerBoxText">ABOUT US</p>
           <div className="footerBox2Div">
-            <Link to="/AboutUs"> <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> About Us </p>
-            </Button></Link>
-            
+            <Link to="/AboutUs">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> About Us </p>
+              </Button>
+            </Link>
+
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> Careers </p>
             </Button>
@@ -92,21 +94,35 @@ export default function Footer() {
         </div>
         <div className="footerBox">
           <p className="footerBoxText">QUICK LINKS</p>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Account </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Contact </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Pre-Order </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Cart(0) </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Offers</p>
-          </Button>
+          <Link to="/Account">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Account </p>
+            </Button>
+          </Link>
+
+          <Link to="/Contacts">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Contact </p>
+            </Button>
+          </Link>
+
+          <Link to="/Pre-Order">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Pre-Order </p>
+            </Button>
+          </Link>
+
+          <Link to="/My-Cart">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Cart(0) </p>
+            </Button>
+          </Link>
+
+          <Link to="/My-Offers">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Offers</p>
+            </Button>
+          </Link>
           <div style={{ marginTop: "20px", marginBottom: "20px" }}>
             <Button
               style={{
@@ -184,11 +200,11 @@ export default function Footer() {
           <div className="footerBox">
             <p className="footerBoxText">ABOUT US</p>
             <div className="footerBox2Div">
-            <Link to="/AboutUs">
-              <Button className="footerBox2DivButton" type="text" block>
-                <p className="footerBox2DivButtonText"> About Us </p>
-              </Button>
-               </Link>
+              <Link to="/AboutUs">
+                <Button className="footerBox2DivButton" type="text" block>
+                  <p className="footerBox2DivButtonText"> About Us </p>
+                </Button>
+              </Link>
               <Button className="footerBox2DivButton" type="text" block>
                 <p className="footerBox2DivButtonText"> Careers </p>
               </Button>
@@ -243,21 +259,36 @@ export default function Footer() {
           </div>
           <div className="footerBox">
             <p className="footerBoxText">QUICK LINKS</p>
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> Account </p>
-            </Button>
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> Contact </p>
-            </Button>
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> Pre-Order </p>
-            </Button>
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> Cart(0) </p>
-            </Button>
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> Offers</p>
-            </Button>
+            <Link to="/Account">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> Account </p>
+              </Button>
+            </Link>
+
+            <Link to="/Contacts">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> Contact </p>
+              </Button>
+            </Link>
+
+            <Link to="/Pre-Order">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> Pre-Order </p>
+              </Button>
+            </Link>
+
+            <Link to="/My-Cart">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> Cart(0) </p>
+              </Button>
+            </Link>
+
+            <Link to="/My-Offers">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> Offers</p>
+              </Button>
+            </Link>
+
             <div style={{ marginTop: "20px", marginBottom: "20px" }}>
               <Button
                 style={{
@@ -328,12 +359,12 @@ export default function Footer() {
         <div className="footerBox">
           <p className="footerBoxText">ABOUT US</p>
           <div className="footerBox2Div">
-          <Link to="/AboutUs">
-            <Button className="footerBox2DivButton" type="text" block>
-              <p className="footerBox2DivButtonText"> About Us </p>
-            </Button>
+            <Link to="/AboutUs">
+              <Button className="footerBox2DivButton" type="text" block>
+                <p className="footerBox2DivButtonText"> About Us </p>
+              </Button>
             </Link>
-            
+
             <Button className="footerBox2DivButton" type="text" block>
               <p className="footerBox2DivButtonText"> Careers </p>
             </Button>
@@ -379,21 +410,35 @@ export default function Footer() {
         </div>
         <div className="footerBox">
           <p className="footerBoxText">QUICK LINKS</p>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Account </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Contact </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Pre-Order </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Cart(0) </p>
-          </Button>
-          <Button className="footerBox2DivButton" type="text" block>
-            <p className="footerBox2DivButtonText"> Offers</p>
-          </Button>
+          <Link to="/Account">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Account </p>
+            </Button>
+          </Link>
+
+          <Link to="/Contacts">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Contact </p>
+            </Button>
+          </Link>
+
+          <Link to="/Pre-Order">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Pre-Order </p>
+            </Button>
+          </Link>
+
+          <Link to="/My-Cart">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Cart(0) </p>
+            </Button>
+          </Link>
+
+          <Link to="/My-Offers">
+            <Button className="footerBox2DivButton" type="text" block>
+              <p className="footerBox2DivButtonText"> Offers</p>
+            </Button>
+          </Link>
           <div style={{ marginTop: "20px", marginBottom: "20px" }}>
             <Button
               style={{
