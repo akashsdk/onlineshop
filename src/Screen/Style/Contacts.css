@@ -1,11 +1,60 @@
 .contactsBody {
-  height: 500px;
+  height: auto;
   width: 100%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.contactsBox {
+  height: auto;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  border: 1px solid aqua;
+  border-radius: 20px;
+}
+.contactsDiv {
+  margin-top: 50px;
+  margin-right: 20%;
+  margin-bottom: 30px;
+}
 
+.contactsSubmitButton {
+  background-color: aqua;
+  color: #000;
+  margin-top: 30px;
+  margin-left: 20%;
+  
+}
+.contactsResetButton {
+  margin-left: 30%;
+}
 
 @media (max-width: 1000px) {
+  .contactsBox {
+    width: 80%;
+  }
 }
 @media (max-width: 600px) {
+    .contactsBody{
+        width: 100%;
+    }
+    .contactsBox {
+        width: 96%;
+
+      }
+      .contactsDiv {
+        margin-right: 2%;
+        margin-left: 2%;
+        
+      }
+      .contactsResetButton {
+        margin-left: 0%;
+        
+      }
+      .contactsSubmitButton {
+        margin-left: 2%;
+      }
 }

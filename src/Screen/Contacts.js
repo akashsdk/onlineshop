@@ -11,12 +11,7 @@ const layout = {
     span: 16,
   },
 };
-const tailLayout = {
-  wrapperCol: {
-    offset: 8,
-    span: 16,
-  },
-};
+
 
 export default function Contacts() {
   const [newName, setNewName] = useState("");
@@ -51,14 +46,17 @@ export default function Contacts() {
 
   return (
     <div className="overflowBox">
+      <h2 style={{opacity:'.8', marginTop:'50px'}}>Easy To Contact With Us 💁</h2>
       <div className="contactsBody">
+        <div className="contactsBox">
+        <div className="contactsDiv">
         <Form
           {...layout}
           ref={formRef}
           name="control-ref"
           onFinish={onFinish}
           style={{
-            maxWidth: 600,
+            width:'100%'
           }}
         >
           <Form.Item
@@ -119,15 +117,16 @@ export default function Contacts() {
               }} />
           </Form.Item>
 
-          <Form.Item {...tailLayout}>
+          <Form.Item>
+          <Button className="contactsResetButton" htmlType="button" onClick={showModal} danger>
+              Reset
+            </Button>
           <Tooltip placement="topLeft" title={isButtonDisabled  ? text : ''}>
-            <Button type="primary" htmlType="submit" disabled={isButtonDisabled}>
+            <Button className="contactsSubmitButton" type="primary" htmlType="submit" disabled={isButtonDisabled}>
               Submit
             </Button>
             </Tooltip>
-            <Button htmlType="button" onClick={showModal}>
-              Reset
-            </Button>
+            
             <Modal
               title="Confirm to Reset !"
               open={isModalOpen}
@@ -137,6 +136,8 @@ export default function Contacts() {
             </Modal>
           </Form.Item>
         </Form>
+        </div>
+        </div>
       </div>
       <Footer />
     </div>
