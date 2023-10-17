@@ -50,7 +50,7 @@ export default function PreOrder() {
   return (
     <div className="overflowBox">
       <div className="preOrderBody">
-        <h2>Looking For Something Different 👀</h2>
+        <h2 style={{marginTop:'50px'}}>Looking For Something Different 👀</h2>
         <div className="preOrderBox">
           <p className="preOrderBoxText">Product Information</p>
           <Input size="large" placeholder="Enter Product Name / URL" />
@@ -116,9 +116,12 @@ export default function PreOrder() {
             I hereby accept the terms and conditions of pre-order and read the
             pre-order terms and conditions carefully.
           </label>
+          <div style={{marginTop:'30px'}}>
           <Button size={"large"} type="dashed" disabled={!isChecked} danger>
             Submit
           </Button>
+          </div>
+          
         </div>
       </div>
       {/* Category */}

@@ -17,3 +17,19 @@
     font-size: 22px;
     opacity: .7;
 }
+@media (max-width: 1000px) {
+    .preOrderBox{
+        width: 80%;
+        margin-left: 10%;
+    
+    }
+    
+  }
+  @media (max-width: 600px) {
+    .preOrderBox{
+        width: 96%;
+        margin-left: 2%;
+    
+    }
+  }
+  
