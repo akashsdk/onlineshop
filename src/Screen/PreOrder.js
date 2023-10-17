@@ -23,71 +23,12 @@ import hub from "../Icon/usb-hub.png";
 import wipe from "../Icon/wipe.png";
 import wirelesscharging from "../Icon/wireless-charging.png";
 
-import { PlusOutlined } from "@ant-design/icons";
-
-const getBase64 = (file) =>
-  new Promise((resolve, reject) => {
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onload = () => resolve(reader.result);
-    reader.onerror = (error) => reject(error);
-  });
-
 export default function PreOrder() {
-  const [previewOpen, setPreviewOpen] = useState(false);
-  const [previewImage, setPreviewImage] = useState("");
-  const [previewTitle, setPreviewTitle] = useState("");
-  const [fileList, setFileList] = useState([
-    {
-      uid: "-1",
-      name: "image.png",
-      status: "done",
-      url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    },
-    {
-      uid: "-xxx",
-      percent: 50,
-      name: "image.png",
-      status: "uploading",
-      url: "https://zos.alipayobjects.com/rmsportal/jkjgkEfvpUPVyRjUImniVslZfWPnJuuZ.png",
-    },
-    {
-      uid: "-5",
-      name: "image.png",
-      status: "error",
-    },
-  ]);
-  const handleCancel = () => setPreviewOpen(false);
-  const handlePreview = async (file) => {
-    if (!file.url && !file.preview) {
-      file.preview = await getBase64(file.originFileObj);
-    }
-    setPreviewImage(file.url || file.preview);
-    setPreviewOpen(true);
-    setPreviewTitle(
-      file.name || file.url.substring(file.url.lastIndexOf("/") + 1)
-    );
-  };
-  const handleChange = ({ fileList: newFileList }) => setFileList(newFileList);
-  const uploadButton = (
-    <div>
-      <PlusOutlined />
-      <div
-        style={{
-          marginTop: 8,
-        }}
-      >
-        Upload
-      </div>
-    </div>
-  );
-
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
   };
-
 
   const [images, setImages] = useState([]);
   const [isUploaderDisabled, setIsUploaderDisabled] = useState(false);
@@ -96,7 +37,7 @@ export default function PreOrder() {
     const selectedImages = Array.from(e.target.files);
 
     if (images.length + selectedImages.length > 2) {
-      alert('You can upload a maximum of 2 images.');
+      alert("You can upload a maximum of 2 images.");
       return;
     }
 
@@ -106,84 +47,79 @@ export default function PreOrder() {
       setIsUploaderDisabled(true);
     }
   };
-
   return (
     <div className="overflowBox">
       <div className="preOrderBody">
         <h2>Looking For Something Different 👀</h2>
         <div className="preOrderBox">
-          <p>Product Information</p>
+          <p className="preOrderBoxText">Product Information</p>
           <Input size="large" placeholder="Enter Product Name / URL" />
-          <p>Insert Image</p>
+          <p className="preOrderBoxText">Insert Image</p>
           <div>
-            <Upload
-              action="https://run.mocky.io/v3/435e224c-44fb-4773-9faf-380c5e6a2188"
-              listType="picture-circle"
-              onPreview={handlePreview}
-              onChange={handleChange}
-            >
-              {fileList.length >= 8 ? null : uploadButton}
-            </Upload>
-            <Modal
-              open={previewOpen}
-              title={previewTitle}
-              footer={null}
-              onCancel={handleCancel}
-            >
-              <img
-                alt="example"
-                style={{
-                  width: "100%",
-                }}
-                src={previewImage}
-              />
-            </Modal>
+            <input
+              type="file"
+              accept="image/*"
+              multiple
+              onChange={handleImageUpload}
+              disabled={isUploaderDisabled}
+            />
+            <div className="image-preview">
+              {images.map((image, index) => (
+                <img
+                  key={index}
+                  src={URL.createObjectURL(image)}
+                  alt={`Uploaded ${index + 1}`}
+                  height={200}
+                  width={200}
+                />
+              ))}
+            </div>
+            {isUploaderDisabled && (
+              <p>Maximum of 2 images reached. Uploader disabled.</p>
+            )}
           </div>
-          <p>Name</p>
+          <p className="preOrderBoxText">Name</p>
           <Input size="large" placeholder="Enter Name" />
-          <div>
-            <p>Phone</p>
-            <Input size="large" placeholder="Enter Phone No" />
-            <p>Email</p>
-            <Input size="large" placeholder="Enter Email Id" />
+          <div style={{ display: "flex", width: "100%" }}>
+            <div
+              style={{
+                width: "48%",
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "column",
+              }}
+            >
+              <p className="preOrderBoxText">Phone</p>
+              <Input size="large" placeholder="Enter Phone No" />
+            </div>
+            <div
+              style={{
+                width: "48%",
+                marginLeft: "4%",
+                display: "flex",
+                alignItems: "flex-start",
+                flexDirection: "column",
+              }}
+            >
+              <p className="preOrderBoxText">Email</p>
+              <Input size="large" placeholder="Enter Email Id" />
+            </div>
           </div>
-          <p>Address</p>
+          <p className="preOrderBoxText">Address</p>
           <Input size="large" placeholder="Enter Address" />
-          <div>
-            <label>
-              <input
-                type="checkbox"
-                checked={isChecked}
-                onChange={handleCheckboxChange}
-              />
-              I hereby accept the terms and conditions of pre-order and read the pre-order terms and conditions carefully.
-            </label>
-          </div>
-          <Button size={'large'} type="dashed" disabled={!isChecked} danger>Submit</Button>
-
+          <label style={{ opacity: ".4", marginTop: "20px" }}>
+            <input
+              type="checkbox"
+              checked={isChecked}
+              onChange={handleCheckboxChange}
+            />
+            I hereby accept the terms and conditions of pre-order and read the
+            pre-order terms and conditions carefully.
+          </label>
+          <Button size={"large"} type="dashed" disabled={!isChecked} danger>
+            Submit
+          </Button>
         </div>
-        <div className="App">
-      <h1>Image Uploader</h1>
-      <input
-        type="file"
-        accept="image/*"
-        multiple
-        onChange={handleImageUpload}
-        disabled={isUploaderDisabled}
-      />
-      <div className="image-preview">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={URL.createObjectURL(image)}
-            alt={`Uploaded ${index + 1}`}
-          />
-        ))}
-      </div>
-      {isUploaderDisabled && (
-        <p>Maximum of 2 images reached. Uploader disabled.</p>
-      )}
-    </div>
       </div>
       {/* Category */}
       <div style={{ marginBottom: "50px", marginTop: "50px" }}>
