@@ -20,7 +20,6 @@ const tailLayout = {
 
 export default function Contacts() {
   const [newName, setNewName] = useState("");
-  const [newGender, setNewGender] = useState("");
   const [newEmail, setNewEmail] = useState("");
   const [newPhone, setNewPhone] = useState("");
   const [newMessage, setNewMessage] = useState("");
