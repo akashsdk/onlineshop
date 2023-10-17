@@ -1,0 +1,11 @@
+.contactsBody {
+  height: 500px;
+  width: 100%;
+}
+
+
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 600px) {
+}
