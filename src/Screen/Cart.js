@@ -4,6 +4,7 @@ import Footer from "../Components/Footer";
 
 import { DeleteOutlined } from "@ant-design/icons";
 import { Button, Input, InputNumber } from "antd";
+import { Link } from "react-router-dom";
 
 const onChange = (value) => {
   console.log("changed", value);
@@ -159,17 +160,26 @@ export default function Cart() {
               marginBottom: "70px",
             }}
           >
-            <div
-              style={{ display: "flex", width: "50%",  }}
-            >
-              <Button size={"large"} type="dashed" danger>
-                Continue Shopping
-              </Button>
+            <div style={{ display: "flex", width: "50%" }}>
+              <Link to="/">
+                <Button size={"large"} type="dashed" danger>
+                  Continue Shopping
+                </Button>
+              </Link>
             </div>
-            <div style={{display:'flex', width:'50%', justifyContent:'flex-end'}}>
-              <Button size={"large"} type="primary" danger>
-                Check Out
-              </Button>
+
+            <div
+              style={{
+                display: "flex",
+                width: "50%",
+                justifyContent: "flex-end",
+              }}
+            >
+              <Link to="/Checkout">
+                <Button size={"large"} type="primary" danger>
+                  Check Out
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
