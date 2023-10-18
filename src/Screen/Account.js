@@ -89,7 +89,6 @@ export default function Account() {
                     }}
                     size={"large"}
                     type="primary"
-                    danger
                   >
                     LogIn
                   </Button>
