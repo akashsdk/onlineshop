@@ -60,6 +60,19 @@ export default function Checkout() {
     }
   };
 
+  const renderOutput4 = () => {
+    switch (selectedOption) {
+      case "A":
+        return <p className="cartTopMidPriceP">100</p>;
+      case "B":
+        return <p className="cartTopMidPriceP">120</p>;
+      case "C":
+        return <p className="cartTopMidPriceP">120</p>;
+      default:
+        return <p className="cartTopMidPriceP">You didn't select the option</p>;
+    }
+  };
+
   //   Radio Buttons (Step-3)
 
   const [selectedOption2, setSelectedOption2] = useState("");
@@ -83,6 +96,21 @@ export default function Checkout() {
     }
   };
 
+  const renderOutput3 = () => {
+    switch (selectedOption2) {
+      case "D":
+        return <p className="cartTopMidPriceP">Cash on Delivery</p>;
+      case "E":
+        return <p className="cartTopMidPriceP">bKash</p>;
+      case "F":
+        return <p className="cartTopMidPriceP">Nagag</p>;
+      case "G":
+        return <p className="cartTopMidPriceP">Rocket</p>;
+      default:
+        return <p className="cartTopMidPriceP">You didn't select the option</p>;
+    }
+  };
+
   //   Modal
 
   const [open, setOpen] = useState(false);
@@ -103,6 +131,32 @@ export default function Checkout() {
     setOpen(false);
   };
 
+  // Test
+
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [address, setAddress] = useState("");
+
+  const handleFirstNameChange = (e) => {
+    setFirstName(e.target.value);
+  };
+
+  const handleLastNameChange = (e) => {
+    setLastName(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePhoneChange = (e) => {
+    setPhone(e.target.value);
+  };
+  const handleAddressChange = (e) => {
+    setAddress(e.target.value);
+  };
+
   return (
     <div className="overflowBox">
       {page === 1 ? (
@@ -120,11 +174,19 @@ export default function Checkout() {
               <div className="checkoutBoxDiv">
                 <div className="checkoutBoxDiv2">
                   <p className="checkoutBoxText">First Name* </p>
-                  <Input placeholder="First Name" />
+                  <Input
+                    placeholder="First Name"
+                    value={firstName}
+                    onChange={handleFirstNameChange}
+                  />
                 </div>
                 <div className="checkoutBoxDiv2">
                   <p className="checkoutBoxText">Last Name </p>
-                  <Input placeholder="Last Name" />
+                  <Input
+                    placeholder="Last Name"
+                    value={lastName}
+                    onChange={handleLastNameChange}
+                  />
                 </div>
               </div>
 
@@ -296,15 +358,27 @@ export default function Checkout() {
 
               <div className="checkoutBoxDiv3">
                 <p className="checkoutBoxText">Email </p>
-                <Input placeholder="Email" />
+                <Input
+                  placeholder="Email"
+                  value={email}
+                  onChange={handleEmailChange}
+                />
               </div>
               <div className="checkoutBoxDiv3">
                 <p className="checkoutBoxText">Phone* </p>
-                <Input placeholder="Phone" />
+                <Input
+                  placeholder="Phone"
+                  value={phone}
+                  onChange={handlePhoneChange}
+                />
               </div>
               <div className="checkoutBoxDiv3">
                 <p className="checkoutBoxText">Address* </p>
-                <Input placeholder="Address" />
+                <Input
+                  placeholder="Address"
+                  value={address}
+                  onChange={handleAddressChange}
+                />
               </div>
               <div className="checkoutBoxDiv3">
                 <p className="checkoutBoxText"> Comment (Optional) </p>
@@ -465,7 +539,170 @@ export default function Checkout() {
         </div>
       ) : page === 2 ? (
         <div className="checkoutBody">
-          <div >Order Overview</div>
+          <div style={{height:'30px'}}/>
+          <h2 style={{opacity:'.7'}}>Order Overview</h2>
+
+          <div className="cartBody">
+            <div className="cartBox">
+              <p>Product Information</p>
+              <div className="cartTopBox">
+                <div className="cartTopImg">
+                  <h3>Image</h3>
+                </div>
+                <div className="cartTopText">
+                  <h3>Product</h3>
+                </div>
+                <div className="cartTopModel">
+                  <h3>Model</h3>
+                </div>
+                <div className="cartTopQuantity">
+                  <h3>Quantity</h3>
+                </div>
+                <div className="cartTopPrice">
+                  <h3>Unit Price</h3>
+                </div>
+                <div className="cartTopTotal">
+                  <h3>Total</h3>
+                </div>
+              </div>
+
+              <div className="cartTopBox2">
+                <div className="cartTopImg2">
+                  <p>Image</p>
+                </div>
+                <div className="cartTopText2">
+                  <p>Product</p>
+                </div>
+                <div className="cartTopModel2">
+                  <p>Model</p>
+                </div>
+                <div className="cartTopQuantity2">
+                  <p>1 x</p>
+                </div>
+                <div className="cartTopPrice2">
+                  <p>Unit Price</p>
+                </div>
+                <div className="cartTopTotal">
+                  <p>3440</p>
+                </div>
+              </div>
+
+              <div className="cartTopBox2">
+                <div className="cartTopImg2">
+                  <p>Image</p>
+                </div>
+                <div className="cartTopText2">
+                  <p>Product</p>
+                </div>
+                <div className="cartTopModel2">
+                  <p>Model</p>
+                </div>
+                <div className="cartTopQuantity2">
+                  <p>1 x</p>
+                </div>
+                <div className="cartTopPrice2">
+                  <p>Unit Price</p>
+                </div>
+                <div className="cartTopTotal">
+                  <p>3440</p>
+                </div>
+              </div>
+
+              <div className="cartTopLineDiv" />
+
+              <div className="cartTopMidPriceDiv">
+                <div className="cartTopMidPriceDox">
+                  <h3>Sub-Total:</h3>
+                  <p className="cartTopMidPriceP">BDT 5000</p>
+                </div>
+
+                <div className="cartTopMidPriceDox2">
+                  <h3>Delivery Charge:</h3>
+                  {renderOutput4()}
+                </div>
+
+                <div className="cartTopMidPriceDox2">
+                  <h3>Total Discount:</h3>
+                  <p className="cartTopMidPriceP">0</p>
+                </div>
+
+                <div className="cartTopMidPriceDox2">
+                  <h3>Total:</h3>
+                  <p className="cartTopMidPriceP">BDT 7200</p>
+                </div>
+
+                <div className="cartTopMidPriceDox2">
+                  <h3>Payment Method:</h3>
+                  {renderOutput3()}
+                </div>
+              </div>
+            </div>
+
+            {/* Delivery Information */}
+            {/* Screen Up to 1000px */}
+            <div className="checkoutInformationBox">
+              <p>Delivery Information</p>
+              <div className="checkoutInformationTopBox">
+                <div style={{ flex: "1" }}>
+                  <h3>Name</h3>
+                </div>
+                <div style={{ flex: "1" }}>
+                  <h3>Email</h3>
+                </div>
+
+                <div style={{ flex: "1" }}>
+                  <h3>Phone</h3>
+                </div>
+
+                <div style={{ flex: "1.5" }}>
+                  <h3>Address</h3>
+                </div>
+              </div>
+            </div>
+
+            <div className="checkoutInformationBox2">
+              <div style={{ flex: "1" }}>
+                <p>
+                  {firstName} {lastName}
+                </p>
+              </div>
+              <div style={{ flex: "1" }}>
+                <p>{email}</p>
+              </div>
+
+              <div style={{ flex: "1" }}>
+                <p>{phone}</p>
+              </div>
+
+              <div style={{ flex: "1.5" }}>
+                <p>{address}</p>
+              </div>
+            </div>
+
+            {/* Screen Below 1000px */}
+            <div className="checkoutInformationBox3">
+              <p>Delivery Information</p>
+              <div className="cartTopLineDiv" />
+              <div style={{ display: "flex" }}>
+                <div className="checkoutInformationTopBox3">
+                  <h3>Name:</h3>
+                  <h3>Email:</h3>
+                  <h3>Phone:</h3>
+                  <h3>Address:</h3>
+                </div>
+                <div className="checkoutInformationTop-Box3">
+                  <h3 style={{ opacity: ".6" }}>
+                    {firstName} {lastName}
+                  </h3>
+                  <h3 style={{ opacity: ".6" }}>{email}</h3>
+                  <h3 style={{ opacity: ".6" }}>{phone}</h3>
+                  <h3 style={{ opacity: ".6" }}>{address}</h3>
+                </div>
+              </div>
+            </div>
+            <div style={{ height: "50px" }} />
+          </div>
+
           {/* Button Box */}
           <div
             style={{

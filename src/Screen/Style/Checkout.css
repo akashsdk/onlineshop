@@ -1,114 +1,176 @@
-.checkoutBody{
-    height: auto;
-    width: 100%;
+.checkoutBody {
+  height: auto;
+  width: 100%;
 }
 
-.checkoutBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+.checkoutBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
-.checkoutDiv{
-    height: auto;
-    width: 45%;
-    margin: 30px;
-    border-radius: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border: .5px solid aqua;
+.checkoutDiv {
+  height: auto;
+  width: 45%;
+  margin: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.5px solid aqua;
 }
-.checkoutDivLeft{
-    height: auto;
-    width: 45%;
-    
+.checkoutDivLeft {
+  height: auto;
+  width: 45%;
+}
+.checkoutDiv2 {
+  height: auto;
+  width: 90%;
+  margin: 30px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  border: 0.5px solid aqua;
+}
+.checkoutBoxDiv {
+  display: flex;
+}
+.checkoutBoxDiv2 {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.checkoutBoxDiv3 {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.checkoutBoxText {
+  font-size: 18px;
+  opacity: 0.7;
+}
+.checkoutBoxLine {
+  height: 0.5px;
+  width: 100%;
+  background-color: aqua;
+}
+.checkoutBoxSelect {
+  height: 35px;
+  width: 100%;
+  border-radius: 6px;
+  opacity: 0.5;
+}
+.checkoutBoxInput-RadioDiv {
+  margin-top: 20px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 10%;
+}
 
+.checkoutInformationBox {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
-.checkoutDiv2{
-    height: auto;
-    width: 90%;
-    margin: 30px;
-    border-radius: 20px;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-    border: .5px solid aqua;
+.checkoutInformationBox2 {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  margin-top: -0px;
 }
-.checkoutBoxDiv{
-    display: flex;
+.checkoutInformationTopBox {
+  display: flex;
+  height: 50px;
+  width: 100%;
+  align-items: center;
+  margin-top: -10px;
+  background-color: rgb(213, 215, 216);
 }
-.checkoutBoxDiv2{
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.checkoutBoxDiv3{
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-.checkoutBoxText{
-    font-size: 18px;
-    opacity: .7;
-}
-.checkoutBoxLine{
-    height: .5px;
-    width: 100%;
-    background-color: aqua;
-}
-.checkoutBoxSelect{
-    height: 35px;
-    width: 100%;
-    border-radius: 6px;
-    opacity: .5;
-}
-.checkoutBoxInput-RadioDiv{
-    
-    margin-top: 20px;
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-    margin-left: 10%;
+
+.checkoutInformationBox3 {
+  display: none;
 }
 
 @media (max-width: 1000px) {
-    .checkoutBox{
-        flex-direction: column;
-    }
-    .checkoutDiv{
-        width: 85%;
-        margin: 0px;
-        margin-top: 30px;
-    }
-    .checkoutDivLeft{
-        width: 85%;
-        margin: 0px;
-        margin-top: 30px;
-    }
-    .checkoutBoxInput-RadioDiv{
-        margin-left: 20%;
-    }
+  .checkoutBox {
+    flex-direction: column;
+  }
+  .checkoutDiv {
+    width: 85%;
+    margin: 0px;
+    margin-top: 30px;
+  }
+  .checkoutDivLeft {
+    width: 85%;
+    margin: 0px;
+    margin-top: 30px;
+  }
+  .checkoutBoxInput-RadioDiv {
+    margin-left: 20%;
+  }
+
+  .checkoutInformationBox {
+    display: none;
+  }
+  .checkoutInformationBox2 {
+    display: none;
+  }
+  .checkoutInformationTopBox {
+    display: none;
+  }
+
+  .checkoutInformationBox3 {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    flex-direction: column;
+    border: 1px solid aqua;
+    margin-left: 5%;
+    border-radius: 10px;
+  }
+
+  .checkoutInformationTopBox3 {
+    display: flex;
+    height: auto;
+    width: 20%;
+    align-items: center;
+    margin-top: -10px;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+  .checkoutInformationTop-Box3 {
+    display: flex;
+    height: auto;
+    width: 75%;
+    align-items: flex-start;
+    margin-top: -10px;
+    flex-direction: column;
+  }
 }
+
 @media (max-width: 600px) {
-    .checkoutBox{
-        flex-direction: column;
-    }
-    .checkoutDiv{
-        width: 95%;
-        margin: 0px;
-        margin-top: 30px;
-    }
-    .checkoutDivLeft{
-        width: 95%;
-        margin: 0px;
-        margin-top: 30px;
-    }
-    .checkoutBoxInput-RadioDiv{
-        margin-left: 5%;
-    }
+  .checkoutBox {
+    flex-direction: column;
+  }
+  .checkoutDiv {
+    width: 95%;
+    margin: 0px;
+    margin-top: 30px;
+  }
+  .checkoutDivLeft {
+    width: 100%;
+    margin: 0px;
+    margin-top: 30px;
+  }
+  .checkoutBoxInput-RadioDiv {
+    margin-left: 5%;
+  }
 }
