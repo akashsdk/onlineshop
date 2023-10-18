@@ -1,0 +1,69 @@
+.checkoutBody{
+    height: auto;
+    width: 100%;
+}
+
+.checkoutBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.checkoutDiv{
+    height: auto;
+    width: 45%;
+    margin: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: .5px solid aqua;
+}
+.checkoutBoxDiv{
+    display: flex;
+}
+.checkoutBoxDiv2{
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.checkoutBoxDiv3{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.checkoutBoxText{
+    font-size: 18px;
+    opacity: .7;
+}
+.checkoutBoxLine{
+    height: .5px;
+    width: 100%;
+    background-color: aqua;
+}
+@media (max-width: 1000px) {
+    .checkoutBox{
+        flex-direction: column;
+    }
+    .checkoutDiv{
+        width: 85%;
+        margin: 0px;
+        margin-top: 30px;
+    }
+}
+@media (max-width: 600px) {
+    .checkoutBox{
+        flex-direction: column;
+    }
+    .checkoutDiv{
+        width: 95%;
+        margin: 0px;
+        margin-top: 30px;
+    }
+}

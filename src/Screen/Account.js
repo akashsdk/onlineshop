@@ -52,7 +52,7 @@ export default function Account() {
               <p className="preOrderBoxText">Email *</p>
               <Input size="large" placeholder="Enter Email" />
               <p className="preOrderBoxText">Password *</p>
-              <Input size="large" placeholder="Enter Password" />
+              <Input.Password size="large" placeholder="Enter Password" />
               <div
                 style={{ display: "flex", width: "100%", marginTop: "30px" }}
               >
