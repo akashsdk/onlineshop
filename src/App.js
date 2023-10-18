@@ -11,6 +11,7 @@ import Cart from './Screen/Cart';
 import PreOrder from './Screen/PreOrder';
 import Contacts from './Screen/Contacts';
 import Account from './Screen/Account';
+import Checkout from "./Screen/Checkout";
 
 import Accessories from './Catagory/Accessories';
 import CableandOther from './Catagory/CableandOther';
@@ -43,6 +44,7 @@ function App() {
           <Route path="/Pre-Order" element={<PreOrder/>} />
           <Route path="/Contacts" element={<Contacts/>} />
           <Route path="/Account" element={<Account/>} />
+          <Route path="/Checkout" element={<Checkout/>} />
           
           <Route path="/Category/Accessories" element={<Accessories/>} />
           <Route path="/Category/Cable-and-Interconnects" element={<CableandOther/>} />
