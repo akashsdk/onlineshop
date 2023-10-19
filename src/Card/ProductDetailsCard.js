@@ -3,6 +3,13 @@ import './ProductDetailsCard.css';
 
 export default function ProductDetailsCard() {
   return (
-    <div>ProductDetailsCard</div>
+    <div>
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+    </div>
   )
 }
