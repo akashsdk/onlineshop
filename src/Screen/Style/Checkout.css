@@ -108,6 +108,12 @@
   flex-direction: column;
   margin-bottom: 50px;
 }
+.checkoutProgressSteps {
+  width: 60%;
+}
+.checkoutProgressText {
+  opacity: 0.5;
+}
 
 @media (max-width: 1000px) {
   .checkoutBox {
@@ -182,5 +188,17 @@
   }
   .checkoutBoxInput-RadioDiv {
     margin-left: 5%;
+  }
+  .checkoutProgress {
+    flex-direction: row;
+    margin-top: 30px;
+  }
+  .checkoutProgressSteps {
+    width: 50%;
+  }
+  .checkoutProgressText {
+    width: 50%;
+    display: flex;
+    justify-content: center;
   }
 }

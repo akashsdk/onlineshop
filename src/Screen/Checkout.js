@@ -131,7 +131,7 @@ export default function Checkout() {
     setOpen(false);
   };
 
-  // Value send 
+  // Value send
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -539,8 +539,8 @@ export default function Checkout() {
         </div>
       ) : page === 2 ? (
         <div className="checkoutBody">
-          <div style={{height:'30px'}}/>
-          <h2 style={{opacity:'.7'}}>Order Overview</h2>
+          <div style={{ height: "30px" }} />
+          <h2 style={{ opacity: ".7" }}>Order Overview</h2>
 
           <div className="cartBody">
             <div className="cartBox">
@@ -762,25 +762,70 @@ export default function Checkout() {
       )}
 
       {/* Progress */}
-      <div className="checkoutProgress">
-        <h3>Progress</h3>
-        <Steps
-        style={{width:'60%'}}
-          size="small"
-          current={1}
-          items={[
-            {
-              title: "Information",
-            },
-            {
-              title: "Overview",
-            },
-            {
-              title: "Purchased",
-            },
-          ]}
-        />
-      </div>
+      {page === 1 ? (
+        <div className="checkoutProgress">
+          <h3 className="checkoutProgressText">Progress</h3>
+          <Steps
+            className="checkoutProgressSteps"
+            size="small"
+            current={1}
+            items={[
+              {
+                title: "Information",
+              },
+              {
+                title: "Overview",
+              },
+              {
+                title: "Purchased",
+              },
+            ]}
+          />
+        </div>
+      ) : page === 2 ? (
+        <div className="checkoutProgress">
+          <h3 className="checkoutProgressText">Progress</h3>
+          <Steps
+            className="checkoutProgressSteps"
+            size="small"
+            current={2}
+            items={[
+              {
+                title: "Information",
+              },
+              {
+                title: "Overview",
+              },
+              {
+                title: "Purchased",
+              },
+            ]}
+          />
+        </div>
+      ) : page === 3 ? (
+        <div className="checkoutProgress">
+          <h3 className="checkoutProgressText">Progress</h3>
+          <Steps
+            className="checkoutProgressSteps"
+            size="small"
+            current={3}
+            items={[
+              {
+                title: "Information",
+              },
+              {
+                title: "Overview",
+              },
+              {
+                title: "Purchased",
+              },
+            ]}
+          />
+        </div>
+      ) : (
+        <h1> Error page</h1>
+      )}
+
       <Footer />
     </div>
   );
