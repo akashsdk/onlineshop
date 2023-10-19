@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ProductDetailsCard.css";
-import { Carousel, Image, Button } from "antd";
+import { Carousel, Image, Button, Tooltip } from "antd";
 
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
@@ -37,19 +37,29 @@ export default function ProductDetailsCard() {
           </div>
           <div className="pDetailsCardRightMid">
             {page === 1 ? (
-              <div><Image width={300} height={300} src={i15PromaxGray} /></div>
+              <div>
+                <Image width={300} height={300} src={i15PromaxGray} />
+              </div>
             ) : page === 2 ? (
-              <div><Image width={300} height={300} src={i15PromaxBlack} /></div>
+              <div>
+                <Image width={300} height={300} src={i15PromaxBlack} />
+              </div>
             ) : page === 3 ? (
-                <div><Image width={300} height={300} src={i15PromaxDarkBlue} /></div>
-              ) : page === 4 ? (
-                <div><Image width={300} height={300} src={i15PromaxWhite} /></div>
-              ) : page === 5 ? (
-                <div><Image width={300} height={300} src={i15PromaxGold} /></div>
-              ) : (
+              <div>
+                <Image width={300} height={300} src={i15PromaxDarkBlue} />
+              </div>
+            ) : page === 4 ? (
+              <div>
+                <Image width={300} height={300} src={i15PromaxWhite} />
+              </div>
+            ) : page === 5 ? (
+              <div>
+                <Image width={300} height={300} src={i15PromaxGold} />
+              </div>
+            ) : (
               <h1> Error page</h1>
             )}
-            
+
             <div className="pDetailsCardRightDown-2">
               <div
                 style={{
@@ -121,7 +131,133 @@ export default function ProductDetailsCard() {
           </div>
         </div>
       </div>
-      <div className="pDetailsCardBodyLeft">Left </div>
+      <div className="pDetailsCardBodyLeft">
+        <p style={{ opacity: ".6", marginLeft: "10px" }}> Brand Apple</p>
+        <h2 style={{ marginTop: "-10px", marginLeft: "10px" }}>
+          iPhone 14 Pro Max
+        </h2>
+        <div className="pDCLeft-SmallBox">
+          <p className="pDCLeft-SmallText">Cash Discount Price:</p>
+          <p className="pDCLeft-SmallText-2">205000৳</p>
+          <h4 className="pDCLeft-SmallText-H4">148000৳</h4>
+        </div>
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-SmallBox">
+            <p className="pDCLeft-SmallText">Product Code: </p>
+            <h4 className="pDCLeft-SmallText-H4">i15-06</h4>
+          </div>
+          <div className="pDCLeft-SmallBox">
+            <p className="pDCLeft-SmallText">Status:</p>
+            <h4 className="pDCLeft-SmallText-H4"> In Stock</h4>
+          </div>
+        </div>
+        <h3 style={{ opacity: ".6", marginLeft: "10px", marginTop: "-0px" }}>
+          1 Year Official Warranty
+        </h3>
+        <div>
+          <div>
+            <p>Color:</p>
+          </div>
+          <div>
+            <Tooltip placement="top" title="Black">
+              <Button
+                onClick={() => {
+                  setPage(1);
+                }}
+                style={{
+                    height: "35Px",
+                    width: "35px",
+                  borderRadius: "5px",
+                  borderColor: page === 1 ? "#fb6565" : "#ffff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "black",
+                }}
+              >
+              </Button>
+            </Tooltip>
+
+            <Tooltip placement="top" title="Gray">
+              <Button
+                onClick={() => {
+                  setPage(2);
+                }}
+                style={{
+                    height: "35Px",
+                    width: "35px",
+                  borderRadius: "5px",
+                  borderColor: page === 2 ? "#fb6565" : "#ffff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "gray",
+
+                }}
+              >
+              </Button>
+            </Tooltip>
+
+            <Tooltip placement="top" title="DarkBlue">
+              <Button
+                onClick={() => {
+                  setPage(3);
+                }}
+                style={{
+                  height: "35Px",
+                  width: "35px",
+                  borderRadius: "5px",
+                  borderColor: page === 3 ? "#fb6565" : "#ffff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: 'DarkBlue',
+                }}
+              >
+              </Button>
+            </Tooltip>
+
+            <Tooltip placement="top" title="White">
+              <Button
+                onClick={() => {
+                  setPage(4);
+                }}
+                style={{
+                    height: "35Px",
+                    width: "35px",
+                  borderRadius: "5px",
+                  borderColor: page === 4 ? "#fb6565" : "#ffff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: "white",
+                }}
+              >
+              </Button>
+            </Tooltip>
+
+            <Tooltip placement="top" title="Gold">
+              <Button
+                onClick={() => {
+                  setPage(5);
+                }}
+                style={{
+                    height: "35Px",
+                    width: "35px",
+                  borderRadius: "5px",
+                  borderColor: page === 5 ? "#fb6565" : "#ffff",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  backgroundColor: 'goldenrod',
+
+                }}
+              >
+              </Button>
+            </Tooltip>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
