@@ -3,6 +3,6 @@ import './ProductDetailsCard.css';
 
 export default function ProductDetailsCard() {
   return (
-    <div>ProductDetailsCardgg</div>
+    <div>ProductDetailsCard</div>
   )
 }
