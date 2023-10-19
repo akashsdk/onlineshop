@@ -99,6 +99,16 @@
   display: none;
 }
 
+.checkoutProgress {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
 @media (max-width: 1000px) {
   .checkoutBox {
     flex-direction: column;

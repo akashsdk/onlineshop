@@ -131,7 +131,7 @@ export default function Checkout() {
     setOpen(false);
   };
 
-  // Test
+  // Value send 
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -762,20 +762,21 @@ export default function Checkout() {
       )}
 
       {/* Progress */}
-      <div>
+      <div className="checkoutProgress">
         <h3>Progress</h3>
         <Steps
+        style={{width:'60%'}}
           size="small"
           current={1}
           items={[
             {
-              title: "Finished",
+              title: "Information",
             },
             {
-              title: "In Progress ",
+              title: "Overview",
             },
             {
-              title: "Waiting",
+              title: "Purchased",
             },
           ]}
         />
