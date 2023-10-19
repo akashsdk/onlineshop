@@ -10,6 +10,13 @@ export default function ProductDetailsCard() {
         ProductDetailsCard
         ProductDetailsCard
         ProductDetailsCard
+
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
     </div>
   )
 }
