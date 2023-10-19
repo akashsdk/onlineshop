@@ -25,6 +25,62 @@ export default function ProductDetailsCard() {
         ProductDetailsCard
         ProductDetailsCard
         ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        v
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        ProductDetailsCard
+        
     </div>
   )
 }
