@@ -1,0 +1,85 @@
+.pDetailsCardBody {
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pDetailsCardBodyRight {
+  margin-top: 50px;
+  width: 40%;
+}
+.pDetailsCardBodyLeft {
+  width: 60%;
+  margin-top: 50px;
+  background-color: aquamarine;
+}
+
+.pDetailsCardRightTopBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pDetailsCardRightTopBoxText {
+  font-size: 14px;
+  color: black;
+  margin-left: 5px;
+}
+.pDetailsCardRightTopBoxText:hover {
+  color: rgb(255, 32, 32);
+}
+.pDetailsCardRightDown {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.pDetailsCardRightDownPercenBox {
+  background-color: rgb(247, 150, 24);
+  color: #ffffff;
+  width: 75px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.pDetailsCardRightMid {
+  height: 400px;
+  width: 100%;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.pDetailsCardRightDown-2 {
+  margin-top: 20px;
+  height: 80px;
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-x: scroll;
+}
+.pDetailsCardRightDown-2Button {
+  height: 75px;
+  width: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 1px;
+  margin-right: 1px;
+}
+
+@media (max-width: 1000px) {
+}
+@media (max-width: 600px) {
+  .pDetailsCardBody {
+    flex-direction: column;
+  }
+  .pDetailsCardBodyRight {
+    width: 100%;
+  }
+  .pDetailsCardBodyLeft {
+    width: 100%;
+  }
+}
