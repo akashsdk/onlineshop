@@ -13,6 +13,8 @@ import Contacts from './Screen/Contacts';
 import Account from './Screen/Account';
 import Checkout from "./Screen/Checkout";
 import ProductCategory from "./Screen/ProductCategory";
+import ProductDetails from "./Screen/ProductDetails";
+
 
 import Accessories from './Catagory/Accessories';
 import CableandOther from './Catagory/CableandOther';
@@ -48,6 +50,7 @@ function App() {
           <Route path="/Account" element={<Account/>} />
           <Route path="/Checkout" element={<Checkout/>} />
           <Route path="/Category" element={<ProductCategory/>} />
+          <Route path="/Category/Product-Details" element={<ProductDetails/>} />
           
           <Route path="/Category/Accessories" element={<Accessories/>} />
           <Route path="/Category/Cable-and-Interconnects" element={<CableandOther/>} />
