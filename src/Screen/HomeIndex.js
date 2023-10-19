@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./Style/Home.css";
 
 import { Button, Image } from "antd";
+import { Link } from "react-router-dom";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 
 import Category from "../Card/Category";
@@ -31,13 +32,15 @@ import speaker from "../Icon/speaker.png";
 import hub from "../Icon/usb-hub.png";
 import wipe from "../Icon/wipe.png";
 import wirelesscharging from "../Icon/wireless-charging.png";
+
 import Offers from "../Components/Offers";
 
 import productIngPs5 from "../Image/PS5-Middle-Banner-6251.jpg";
 import productIngQ20 from "../Image/Anker-Life-Q20.jpeg";
 import productIngIphone15Pro from "../Image/Iphone 15 pro.jpeg";
 import productIngGoPro11 from "../Image/go pro 11.jpeg";
-import { Link } from "react-router-dom";
+
+
 
 const images = [
   "https://9to5mac.com/wp-content/uploads/sites/6/2023/09/iphone-15-pro-wallpaper-2.webp",

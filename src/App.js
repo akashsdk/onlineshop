@@ -12,6 +12,7 @@ import PreOrder from './Screen/PreOrder';
 import Contacts from './Screen/Contacts';
 import Account from './Screen/Account';
 import Checkout from "./Screen/Checkout";
+import ProductCategory from "./Screen/ProductCategory";
 
 import Accessories from './Catagory/Accessories';
 import CableandOther from './Catagory/CableandOther';
@@ -31,6 +32,7 @@ import SmartWatch from './Catagory/SmartWatch';
 import AboutUs from "./OtherLink/AboutUs";
 
 
+
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +47,7 @@ function App() {
           <Route path="/Contacts" element={<Contacts/>} />
           <Route path="/Account" element={<Account/>} />
           <Route path="/Checkout" element={<Checkout/>} />
+          <Route path="/Category" element={<ProductCategory/>} />
           
           <Route path="/Category/Accessories" element={<Accessories/>} />
           <Route path="/Category/Cable-and-Interconnects" element={<CableandOther/>} />
