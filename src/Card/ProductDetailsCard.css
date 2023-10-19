@@ -50,6 +50,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-bottom: 50px;
 }
 .pDetailsCardRightDown-2 {
   margin-top: 20px;
@@ -71,6 +72,15 @@
 }
 
 @media (max-width: 1000px) {
+  .pDetailsCardBody {
+    flex-direction: column;
+  }
+  .pDetailsCardBodyRight {
+    width: 100%;
+  }
+  .pDetailsCardBodyLeft {
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .pDetailsCardBody {
