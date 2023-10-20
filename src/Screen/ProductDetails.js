@@ -40,10 +40,7 @@ export default function ProductDetails() {
           sim={Sim} // null or data
           storage= {Storage} // null or data
         />
-        <div style={{ width: "100%" }}>
-          <h2 style={{ opacity: ".6" }}>Related Products</h2>
-          <Offers />
-        </div>
+        
       </div>
       <Footer />
     </div>
