@@ -619,7 +619,7 @@ export default function ProductDetailsCard({
         {/* Description */}
         {page4 === 1 ? (
           <div style={{ marginTop: "5px" }}>
-            <img height={300} src={img1} />
+            <h2>Description</h2>
             <div
               style={{
                 display: "flex",
@@ -787,13 +787,16 @@ export default function ProductDetailsCard({
           </div>
         ) : // Specification
         page4 === 2 ? (
-          <div>Specification</div>
+          <div style={{ marginTop: "5px" }}>
+            <h2>Specification</h2>
+            <img height={300} src={img1} />
+          </div>
         ) : // Video
         page4 === 3 ? (
-          <div>Video</div>
+          <div style={{ marginTop: "5px" }}>Video</div>
         ) : page4 === 4 ? (
           // Warranty
-          <div>Warranty</div>
+          <div style={{ marginTop: "5px" }}>Warranty</div>
         ) : (
           <h1> Error page</h1>
         )}
