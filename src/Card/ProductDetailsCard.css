@@ -72,71 +72,71 @@
   margin-left: 1px;
   margin-right: 1px;
 }
-.pDCLeft-SmallBox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: aliceblue;
-    height: 40px;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    margin-left: 10px;
+.pDCLeft-SmallBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+  height: 40px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  margin-left: 10px;
 }
-.pDCLeft-SmallText{
-    opacity: .8;
-    margin-left: 10px;
+.pDCLeft-SmallText {
+  opacity: 0.8;
+  margin-left: 10px;
 }
-.pDCLeft-SmallText-2{
-    opacity: .4;
-    text-decoration: line-through;
-}
-
-.pDCLeft-SmallText-2:hover{
-    opacity: .9;
-}
-.pDCLeft-SmallText-H4{
-margin-right: 10px;
-margin-left: 10px;
-color: #f50505;
-}
-.pDCLeft-MdiBox-Div{
- display: flex;
- justify-content: center;
- align-items: center;
- margin-left: 10px;
- 
-}
-.pDCLeft-MdiBox-IndexButton-Div{
-    height: 35px;
-    width: 130px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid rgb(255, 86, 97);
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-top: 20px;
-}
-.pDCLeft-MdiBox-IndexButton{
-    border: none;
-}
-.pDCLeft-MdiBox-IndexBiv{
-    height: 35px;
-    width: 40px;
-    border: 2px solid rgb(255, 86, 97);
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.pDCLeft-MdiBox-LinkButton{
-    margin-left: 10px;
-    margin-top: 20px;
+.pDCLeft-SmallText-2 {
+  opacity: 0.4;
+  text-decoration: line-through;
 }
 
-
+.pDCLeft-SmallText-2:hover {
+  opacity: 0.9;
+}
+.pDCLeft-SmallText-H4 {
+  margin-right: 10px;
+  margin-left: 10px;
+  color: #f50505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pDCLeft-MdiBox-Div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.pDCLeft-MdiBox-IndexButton-Div {
+  height: 35px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(255, 86, 97);
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.pDCLeft-MdiBox-IndexButton {
+  border: none;
+}
+.pDCLeft-MdiBox-IndexBiv {
+  height: 35px;
+  width: 40px;
+  border: 2px solid rgb(255, 86, 97);
+  border-radius: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pDCLeft-MdiBox-LinkButton {
+  margin-left: 10px;
+  margin-top: 20px;
+}
 
 .star-rating {
   font-size: 10px;
@@ -156,14 +156,6 @@ color: #f50505;
 .filled {
   color: gold;
 }
-  
-  
-  
-  
-  
-
-
-
 
 @media (max-width: 1000px) {
   .pDetailsCardBody {

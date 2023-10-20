@@ -1,24 +1,30 @@
 import React, { useState, useEffect } from "react";
 import "./ProductDetailsCard.css";
-import {  Image, Button, Tooltip, Radio } from "antd";
+import { Image, Button, Tooltip, Radio } from "antd";
 
 import { HomeOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-import i15PromaxGray from "../Image/i15PromaxGray.jpg";
-import i15PromaxBlack from "../Image/i15PromaxBlack.jpeg";
-import i15PromaxDarkBlue from "../Image/i15PromaxDarkBlue.jpeg";
-import i15PromaxWhite from "../Image/i15PromaxWhite.jpeg";
-import i15PromaxGold from "../Image/i15PromaxGold.jpeg";
 
 export default function ProductDetailsCard({
+  brandName,
+  name,
   rating,
   percentage,
-  number,
-  Img,
-  name,
-  details,
+  oldPrice,
+  warranty,
   sells,
+  color1,
+  color2,
+  color3,
+  color4,
+  color5,
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  details,
 }) {
   const [page, setPage] = useState(1); // Color and Image
   const [page1, setPage1] = useState(1); // Region
@@ -46,17 +52,17 @@ export default function ProductDetailsCard({
     }
   };
 
-// Review or Stars
+  // Review or Stars
   const [result, setResult] = useState("");
 
   useEffect(() => {
-    if (percentage === "" || number === "") {
+    if (percentage === "" || oldPrice === "") {
       setResult("");
       return;
     }
 
     const percent = parseFloat(percentage);
-    const num = parseFloat(number);
+    const num = parseFloat(oldPrice);
 
     if (isNaN(percent) || isNaN(num)) {
       setResult("");
@@ -65,7 +71,7 @@ export default function ProductDetailsCard({
 
     const calculatedResult = Math.round(num - (percent / 100) * num);
     setResult(calculatedResult);
-  }, [percentage, number]);
+  }, [percentage, oldPrice]);
 
   const renderStars = (rating) => {
     const stars = [];
@@ -81,6 +87,7 @@ export default function ProductDetailsCard({
 
   return (
     <div className="pDetailsCardBody">
+      {/* Right-Box */}
       <div className="pDetailsCardBodyRight">
         <div className="pDetailsCardRightTopBox">
           <Link to="/" style={{ textDecoration: "none" }}>
@@ -98,28 +105,28 @@ export default function ProductDetailsCard({
         </div>
         <div className="pDetailsCardRightDown">
           <div className="pDetailsCardRightDownPercenBox">
-            <p style={{ marginTop: "-0px" }}>28% Off</p>
+            <p style={{ marginTop: "-0px" }}>{percentage}% Off</p>
           </div>
           <div className="pDetailsCardRightMid">
             {page === 1 ? (
               <div>
-                <Image width={300} height={300} src={i15PromaxGray} />
+                <Image width={300} height={300} src={img1} />
               </div>
             ) : page === 2 ? (
               <div>
-                <Image width={300} height={300} src={i15PromaxBlack} />
+                <Image width={300} height={300} src={img2} />
               </div>
             ) : page === 3 ? (
               <div>
-                <Image width={300} height={300} src={i15PromaxDarkBlue} />
+                <Image width={300} height={300} src={img3} />
               </div>
             ) : page === 4 ? (
               <div>
-                <Image width={300} height={300} src={i15PromaxWhite} />
+                <Image width={300} height={300} src={img4} />
               </div>
             ) : page === 5 ? (
               <div>
-                <Image width={300} height={300} src={i15PromaxGold} />
+                <Image width={300} height={300} src={img5} />
               </div>
             ) : (
               <h1> Error page</h1>
@@ -141,7 +148,7 @@ export default function ProductDetailsCard({
                     borderColor: page === 1 ? "#fb6565" : "#ffff",
                   }}
                 >
-                  <img style={{ height: "70px" }} src={i15PromaxGray} />
+                  <img style={{ height: "70px" }} src={img1} />
                 </Button>
 
                 <Button
@@ -153,7 +160,7 @@ export default function ProductDetailsCard({
                     borderColor: page === 2 ? "#fb6565" : "#ffff",
                   }}
                 >
-                  <img style={{ height: "70px" }} src={i15PromaxBlack} />
+                  <img style={{ height: "70px" }} src={img2} />
                 </Button>
 
                 <Button
@@ -165,7 +172,7 @@ export default function ProductDetailsCard({
                     borderColor: page === 3 ? "#fb6565" : "#ffff",
                   }}
                 >
-                  <img style={{ height: "70px" }} src={i15PromaxDarkBlue} />
+                  <img style={{ height: "70px" }} src={img3} />
                 </Button>
 
                 <Button
@@ -177,7 +184,7 @@ export default function ProductDetailsCard({
                     borderColor: page === 4 ? "#fb6565" : "#ffff",
                   }}
                 >
-                  <img style={{ height: "70px" }} src={i15PromaxWhite} />
+                  <img style={{ height: "70px" }} src={img4} />
                 </Button>
 
                 <Button
@@ -189,26 +196,32 @@ export default function ProductDetailsCard({
                     borderColor: page === 5 ? "#fb6565" : "#ffff",
                   }}
                 >
-                  <img style={{ height: "70px" }} src={i15PromaxGold} />
+                  <img style={{ height: "70px" }} src={img5} />
                 </Button>
               </div>
             </div>
           </div>
         </div>
-        <div>
-          <p>Sell's ({sells})</p>
-        <div className="star-rating">{renderStars(rating)}</div>
+        <div style={{
+          display:'flex',
+          justifyContent:'center',
+          alignItems:'center',
+        }}>
+          <div className="star-rating">{renderStars(rating)}</div>
+          <p style={{opacity:'.6', fontSize:'13px', marginTop:'4px'}}>Sell's ({sells})</p>
+
         </div>
       </div>
+      {/* Left-Box */}
       <div className="pDetailsCardBodyLeft">
-        <p style={{ opacity: ".6", marginLeft: "10px" }}> Brand Apple</p>
-        <h2 style={{ marginTop: "10px", marginLeft: "10px" }}>
-          iPhone 14 Pro Max
-        </h2>
+        <p style={{ opacity: ".6", marginLeft: "10px" }}> Brand {brandName}</p>
+        <h2 style={{ marginTop: "10px", marginLeft: "10px" }}>{name}</h2>
         <div className="pDCLeft-SmallBox">
           <p className="pDCLeft-SmallText">Cash Discount Price:</p>
-          <p className="pDCLeft-SmallText-2">205000৳</p>
-          <h4 className="pDCLeft-SmallText-H4">148000৳</h4>
+          <p className="pDCLeft-SmallText-2">{oldPrice}৳</p>
+          <h4 className="pDCLeft-SmallText-H4">
+            {result !== "" ? <p> {result}৳</p> : <p>Out of Stock</p>}
+          </h4>
         </div>
         <div style={{ display: "flex" }}>
           <div className="pDCLeft-SmallBox">
@@ -217,116 +230,166 @@ export default function ProductDetailsCard({
           </div>
           <div className="pDCLeft-SmallBox">
             <p className="pDCLeft-SmallText">Status:</p>
-            <h4 className="pDCLeft-SmallText-H4"> In Stock</h4>
+            {result !== "" ?<h4 className="pDCLeft-SmallText-H4">  In Stock</h4> : <h4 className="pDCLeft-SmallText-H4">Out of Stock</h4>}
+            
           </div>
         </div>
+        
         <h3 style={{ opacity: ".6", marginLeft: "10px", marginTop: "-0px" }}>
-          1 Year Official Warranty
+          
+          {warranty !== "Yes" ? <p> No Warranty Available </p> : <p>1 Year Official Warranty</p>}
         </h3>
         {/* Color */}
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display:
+              color1 || color2 || color3 || color4 || color5 !== ""
+                ? "flex"
+                : "none",
+          }}
+        >
           <div className="pDCLeft-MdiBox-Div">
             <p>Color:</p>
           </div>
           <div className="pDCLeft-MdiBox-Div">
-            <Tooltip placement="top" title="Black">
-              <Button
-                onClick={() => {
-                  setPage(1);
-                }}
-                style={{
-                  height: "35Px",
-                  width: "35px",
-                  borderRadius: "5px",
-                  borderColor: page === 1 ? "#fb6565" : "#ffff",
-                  boxShadow: page === 1 ? "#f50505 1px 0px 3px 2px" : "none",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "black",
-                }}
-              ></Button>
-            </Tooltip>
+            <div
+              style={{
+                height: "38Px",
+                width: "38px",
+                borderRadius: "5px",
+                display: color1 !== "" ? "flex" : "none",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: page === 1 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+              }}
+            >
+              <Tooltip placement="top" title={color1}>
+                <Button
+                  onClick={() => {
+                    setPage(1);
+                  }}
+                  style={{
+                    height: "30Px",
+                    width: "30px",
+                    borderRadius: "5px",
+                    borderColor: color1,
+                    backgroundColor: color1,
+                  }}
+                ></Button>
+              </Tooltip>
+            </div>
 
-            <Tooltip placement="top" title="Gray">
-              <Button
-                onClick={() => {
-                  setPage(2);
-                }}
-                style={{
-                  height: "35Px",
-                  width: "35px",
-                  borderRadius: "5px",
-                  borderColor: page === 2 ? "#fb6565" : "#ffff",
-                  boxShadow: page === 2 ? "#f50505 1px 0px 3px 2px" : "none",
-                  marginLeft: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "gray",
-                }}
-              ></Button>
-            </Tooltip>
+            <div
+              style={{
+                height: "38Px",
+                width: "38px",
+                borderRadius: "5px",
+                display: color2 !== "" ? "flex" : "none",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: page === 2 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                marginLeft: "5px",
+              }}
+            >
+              <Tooltip placement="top" title={color2}>
+                <Button
+                  onClick={() => {
+                    setPage(2);
+                  }}
+                  style={{
+                    height: "30Px",
+                    width: "30px",
+                    borderRadius: "5px",
+                    borderColor: color2,
+                    backgroundColor: color2,
+                  }}
+                ></Button>
+              </Tooltip>
+            </div>
 
-            <Tooltip placement="top" title="DarkBlue">
-              <Button
-                onClick={() => {
-                  setPage(3);
-                }}
-                style={{
-                  height: "35Px",
-                  width: "35px",
-                  borderRadius: "5px",
-                  borderColor: page === 3 ? "#fb6565" : "#ffff",
-                  boxShadow: page === 3 ? "#f50505 1px 0px 3px 2px" : "none",
-                  marginLeft: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "DarkBlue",
-                }}
-              ></Button>
-            </Tooltip>
+            <div
+              style={{
+                height: "38Px",
+                width: "38px",
+                borderRadius: "5px",
+                display: color3 !== "" ? "flex" : "none",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: page === 3 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                marginLeft: "5px",
+              }}
+            >
+              <Tooltip placement="top" title={color3}>
+                <Button
+                  onClick={() => {
+                    setPage(3);
+                  }}
+                  style={{
+                    height: "30Px",
+                    width: "30px",
+                    borderRadius: "5px",
+                    borderColor: color3,
+                    backgroundColor: color3,
+                  }}
+                ></Button>
+              </Tooltip>
+            </div>
 
-            <Tooltip placement="top" title="White">
-              <Button
-                onClick={() => {
-                  setPage(4);
-                }}
-                style={{
-                  height: "35Px",
-                  width: "35px",
-                  borderRadius: "5px",
-                  borderColor: page === 4 ? "#fb6565" : "#ffff",
-                  boxShadow: page === 4 ? "#f50505 1px 0px 3px 2px" : "none",
-                  marginLeft: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "white",
-                }}
-              ></Button>
-            </Tooltip>
+            <div
+              style={{
+                height: "38Px",
+                width: "38px",
+                borderRadius: "5px",
+                display: color4 !== "" ? "flex" : "none",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: page === 4 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                marginLeft: "5px",
+              }}
+            >
+              <Tooltip placement="top" title={color4}>
+                <Button
+                  onClick={() => {
+                    setPage(4);
+                  }}
+                  style={{
+                    height: "30Px",
+                    width: "30px",
+                    borderRadius: "5px",
+                    borderColor: color4,
+                    backgroundColor: color4,
+                  }}
+                ></Button>
+              </Tooltip>
+            </div>
 
-            <Tooltip placement="top" title="Gold">
-              <Button
-                onClick={() => {
-                  setPage(5);
-                }}
-                style={{
-                  height: "35Px",
-                  width: "35px",
-                  borderRadius: "5px",
-                  borderColor: page === 5 ? "#fb6565" : "#ffff",
-                  boxShadow: page === 5 ? "#f50505 1px 0px 3px 2px" : "none",
-                  marginLeft: "5px",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  backgroundColor: "goldenrod",
-                }}
-              ></Button>
-            </Tooltip>
+            <div
+              style={{
+                height: "38Px",
+                width: "38px",
+                borderRadius: "5px",
+                display: color5 !== "" ? "flex" : "none",
+                justifyContent: "center",
+                alignItems: "center",
+                boxShadow: page === 5 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                marginLeft: "5px",
+              }}
+            >
+              <Tooltip placement="top" title={color5}>
+                <Button
+                  onClick={() => {
+                    setPage(5);
+                  }}
+                  style={{
+                    height: "30Px",
+                    width: "30px",
+                    borderRadius: "5px",
+                    borderColor: color5,
+                    backgroundColor: color5,
+                  }}
+                ></Button>
+              </Tooltip>
+            </div>
           </div>
         </div>
         {/* Region */}
@@ -451,7 +514,7 @@ export default function ProductDetailsCard({
         </div>
         <div style={{ display: "flex" }}>
           <div className="pDCLeft-MdiBox-IndexButton-Div">
-          <Button
+            <Button
               onClick={handleDecrement}
               className="pDCLeft-MdiBox-IndexButton"
               icon={<MinusOutlined />}
