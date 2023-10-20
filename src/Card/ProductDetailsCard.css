@@ -157,6 +157,14 @@
   color: gold;
 }
 
+.pDetailsCard-Line{
+  width: 95%;
+  height: .5px;
+  margin-top: 0px;
+  margin-left: 2.5%;
+  background-color: rgb(66, 66, 66);
+}
+
 @media (max-width: 1000px) {
   .pDetailsCardBody {
     flex-direction: column;

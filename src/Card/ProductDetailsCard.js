@@ -33,6 +33,7 @@ export default function ProductDetailsCard({
   const [page1, setPage1] = useState(0); // Region
   const [page2, setPage2] = useState(0); // Sim
   const [page3, setPage3] = useState(0); // Storage
+  const [page4, setPage4] = useState(1); // Description
 
   const [value, setValue] = useState(1);
   const [message, setMessage] = useState("");
@@ -561,6 +562,241 @@ export default function ProductDetailsCard({
       <div style={{ width: "100%" }}>
         <h2 style={{ opacity: ".6" }}>Related Products</h2>
         <Offers />
+      </div>
+      {/* Description */}
+      <div>
+        <Radio.Group size="large">
+          <Radio.Button
+            onClick={() => {
+              setPage4(1);
+            }}
+            style={{
+              color: page4 === 1 ? "white" : "black",
+              backgroundColor: page4 === 1 ? "#fb6565" : "",
+              borderColor:  "#fb6565" ,
+            }}
+          >
+            Description
+          </Radio.Button>
+          <Radio.Button
+            onClick={() => {
+              setPage4(2);
+            }}
+            style={{
+              color: page4 === 2 ? "white" : "black",
+              backgroundColor: page4 === 2 ? "#fb6565" : "",
+              borderColor:  "#fb6565" ,
+            }}
+          >
+            Specification
+          </Radio.Button>
+          <Radio.Button
+            onClick={() => {
+              setPage4(3);
+            }}
+            style={{
+              color: page4 === 3 ? "white" : "black",
+              backgroundColor: page4 === 3 ? "#fb6565" : "",
+              borderColor:  "#fb6565" ,
+            }}
+          >
+            Video
+          </Radio.Button>
+          <Radio.Button
+            onClick={() => {
+              setPage4(4);
+            }}
+            style={{
+              color: page4 === 4 ? "white" : "black",
+              backgroundColor: page4 === 4 ? "#fb6565" : "",
+              borderColor:  "#fb6565" ,
+            }}
+          >
+            Warranty
+          </Radio.Button>
+        </Radio.Group>
+        <div className="pDetailsCard-Line" />
+        {/* Description */}
+        {page4 === 1 ? (
+          <div style={{ marginTop: "5px" }}>
+            <img height={300} src={img1} />
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                margin: "20px",
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+              }}
+            >
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                Welcome to [Your Brand Name], where quality meets innovation. We
+                take pride in offering a wide range of products designed to
+                enhance your life and exceed your expectations. From
+                cutting-edge technology to timeless classics, our diverse
+                product lineup has something for everyone.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Product Excellence:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                At [Your Brand Name], we are committed to excellence in every
+                product we create. Our unwavering dedication to quality and
+                innovation sets us apart from the competition. Whether you're
+                looking for [Product Category], [Product Category], or [Product
+                Category], we've got you covered with the best.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Features and Benefits:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                High-Quality Materials:
+                <br />
+                Each product is crafted with precision and care, using only the
+                finest materials. We prioritize durability, ensuring that your
+                investment stands the test of time.
+                <br />
+                <br />
+                Innovative Technology:
+                <br />
+                Our products are at the forefront of technological innovation.
+                Enjoy the latest advancements that simplify your life and
+                elevate your experiences.
+                <br />
+                <br />
+                Stylish Design:
+                <br />
+                Beauty and functionality go hand in hand. Our products are not
+                only practical but also aesthetically pleasing, enhancing your
+                environment with their sleek and modern design.
+                <br />
+                <br />
+                User-Friendly:
+                <br />
+                We understand that our customers value convenience. Our products
+                are designed to be user-friendly, ensuring ease of use for all
+                ages.
+                <br />
+                <br />
+                Versatile:
+                <br />
+                From [Product Feature 1] to [Product Feature 2], our products
+                offer versatility to cater to your diverse needs.
+                <br />
+                <br />
+                Unparalleled Performance:
+                <br />
+                Expect nothing less than exceptional performance. Our products
+                are built to perform at their best, no matter the task.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Why Choose Us?</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                [Your Brand Name] has earned a reputation for excellence, and
+                for good reason. Our commitment to customer satisfaction and
+                product quality is unwavering. When you choose us, you're not
+                just purchasing a product; you're investing in quality,
+                reliability, and peace of mind.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Customer Satisfaction:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                Our customers are at the heart of everything we do. We take
+                pride in delivering products that consistently exceed your
+                expectations. Your satisfaction is our greatest reward.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Endless Possibilities:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                No matter your needs, [Your Brand Name] has a solution. Whether
+                you're looking for a [Product Type], a [Product Type], or a
+                [Product Type], we offer endless possibilities.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Environmentally Friendly:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                We're also committed to being environmentally responsible. Our
+                products adhere to strict eco-friendly standards, ensuring that
+                we minimize our impact on the planet.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Explore Our Collection:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                Discover our extensive range of products, including:
+                <br />
+                [Product 1 Name]
+                <br />
+                [Product 2 Name]
+                <br />
+                [Product 3 Name]
+                <br />
+                [Product 4 Name]
+                <br />
+                [Product 5 Name]
+                <br />
+                Choose the perfect product to complement your lifestyle, and
+                experience the quality that sets us apart.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Customer Reviews:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                Don't just take our word for it. Hear what our satisfied
+                customers have to say about their experiences with our products:
+                <br />
+                "Absolutely love my [Product Name]! It's made my life so much
+                easier."
+                <br />
+                "The [Product Name] is a game-changer. I can't imagine life
+                without it."
+                <br />
+                "Highly recommended! [Your Brand Name] never disappoints."
+                <br />
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>Order with Confidence:</h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                When you shop with us, you're not just purchasing a product;
+                you're joining a community of individuals who value quality,
+                innovation, and reliability. We stand behind every product we
+                offer, and your satisfaction is guaranteed.
+              </p>
+              <h3 style={{ color: "#FE6D02" }}>
+                Discover the [Your Brand Name] Difference:
+              </h3>
+              <p
+                style={{ textAlign: "left", opacity: ".6", marginTop: "-10px" }}
+              >
+                Join the thousands of satisfied customers who have experienced
+                the [Your Brand Name] difference. We're more than just a brand;
+                we're a commitment to quality and an assurance of satisfaction.
+                <br />
+                Explore our collection today and experience products designed
+                with you in mind. Welcome to a world of quality, innovation, and
+                excellence.
+              </p>
+            </div>
+          </div>
+        ) : // Specification
+        page4 === 2 ? (
+          <div>Specification</div>
+        ) : // Video
+        page4 === 3 ? (
+          <div>Video</div>
+        ) : page4 === 4 ? (
+          // Warranty
+          <div>Warranty</div>
+        ) : (
+          <h1> Error page</h1>
+        )}
       </div>
     </div>
   );
