@@ -7,7 +7,7 @@ export default function ProductDetails() {
   return (
     <div className="overflowBox">
       <div>
-        <ProductDetailsCard />
+        <ProductDetailsCard rating='4' sells='100'/>
         <div style={{ width: "100%" }}>
           <h2 style={{opacity:'.6'}}>Related Products</h2>
           <Offers />

@@ -11,7 +11,15 @@ import i15PromaxDarkBlue from "../Image/i15PromaxDarkBlue.jpeg";
 import i15PromaxWhite from "../Image/i15PromaxWhite.jpeg";
 import i15PromaxGold from "../Image/i15PromaxGold.jpeg";
 
-export default function ProductDetailsCard() {
+export default function ProductDetailsCard({
+  rating,
+  percentage,
+  number,
+  Img,
+  name,
+  details,
+  sells,
+}) {
   const [page, setPage] = useState(1); // Color and Image
   const [page1, setPage1] = useState(1); // Region
   const [page2, setPage2] = useState(2); // Sim
@@ -36,6 +44,39 @@ export default function ProductDetailsCard() {
     } else {
       setMessage("Select a Minimum 1 item");
     }
+  };
+
+// Review or Stars
+  const [result, setResult] = useState("");
+
+  useEffect(() => {
+    if (percentage === "" || number === "") {
+      setResult("");
+      return;
+    }
+
+    const percent = parseFloat(percentage);
+    const num = parseFloat(number);
+
+    if (isNaN(percent) || isNaN(num)) {
+      setResult("");
+      return;
+    }
+
+    const calculatedResult = Math.round(num - (percent / 100) * num);
+    setResult(calculatedResult);
+  }, [percentage, number]);
+
+  const renderStars = (rating) => {
+    const stars = [];
+    for (let i = 1; i <= 5; i++) {
+      stars.push(
+        <span key={i} className={`star ${i <= rating ? "filled" : "empty"}`}>
+          &#9733;
+        </span>
+      );
+    }
+    return stars;
   };
 
   return (
@@ -153,6 +194,10 @@ export default function ProductDetailsCard() {
               </div>
             </div>
           </div>
+        </div>
+        <div>
+          <p>Sell's ({sells})</p>
+        <div className="star-rating">{renderStars(rating)}</div>
         </div>
       </div>
       <div className="pDetailsCardBodyLeft">

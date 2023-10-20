@@ -21,7 +21,7 @@ export default function Note() {
       <p>Projer Time: 3 month.. </p>
       <div style={{width:'50%',marginLeft:'25%'}}>
         <p>Total Process...</p>
-      <Progress  percent={9.0} strokeColor={twoColors} />
+      <Progress  percent={23.0} strokeColor={twoColors} />
 
       </div>
     </div>
