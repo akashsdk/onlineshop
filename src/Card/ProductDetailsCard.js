@@ -406,19 +406,19 @@ export default function ProductDetailsCard() {
         </div>
         <div style={{ display: "flex" }}>
           <div className="pDCLeft-MdiBox-IndexButton-Div">
-            <Button
-              onClick={handleIncrement}
+          <Button
+              onClick={handleDecrement}
               className="pDCLeft-MdiBox-IndexButton"
-              icon={<PlusOutlined />}
+              icon={<MinusOutlined />}
               danger
             />
             <div className="pDCLeft-MdiBox-IndexBiv">
               <h3> {value}</h3>
             </div>
             <Button
-              onClick={handleDecrement}
+              onClick={handleIncrement}
               className="pDCLeft-MdiBox-IndexButton"
-              icon={<MinusOutlined />}
+              icon={<PlusOutlined />}
               danger
             />
           </div>
