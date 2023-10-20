@@ -5,7 +5,6 @@ import { Image, Button, Tooltip, Radio } from "antd";
 import { HomeOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
-
 export default function ProductDetailsCard({
   brandName,
   name,
@@ -24,10 +23,11 @@ export default function ProductDetailsCard({
   img3,
   img4,
   img5,
+  region,
   details,
 }) {
   const [page, setPage] = useState(1); // Color and Image
-  const [page1, setPage1] = useState(1); // Region
+  const [page1, setPage1] = useState(0); // Region
   const [page2, setPage2] = useState(2); // Sim
   const [page3, setPage3] = useState(1); // Storage
 
@@ -202,14 +202,17 @@ export default function ProductDetailsCard({
             </div>
           </div>
         </div>
-        <div style={{
-          display:'flex',
-          justifyContent:'center',
-          alignItems:'center',
-        }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
           <div className="star-rating">{renderStars(rating)}</div>
-          <p style={{opacity:'.6', fontSize:'13px', marginTop:'4px'}}>Sell's ({sells})</p>
-
+          <p style={{ opacity: ".6", fontSize: "13px", marginTop: "4px" }}>
+            Sell's ({sells})
+          </p>
         </div>
       </div>
       {/* Left-Box */}
@@ -230,14 +233,20 @@ export default function ProductDetailsCard({
           </div>
           <div className="pDCLeft-SmallBox">
             <p className="pDCLeft-SmallText">Status:</p>
-            {result !== "" ?<h4 className="pDCLeft-SmallText-H4">  In Stock</h4> : <h4 className="pDCLeft-SmallText-H4">Out of Stock</h4>}
-            
+            {result !== "" ? (
+              <h4 className="pDCLeft-SmallText-H4"> In Stock</h4>
+            ) : (
+              <h4 className="pDCLeft-SmallText-H4">Out of Stock</h4>
+            )}
           </div>
         </div>
-        
+
         <h3 style={{ opacity: ".6", marginLeft: "10px", marginTop: "-0px" }}>
-          
-          {warranty !== "Yes" ? <p> No Warranty Available </p> : <p>1 Year Official Warranty</p>}
+          {warranty !== "Yes" ? (
+            <p> No Warranty Available </p>
+          ) : (
+            <p>1 Year Official Warranty</p>
+          )}
         </h3>
         {/* Color */}
         <div
@@ -260,7 +269,10 @@ export default function ProductDetailsCard({
                 display: color1 !== "" ? "flex" : "none",
                 justifyContent: "center",
                 alignItems: "center",
-                boxShadow: page === 1 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                boxShadow:
+                  page === 1
+                    ? "#f50505 1px 0px 3px 2px"
+                    : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
               }}
             >
               <Tooltip placement="top" title={color1}>
@@ -287,7 +299,10 @@ export default function ProductDetailsCard({
                 display: color2 !== "" ? "flex" : "none",
                 justifyContent: "center",
                 alignItems: "center",
-                boxShadow: page === 2 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                boxShadow:
+                  page === 2
+                    ? "#f50505 1px 0px 3px 2px"
+                    : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                 marginLeft: "5px",
               }}
             >
@@ -315,7 +330,10 @@ export default function ProductDetailsCard({
                 display: color3 !== "" ? "flex" : "none",
                 justifyContent: "center",
                 alignItems: "center",
-                boxShadow: page === 3 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                boxShadow:
+                  page === 3
+                    ? "#f50505 1px 0px 3px 2px"
+                    : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                 marginLeft: "5px",
               }}
             >
@@ -343,7 +361,10 @@ export default function ProductDetailsCard({
                 display: color4 !== "" ? "flex" : "none",
                 justifyContent: "center",
                 alignItems: "center",
-                boxShadow: page === 4 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                boxShadow:
+                  page === 4
+                    ? "#f50505 1px 0px 3px 2px"
+                    : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                 marginLeft: "5px",
               }}
             >
@@ -371,7 +392,10 @@ export default function ProductDetailsCard({
                 display: color5 !== "" ? "flex" : "none",
                 justifyContent: "center",
                 alignItems: "center",
-                boxShadow: page === 5 ? "#f50505 1px 0px 3px 2px" : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
+                boxShadow:
+                  page === 5
+                    ? "#f50505 1px 0px 3px 2px"
+                    : "rgba(27, 31, 35, 0.15) 0px 0px 0px 1px",
                 marginLeft: "5px",
               }}
             >
@@ -393,49 +417,33 @@ export default function ProductDetailsCard({
           </div>
         </div>
         {/* Region */}
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: region !== "" ? "flex" : "none",
+          }}
+        >
           <div className="pDCLeft-MdiBox-Div">
             <p>Region:</p>
           </div>
           <div className="pDCLeft-MdiBox-Div">
-            <Radio.Group value={""} onChange={""}>
-              <Radio.Button
-                onClick={() => {
-                  setPage1(1);
-                }}
-                style={{ color: page1 === 1 ? "#fb6565" : "black" }}
-                value="large"
-              >
-                Regular
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage1(2);
-                }}
-                style={{ color: page1 === 2 ? "#fb6565" : "black" }}
-                value="middle"
-              >
-                CN
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage1(3);
-                }}
-                style={{ color: page1 === 3 ? "#fb6565" : "black" }}
-                value="small"
-              >
-                UAE
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage1(4);
-                }}
-                style={{ color: page1 === 4 ? "#fb6565" : "black" }}
-                value="small"
-              >
-                USA
-              </Radio.Button>
-            </Radio.Group>
+            {region !== "" ? (
+              <Radio.Group value={""} onChange={""}>
+                {region.map((region, index) => (
+                  <Radio.Button
+                    onClick={() => {
+                      setPage1(index);
+                    }}
+                    style={{ color: page1 === index ? "#fb6565" : "black" }}
+                    value="large"
+                  >
+                    {region}
+                  </Radio.Button>
+                ))}
+              </Radio.Group>
+            ) : (
+              <div> </div>
+            )}
+
           </div>
         </div>
         {/* Sim */}
@@ -466,6 +474,7 @@ export default function ProductDetailsCard({
             </Radio.Group>
           </div>
         </div>
+
         {/* Storage */}
         <div style={{ display: "flex" }}>
           <div className="pDCLeft-MdiBox-Div">

@@ -11,11 +11,12 @@ import i15PromaxWhite from "../Image/i15PromaxWhite.jpeg";
 import i15PromaxGold from "../Image/i15PromaxGold.jpeg";
 
 export default function ProductDetails() {
+  const region = [ 'Regular', 'CN', 'UAE', 'USA' ];
   return (
     <div className="overflowBox">
       <div>
         <ProductDetailsCard
-          brandName="Apple"
+          brandName="Apple" 
           name="iPhone 14 Pro Max"
           productCode="i15-06"
           rating="4" // 0 to 5
@@ -33,6 +34,7 @@ export default function ProductDetails() {
           img3={i15PromaxDarkBlue}
           img4={i15PromaxWhite}
           img5={i15PromaxGold}
+          region={region}
         />
         <div style={{ width: "100%" }}>
           <h2 style={{ opacity: ".6" }}>Related Products</h2>
