@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ProductDetailsCard.css";
-import { Carousel, Image, Button, Tooltip, Radio } from "antd";
+import {  Image, Button, Tooltip, Radio } from "antd";
 
 import { HomeOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
@@ -25,7 +25,7 @@ export default function ProductDetailsCard() {
       setValue(value + 1);
       setMessage("");
     } else {
-      setMessage("Fuck u");
+      setMessage("Please visit our shop");
     }
   };
 
@@ -34,7 +34,7 @@ export default function ProductDetailsCard() {
       setValue(value - 1);
       setMessage("");
     } else {
-      setMessage("Value can't go below 0");
+      setMessage("Select a Minimum 1 item");
     }
   };
 
@@ -418,20 +418,33 @@ export default function ProductDetailsCard() {
             <Button
               onClick={handleDecrement}
               className="pDCLeft-MdiBox-IndexButton"
-              icon={<MinusOutlined  />}
+              icon={<MinusOutlined />}
               danger
             />
           </div>
-          <div>Buy Now</div>
-          <div> Add to Cart</div>
+          {/* Buy Now */}
+          <div className="pDCLeft-MdiBox-LinkButton">
+            <Link to="/Checkout">
+              <Button type="primary" size="large" danger>
+                Buy Now
+              </Button>
+            </Link>
+          </div>
+          {/* Add to Cart */}
+          <div className="pDCLeft-MdiBox-LinkButton">
+            <Link to="/My-Cart">
+              <Button size="large" danger>
+                Add to Cart
+              </Button>
+            </Link>
+          </div>
         </div>
 
-        <div>
-          <button>+</button>
-          <button>-</button>
+        <div style={{ height: "50px", marginLeft: "10px" }}>
+          <p style={{ color: "rgb(255, 86, 97)" }}>
+            {message && <p>{message}</p>}
+          </p>
         </div>
-        <p>Value: </p>
-        {message && <p>{message}</p>}
       </div>
     </div>
   );
