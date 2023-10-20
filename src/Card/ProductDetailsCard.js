@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./ProductDetailsCard.css";
 import { Carousel, Image, Button, Tooltip, Radio } from "antd";
 
-import { HomeOutlined } from "@ant-design/icons";
+import { HomeOutlined, PlusOutlined, MinusOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 import i15PromaxGray from "../Image/i15PromaxGray.jpg";
@@ -12,11 +12,31 @@ import i15PromaxWhite from "../Image/i15PromaxWhite.jpeg";
 import i15PromaxGold from "../Image/i15PromaxGold.jpeg";
 
 export default function ProductDetailsCard() {
-  const [page, setPage] = useState(1);   // Color and Image
+  const [page, setPage] = useState(1); // Color and Image
   const [page1, setPage1] = useState(1); // Region
   const [page2, setPage2] = useState(2); // Sim
   const [page3, setPage3] = useState(1); // Storage
 
+  const [value, setValue] = useState(1);
+  const [message, setMessage] = useState("");
+
+  const handleIncrement = () => {
+    if (value < 10) {
+      setValue(value + 1);
+      setMessage("");
+    } else {
+      setMessage("Fuck u");
+    }
+  };
+
+  const handleDecrement = () => {
+    if (value > 1) {
+      setValue(value - 1);
+      setMessage("");
+    } else {
+      setMessage("Value can't go below 0");
+    }
+  };
 
   return (
     <div className="pDetailsCardBody">
@@ -384,6 +404,34 @@ export default function ProductDetailsCard() {
             </Radio.Group>
           </div>
         </div>
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-MdiBox-IndexButton-Div">
+            <Button
+              onClick={handleIncrement}
+              className="pDCLeft-MdiBox-IndexButton"
+              icon={<PlusOutlined />}
+              danger
+            />
+            <div className="pDCLeft-MdiBox-IndexBiv">
+              <h3> {value}</h3>
+            </div>
+            <Button
+              onClick={handleDecrement}
+              className="pDCLeft-MdiBox-IndexButton"
+              icon={<MinusOutlined  />}
+              danger
+            />
+          </div>
+          <div>Buy Now</div>
+          <div> Add to Cart</div>
+        </div>
+
+        <div>
+          <button>+</button>
+          <button>-</button>
+        </div>
+        <p>Value: </p>
+        {message && <p>{message}</p>}
       </div>
     </div>
   );

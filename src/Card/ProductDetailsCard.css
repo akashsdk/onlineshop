@@ -106,7 +106,31 @@ color: #f50505;
  margin-left: 10px;
  
 }
-
+.pDCLeft-MdiBox-IndexButton-Div{
+    height: 45px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid rgb(255, 86, 97);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.pDCLeft-MdiBox-IndexButton{
+    border: none;
+}
+.pDCLeft-MdiBox-IndexBiv{
+    height: 45px;
+    width: 40px;
+    border: 2px solid rgb(255, 86, 97);
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 
 
