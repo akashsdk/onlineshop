@@ -1,8 +1,6 @@
 import React from "react";
 import ProductDetailsCard from "../Card/ProductDetailsCard";
 import Footer from "../Components/Footer";
-import Offers from "../Components/Offers";
-import { Link } from "react-router-dom";
 
 import i15PromaxGray from "../Image/i15PromaxGray.jpg";
 import i15PromaxBlack from "../Image/i15PromaxBlack.jpeg";

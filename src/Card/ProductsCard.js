@@ -5,6 +5,7 @@ import { Image, Button } from "antd";
 
 import taka from "../Icon/taka (1).png";
 import taka2 from "../Icon/taka.png";
+import { Link } from "react-router-dom";
 
 export default function ProductsCard({
   rating,
@@ -47,6 +48,7 @@ export default function ProductsCard({
   };
 
   return (
+    <Link to='/Category/Product-Details' >
     <Button className="ProductsCardBody">
       <Image
         height={170}
@@ -87,5 +89,6 @@ export default function ProductsCard({
         <div className="star-rating">{renderStars(rating)}</div>
       </div>
     </Button>
+    </Link>
   );
 }
