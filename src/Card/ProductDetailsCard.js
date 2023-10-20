@@ -24,12 +24,14 @@ export default function ProductDetailsCard({
   img4,
   img5,
   region,
+  sim,
+  storage,
   details,
 }) {
   const [page, setPage] = useState(1); // Color and Image
   const [page1, setPage1] = useState(0); // Region
-  const [page2, setPage2] = useState(2); // Sim
-  const [page3, setPage3] = useState(1); // Storage
+  const [page2, setPage2] = useState(0); // Sim
+  const [page3, setPage3] = useState(0); // Storage
 
   const [value, setValue] = useState(1);
   const [message, setMessage] = useState("");
@@ -443,84 +445,70 @@ export default function ProductDetailsCard({
             ) : (
               <div> </div>
             )}
-
           </div>
         </div>
         {/* Sim */}
-        <div style={{ display: "flex" }}>
+        <div
+          style={{
+            display: sim !== "" ? "flex" : "none",
+          }}
+        >
           <div className="pDCLeft-MdiBox-Div">
             <p>Sim:</p>
           </div>
           <div className="pDCLeft-MdiBox-Div">
-            <Radio.Group value={""} onChange={""}>
-              <Radio.Button
-                onClick={() => {
-                  setPage2(1);
-                }}
-                style={{ color: page2 === 1 ? "#fb6565" : "black" }}
-                value="large"
-              >
-                Dual
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage2(2);
-                }}
-                style={{ color: page2 === 2 ? "#fb6565" : "black" }}
-                value="middle"
-              >
-                e-Sim
-              </Radio.Button>
-            </Radio.Group>
+            {sim !== "" ? (
+              <Radio.Group value={""} onChange={""}>
+                {sim.map((sim, index) => (
+                  <Radio.Button
+                    onClick={() => {
+                      setPage2(index);
+                    }}
+                    style={{ color: page2 === index ? "#fb6565" : "black" }}
+                    value="large"
+                  >
+                    {sim}
+                  </Radio.Button>
+                ))}
+              </Radio.Group>
+            ) : (
+              <div> </div>
+            )}
           </div>
         </div>
 
         {/* Storage */}
-        <div style={{ display: "flex" }}>
+
+        <div
+          style={{
+            display: storage !== "" ? "flex" : "none",
+          }}
+        >
           <div className="pDCLeft-MdiBox-Div">
             <p>Storage:</p>
           </div>
           <div className="pDCLeft-MdiBox-Div">
-            <Radio.Group value={""} onChange={""}>
-              <Radio.Button
-                onClick={() => {
-                  setPage3(1);
-                }}
-                style={{ color: page3 === 1 ? "#fb6565" : "black" }}
-                value="large"
-              >
-                128GB
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage3(2);
-                }}
-                style={{ color: page3 === 2 ? "#fb6565" : "black" }}
-                value="middle"
-              >
-                256GB
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage3(3);
-                }}
-                style={{ color: page3 === 3 ? "#fb6565" : "black" }}
-                value="middle"
-              >
-                512GB
-              </Radio.Button>
-              <Radio.Button
-                onClick={() => {
-                  setPage3(4);
-                }}
-                style={{ color: page3 === 4 ? "#fb6565" : "black" }}
-                value="middle"
-              >
-                1TB
-              </Radio.Button>
-            </Radio.Group>
+            {storage !== "" ? (
+              <Radio.Group value={""} onChange={""}>
+                {storage.map((storage, index) => (
+                  <Radio.Button
+                    onClick={() => {
+                      setPage3(index);
+                    }}
+                    style={{ color: page3 === index ? "#fb6565" : "black" }}
+                    value="large"
+                  >
+                    {storage}
+                  </Radio.Button>
+                ))}
+              </Radio.Group>
+            ) : (
+              <div> </div>
+            )}
           </div>
         </div>
+
+        {/* Button */}
         <div style={{ display: "flex" }}>
           <div className="pDCLeft-MdiBox-IndexButton-Div">
             <Button
