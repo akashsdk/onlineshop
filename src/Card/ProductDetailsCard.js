@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./ProductDetailsCard.css";
-import { Carousel, Image, Button, Tooltip } from "antd";
+import { Carousel, Image, Button, Tooltip, Radio } from "antd";
 
 import { HomeOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
@@ -12,7 +12,11 @@ import i15PromaxWhite from "../Image/i15PromaxWhite.jpeg";
 import i15PromaxGold from "../Image/i15PromaxGold.jpeg";
 
 export default function ProductDetailsCard() {
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(1);   // Color and Image
+  const [page1, setPage1] = useState(1); // Region
+  const [page2, setPage2] = useState(2); // Sim
+  const [page3, setPage3] = useState(1); // Storage
+
 
   return (
     <div className="pDetailsCardBody">
@@ -133,7 +137,7 @@ export default function ProductDetailsCard() {
       </div>
       <div className="pDetailsCardBodyLeft">
         <p style={{ opacity: ".6", marginLeft: "10px" }}> Brand Apple</p>
-        <h2 style={{ marginTop: "-10px", marginLeft: "10px" }}>
+        <h2 style={{ marginTop: "10px", marginLeft: "10px" }}>
           iPhone 14 Pro Max
         </h2>
         <div className="pDCLeft-SmallBox">
@@ -154,28 +158,29 @@ export default function ProductDetailsCard() {
         <h3 style={{ opacity: ".6", marginLeft: "10px", marginTop: "-0px" }}>
           1 Year Official Warranty
         </h3>
-        <div>
-          <div>
+        {/* Color */}
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-MdiBox-Div">
             <p>Color:</p>
           </div>
-          <div>
+          <div className="pDCLeft-MdiBox-Div">
             <Tooltip placement="top" title="Black">
               <Button
                 onClick={() => {
                   setPage(1);
                 }}
                 style={{
-                    height: "35Px",
-                    width: "35px",
+                  height: "35Px",
+                  width: "35px",
                   borderRadius: "5px",
                   borderColor: page === 1 ? "#fb6565" : "#ffff",
+                  boxShadow: page === 1 ? "#f50505 1px 0px 3px 2px" : "none",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: "black",
                 }}
-              >
-              </Button>
+              ></Button>
             </Tooltip>
 
             <Tooltip placement="top" title="Gray">
@@ -184,18 +189,18 @@ export default function ProductDetailsCard() {
                   setPage(2);
                 }}
                 style={{
-                    height: "35Px",
-                    width: "35px",
+                  height: "35Px",
+                  width: "35px",
                   borderRadius: "5px",
                   borderColor: page === 2 ? "#fb6565" : "#ffff",
+                  boxShadow: page === 2 ? "#f50505 1px 0px 3px 2px" : "none",
+                  marginLeft: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: "gray",
-
                 }}
-              >
-              </Button>
+              ></Button>
             </Tooltip>
 
             <Tooltip placement="top" title="DarkBlue">
@@ -208,13 +213,14 @@ export default function ProductDetailsCard() {
                   width: "35px",
                   borderRadius: "5px",
                   borderColor: page === 3 ? "#fb6565" : "#ffff",
+                  boxShadow: page === 3 ? "#f50505 1px 0px 3px 2px" : "none",
+                  marginLeft: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: 'DarkBlue',
+                  backgroundColor: "DarkBlue",
                 }}
-              >
-              </Button>
+              ></Button>
             </Tooltip>
 
             <Tooltip placement="top" title="White">
@@ -223,17 +229,18 @@ export default function ProductDetailsCard() {
                   setPage(4);
                 }}
                 style={{
-                    height: "35Px",
-                    width: "35px",
+                  height: "35Px",
+                  width: "35px",
                   borderRadius: "5px",
                   borderColor: page === 4 ? "#fb6565" : "#ffff",
+                  boxShadow: page === 4 ? "#f50505 1px 0px 3px 2px" : "none",
+                  marginLeft: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
                   backgroundColor: "white",
                 }}
-              >
-              </Button>
+              ></Button>
             </Tooltip>
 
             <Tooltip placement="top" title="Gold">
@@ -242,19 +249,139 @@ export default function ProductDetailsCard() {
                   setPage(5);
                 }}
                 style={{
-                    height: "35Px",
-                    width: "35px",
+                  height: "35Px",
+                  width: "35px",
                   borderRadius: "5px",
                   borderColor: page === 5 ? "#fb6565" : "#ffff",
+                  boxShadow: page === 5 ? "#f50505 1px 0px 3px 2px" : "none",
+                  marginLeft: "5px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
-                  backgroundColor: 'goldenrod',
-
+                  backgroundColor: "goldenrod",
                 }}
-              >
-              </Button>
+              ></Button>
             </Tooltip>
+          </div>
+        </div>
+        {/* Region */}
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-MdiBox-Div">
+            <p>Region:</p>
+          </div>
+          <div className="pDCLeft-MdiBox-Div">
+            <Radio.Group value={""} onChange={""}>
+              <Radio.Button
+                onClick={() => {
+                  setPage1(1);
+                }}
+                style={{ color: page1 === 1 ? "#fb6565" : "black" }}
+                value="large"
+              >
+                Regular
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage1(2);
+                }}
+                style={{ color: page1 === 2 ? "#fb6565" : "black" }}
+                value="middle"
+              >
+                CN
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage1(3);
+                }}
+                style={{ color: page1 === 3 ? "#fb6565" : "black" }}
+                value="small"
+              >
+                UAE
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage1(4);
+                }}
+                style={{ color: page1 === 4 ? "#fb6565" : "black" }}
+                value="small"
+              >
+                USA
+              </Radio.Button>
+            </Radio.Group>
+          </div>
+        </div>
+        {/* Sim */}
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-MdiBox-Div">
+            <p>Sim:</p>
+          </div>
+          <div className="pDCLeft-MdiBox-Div">
+            <Radio.Group value={""} onChange={""}>
+              <Radio.Button
+                onClick={() => {
+                  setPage2(1);
+                }}
+                style={{ color: page2 === 1 ? "#fb6565" : "black" }}
+                value="large"
+              >
+                Dual
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage2(2);
+                }}
+                style={{ color: page2 === 2 ? "#fb6565" : "black" }}
+                value="middle"
+              >
+                e-Sim
+              </Radio.Button>
+            </Radio.Group>
+          </div>
+        </div>
+        {/* Storage */}
+        <div style={{ display: "flex" }}>
+          <div className="pDCLeft-MdiBox-Div">
+            <p>Storage:</p>
+          </div>
+          <div className="pDCLeft-MdiBox-Div">
+            <Radio.Group value={""} onChange={""}>
+              <Radio.Button
+                onClick={() => {
+                  setPage3(1);
+                }}
+                style={{ color: page3 === 1 ? "#fb6565" : "black" }}
+                value="large"
+              >
+                128GB
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage3(2);
+                }}
+                style={{ color: page3 === 2 ? "#fb6565" : "black" }}
+                value="middle"
+              >
+                256GB
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage3(3);
+                }}
+                style={{ color: page3 === 3 ? "#fb6565" : "black" }}
+                value="middle"
+              >
+                512GB
+              </Radio.Button>
+              <Radio.Button
+                onClick={() => {
+                  setPage3(4);
+                }}
+                style={{ color: page3 === 4 ? "#fb6565" : "black" }}
+                value="middle"
+              >
+                1TB
+              </Radio.Button>
+            </Radio.Group>
           </div>
         </div>
       </div>

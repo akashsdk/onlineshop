@@ -61,7 +61,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 }
 .pDetailsCardRightDown-2Button {
   height: 75px;
@@ -99,6 +99,27 @@ margin-right: 10px;
 margin-left: 10px;
 color: #f50505;
 }
+.pDCLeft-MdiBox-Div{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-left: 10px;
+ 
+}
+
+
+
+
+
+ 
+  
+  
+  
+  
+  
+
+
+
 
 @media (max-width: 1000px) {
   .pDetailsCardBody {
