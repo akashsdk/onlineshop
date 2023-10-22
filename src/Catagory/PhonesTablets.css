@@ -1,0 +1,29 @@
+.phonesTabletsTopBox{
+    height: auto;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 40px;
+    margin-left: 2.5%;
+}
+.phonesTabletsTopBox-Button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-color: aqua;
+}
+.phonesTabletsTopBox-Button:hover{
+    background-color: aqua;
+    border: none;
+    
+}
+.phonesTabletsTopBox-ButtonText{
+    font-size: 20px;
+    
+}
+.phonesTabletsTopBox-ButtonText:hover{
+    color: #ffffff;
+
+}
