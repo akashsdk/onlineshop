@@ -27,8 +27,8 @@ export default function PhonesTablets() {
           </Flex>
         </div>
         <div style={{ height: "auto", width: "100%", marginTop:'40px' }}>
-          <div>Left</div>
-          <div>Right</div>
+          <div className="phonesTabletsLeftBox">Left</div>
+          <div className="phonesTabletsRightBox">Right</div>
         </div>
       </div>
       <Footer />
