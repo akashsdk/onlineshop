@@ -17,6 +17,7 @@
 .phonesTabletsTopBox-Button:hover {
   background-color: rgb(194, 253, 253);
   border: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .phonesTabletsTopBox-ButtonText {
   font-size: 20px;
