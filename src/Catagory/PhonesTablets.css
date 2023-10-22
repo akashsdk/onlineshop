@@ -15,21 +15,33 @@
   border-color: aqua;
 }
 .phonesTabletsTopBox-Button:hover {
-  background-color: aqua;
+  background-color: rgb(194, 253, 253);
   border: none;
 }
 .phonesTabletsTopBox-ButtonText {
   font-size: 20px;
 }
 .phonesTabletsTopBox-ButtonText:hover {
-  color: #ffffff;
+  color: #ff0000;
 }
 .phonesTabletsLeftBox {
   width: 30%;
+  background-color: aqua;
 }
 .phonesTabletsRightBox {
   width: 70%;
-  background-color: aqua;
+}
+.phonesTabletsRight-Header {
+  display: flex;
+  width: 95%;
+  margin-left: 2.5%;
+  justify-content: space-between;
+  background-color: rgb(250, 250, 250);
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.phonesTabletsRight-HeaderText{
+    margin-left: 20px;
 }
 @media only screen and (max-width: 1000px) {
   .phonesTabletsLeftBox {
@@ -38,4 +50,7 @@
   .phonesTabletsRightBox {
     width: 100%;
   }
+  .phonesTabletsRight-HeaderText{
+    display: none;
+}
 }

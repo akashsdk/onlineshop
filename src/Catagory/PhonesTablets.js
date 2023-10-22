@@ -28,7 +28,12 @@ export default function PhonesTablets() {
         </div>
         <div style={{ height: "auto", width: "100%", marginTop:'40px', display:'flex' }}>
           <div className="phonesTabletsLeftBox">Left</div>
-          <div className="phonesTabletsRightBox">Right</div>
+          <div className="phonesTabletsRightBox">
+            <div className="phonesTabletsRight-Header">
+              <h3 className="phonesTabletsRight-HeaderText">Phones & Tablets</h3>
+              <h3>Sort By: </h3>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
