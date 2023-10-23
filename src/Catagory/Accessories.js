@@ -35,7 +35,7 @@ export default function Accessories() {
           <Flex wrap="wrap" gap="small">
             {Array.from(
               {
-                length: 24,
+                length: 20,
               },
               (_, i) => (
                 <Button className="phonesTabletsTopBox-Button" shape="round">
@@ -100,9 +100,7 @@ export default function Accessories() {
           <div className="phonesTabletsRightBox">
             {/* Header */}
             <div className="phonesTabletsRight-Header">
-              <h3 className="phonesTabletsRight-HeaderText">
-                Phones & Tablets
-              </h3>
+              <h3 className="phonesTabletsRight-HeaderText">Accessories</h3>
               {/* Filter */}
               <Button
                 className="phonesTabletsRight-HeaderFilter"
