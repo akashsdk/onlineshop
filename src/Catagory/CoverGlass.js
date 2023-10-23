@@ -35,7 +35,7 @@ export default function CoverGlass() {
           <Flex wrap="wrap" gap="small">
             {Array.from(
               {
-                length: 24,
+                length: 20,
               },
               (_, i) => (
                 <Button className="phonesTabletsTopBox-Button" shape="round">
@@ -80,9 +80,7 @@ export default function CoverGlass() {
                 <Checkbox style={{ color: "red" }}>Tablets Glass</Checkbox>
                 <Checkbox style={{ color: "red" }}>Laptop Cover</Checkbox>
                 <Checkbox style={{ color: "red" }}>Laptop Glass</Checkbox>
-                <Checkbox style={{ color: "red" }}>
-                  Monitor Cover&Glass
-                </Checkbox>
+                <Checkbox style={{ color: "red" }}>Monitor Glass</Checkbox>
                 <Checkbox style={{ color: "red" }}>Airpods Cover</Checkbox>
                 <Checkbox style={{ color: "red" }}>Watch Cover&Glass</Checkbox>
               </div>
@@ -217,7 +215,7 @@ export default function CoverGlass() {
                       <Checkbox style={{ color: "red" }}>Laptop Cover</Checkbox>
                       <Checkbox style={{ color: "red" }}>Laptop Glass</Checkbox>
                       <Checkbox style={{ color: "red" }}>
-                        Monitor Cover&Glass
+                        Monitor Glass
                       </Checkbox>
                       <Checkbox style={{ color: "red" }}>
                         Airpods Cover
