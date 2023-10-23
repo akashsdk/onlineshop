@@ -32,6 +32,7 @@ import speaker from "../Icon/speaker.png";
 import hub from "../Icon/usb-hub.png";
 import wipe from "../Icon/wipe.png";
 import wirelesscharging from "../Icon/wireless-charging.png";
+import accessories from '../Icon/keyboard-and-mouse.png';
 
 import Offers from "../Components/Offers";
 
@@ -282,6 +283,14 @@ export default function HomeIndex() {
               <Category
                 categoryImg={camera}
                 categoryFastText="Camera"
+                categoryScendText="Accessories"
+              />
+            </Link>
+
+            <Link to="/Category/Accessories">
+              <Category
+                categoryImg={accessories}
+                categoryFastText="All"
                 categoryScendText="Accessories"
               />
             </Link>

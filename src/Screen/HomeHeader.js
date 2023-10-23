@@ -106,11 +106,6 @@ export default function HomeHeader() {
                 </Button>
               </Link>
 
-              <Link to="/Category/Headphones" style={{ flex: "1" }}>
-                <Button onClick={onClose2} type="text" className="homeMedTopButton1" block>
-                  Airpods
-                </Button>
-              </Link>
 
               <Link to="/Category/Headphones" style={{ flex: "1" }}>
                 <Button onClick={onClose2} type="text" className="homeMedTopButton1" block>
@@ -168,6 +163,12 @@ export default function HomeHeader() {
                   Cover & Glass
                 </Button>
               </Link>
+
+              <Link to="/Category/Accessories" style={{ flex: "1" }}>
+            <Button type="text" className="homeMedTopButton" block>
+            Accessories
+            </Button>
+          </Link>
             </div>
           </div>
         </Drawer>
@@ -288,12 +289,6 @@ export default function HomeHeader() {
 
           <Link to="/Category/Headphones" style={{ flex: "1" }}>
             <Button type="text" className="homeMedTopButton" block>
-              Airpods
-            </Button>
-          </Link>
-
-          <Link to="/Category/Headphones" style={{ flex: "1" }}>
-            <Button type="text" className="homeMedTopButton" block>
               {/* <Menu
               mode="horizontal"
               items={items}
@@ -344,6 +339,13 @@ export default function HomeHeader() {
               Cover & <br /> Glass
             </Button>
           </Link>
+
+          <Link to="/Category/Accessories" style={{ flex: "1" }}>
+            <Button type="text" className="homeMedTopButton" block>
+            Accessories
+            </Button>
+          </Link>
+
         </div>
       </div>
     </div>
