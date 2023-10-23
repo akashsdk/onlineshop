@@ -35,7 +35,7 @@ export default function Camera() {
           <Flex wrap="wrap" gap="small">
             {Array.from(
               {
-                length: 24,
+                length: 6,
               },
               (_, i) => (
                 <Button className="phonesTabletsTopBox-Button" shape="round">
