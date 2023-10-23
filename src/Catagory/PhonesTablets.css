@@ -30,82 +30,50 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items:  center;
+  align-items: center;
 }
-.phonesTabletsLeft-FilterBox{
-    height: auto;
-    width:80%;
+.phonesTabletsRight-DrawerBox {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.phonesTabletsLeft-FilterBox {
+  height: auto;
+  width: 80%;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    border-radius: 20px;
-    margin-bottom: 30px;
-
+  border-radius: 20px;
+  margin-bottom: 30px;
 }
-.phonesTabletsLeft-FilterBox-Text{
-    font-size: 20px;
-    font-family: sans-serif;
-    margin-top: 10px;
-
+.phonesTabletsLeft-FilterBox-Text {
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-top: 10px;
 }
-.phonesTabletsLeft-FilterBox-Line{
-    width: 100%;
-    height: 1px;
-    background-color: aqua;
-    margin-top: -10px;
+.phonesTabletsLeft-FilterBox-Line {
+  width: 100%;
+  height: 1px;
+  background-color: aqua;
+  margin-top: -10px;
 }
-.phonesTabletsLeft-FilterBox-Input{
-    width: 90%;
-    margin: 5%;
+.phonesTabletsLeft-FilterBox-Input {
+  width: 90%;
+  margin: 5%;
 }
-.phonesTabletsLeft-FilterBox-ButtonDiv{
-    display: flex;
-    justify-content: flex-end;
-    margin: 5%;
-    margin-bottom: 20px;
+.phonesTabletsLeft-FilterBox-ButtonDiv {
+  display: flex;
+  justify-content: flex-end;
+  margin: 5%;
+  margin-bottom: 20px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.phonesTabletsLeft-FilterBox-Select {
+  margin: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
 
 .phonesTabletsRightBox {
   width: 70%;
@@ -146,6 +114,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-left: 20px;
+  }
+  .phonesTabletsLeft-FilterBox-Text {
     margin-left: 20px;
   }
 }

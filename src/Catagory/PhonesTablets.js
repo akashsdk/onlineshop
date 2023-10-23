@@ -3,7 +3,7 @@ import "./PhonesTablets.css";
 import Footer from "../Components/Footer";
 import OffersCard from "../Card/OffersCard";
 
-import { Button, Flex, Drawer, Select, Space, Input } from "antd";
+import { Button, Flex, Drawer, Select, Space, Input, Checkbox } from "antd";
 import { FilterOutlined } from "@ant-design/icons";
 
 import iphone from "../Image/iphone15-pro-64.webp";
@@ -53,6 +53,7 @@ export default function PhonesTablets() {
           }}
         >
           <div className="phonesTabletsLeftBox">
+            {/* Price Range */}
             <div className="phonesTabletsLeft-FilterBox">
               <p className="phonesTabletsLeft-FilterBox-Text">Price Range</p>
               <div className="phonesTabletsLeft-FilterBox-Line" />
@@ -67,17 +68,62 @@ export default function PhonesTablets() {
               </div>
             </div>
 
+            {/* Storage */}
             <div className="phonesTabletsLeft-FilterBox">
-              <p className="phonesTabletsLeft-FilterBox-Text">Price Range</p>
+              <p className="phonesTabletsLeft-FilterBox-Text">Storage</p>
               <div className="phonesTabletsLeft-FilterBox-Line" />
-              <div className="phonesTabletsLeft-FilterBox-Input">
-                <Space.Compact size="large">
-                  <Input placeholder="Minimum" />
-                  <Input placeholder="Maximum" />
-                </Space.Compact>
+              <div className="phonesTabletsLeft-FilterBox-Select">
+                <Checkbox style={{ color: "red" }}>8/128GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>8/128GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>8/256GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>6/125GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>6/256GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>4/128GB</Checkbox>
+                <Checkbox style={{ color: "red" }}>4/256GB</Checkbox>
               </div>
-              <div className="phonesTabletsLeft-FilterBox-ButtonDiv">
-                <Button danger>Filter</Button>
+            </div>
+
+            {/* Type */}
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Type</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Select">
+                <Checkbox style={{ color: "red" }}>3G</Checkbox>
+                <Checkbox style={{ color: "red" }}>4G</Checkbox>
+                <Checkbox style={{ color: "red" }}>5G</Checkbox>
+              </div>
+            </div>
+
+            {/* Warranty */}
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Warranty</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Select">
+                <Checkbox style={{ color: "red" }}>Official</Checkbox>
+              </div>
+            </div>
+
+            {/* Sim */}
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Sim</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Select">
+                <Checkbox style={{ color: "red" }}>Dual</Checkbox>
+                <Checkbox style={{ color: "red" }}>Single</Checkbox>
+                <Checkbox style={{ color: "red" }}>e-Sim</Checkbox>
+              </div>
+            </div>
+
+            {/* Region */}
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Region</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Select">
+                <Checkbox style={{ color: "red" }}>CN</Checkbox>
+                <Checkbox style={{ color: "red" }}>IND</Checkbox>
+                <Checkbox style={{ color: "red" }}>INT</Checkbox>
+                <Checkbox style={{ color: "red" }}>Regular</Checkbox>
+                <Checkbox style={{ color: "red" }}>USA</Checkbox>
               </div>
             </div>
           </div>
@@ -104,9 +150,83 @@ export default function PhonesTablets() {
                 onClose={onClose}
                 open={open}
               >
-                <p>Some contents...</p>
-                <p>Some contents...</p>
-                <p>Some contents...</p>
+                <div className="phonesTabletsRight-DrawerBox">
+                  {/* Price Range */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">
+                      Price Range
+                    </p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Input">
+                      <Space.Compact size="large">
+                        <Input placeholder="Minimum" />
+                        <Input placeholder="Maximum" />
+                      </Space.Compact>
+                    </div>
+                    <div className="phonesTabletsLeft-FilterBox-ButtonDiv">
+                      <Button danger>Filter</Button>
+                    </div>
+                  </div>
+
+                  {/* Storage */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">Storage</p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Select">
+                      <Checkbox style={{ color: "red" }}>8/128GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>8/128GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>8/256GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>6/125GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>6/256GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>4/128GB</Checkbox>
+                      <Checkbox style={{ color: "red" }}>4/256GB</Checkbox>
+                    </div>
+                  </div>
+
+                  {/* Type */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">Type</p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Select">
+                      <Checkbox style={{ color: "red" }}>3G</Checkbox>
+                      <Checkbox style={{ color: "red" }}>4G</Checkbox>
+                      <Checkbox style={{ color: "red" }}>5G</Checkbox>
+                    </div>
+                  </div>
+
+                  {/* Warranty */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">Warranty</p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Select">
+                      <Checkbox style={{ color: "red" }}>Official</Checkbox>
+                    </div>
+                  </div>
+
+                  {/* Sim */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">Sim</p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Select">
+                      <Checkbox style={{ color: "red" }}>Dual</Checkbox>
+                      <Checkbox style={{ color: "red" }}>Single</Checkbox>
+                      <Checkbox style={{ color: "red" }}>e-Sim</Checkbox>
+                    </div>
+                  </div>
+
+                  {/* Region */}
+                  <div className="phonesTabletsLeft-FilterBox">
+                    <p className="phonesTabletsLeft-FilterBox-Text">Region</p>
+                    <div className="phonesTabletsLeft-FilterBox-Line" />
+                    <div className="phonesTabletsLeft-FilterBox-Select">
+                      <Checkbox style={{ color: "red" }}>CN</Checkbox>
+                      <Checkbox style={{ color: "red" }}>IND</Checkbox>
+                      <Checkbox style={{ color: "red" }}>INT</Checkbox>
+                      <Checkbox style={{ color: "red" }}>Regular</Checkbox>
+                      <Checkbox style={{ color: "red" }}>USA</Checkbox>
+                    </div>
+                  </div>
+                </div>
               </Drawer>
               {/* Sort By: */}
               <div className="phonesTabletsRight-HeaderSortBy">
@@ -139,7 +259,7 @@ export default function PhonesTablets() {
               </div>
             </div>
             {/* Product Demo Box */}
-            <div>
+            <div style={{marginTop:'20px', marginBottom:'20px'}}>
               <OffersCard
                 name="Iphone 15 Pro"
                 Img={iphone}
