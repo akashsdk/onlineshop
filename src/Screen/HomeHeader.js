@@ -96,7 +96,7 @@ export default function HomeHeader() {
 
               <Link to="/Category/Computer-and-Laptop" style={{ flex: "1" }}>
                 <Button onClick={onClose2} type="text" className="homeMedTopButton1" block>
-                  MacBook
+                Computer
                 </Button>
               </Link>
 
@@ -276,7 +276,7 @@ export default function HomeHeader() {
 
           <Link to="/Category/Computer-and-Laptop" style={{ flex: "1" }}>
             <Button type="text" className="homeMedTopButton" block>
-              <p>MacBook</p>
+              <p>Computer</p>
             </Button>
           </Link>
 
