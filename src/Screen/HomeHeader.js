@@ -165,10 +165,12 @@ export default function HomeHeader() {
               </Link>
 
               <Link to="/Category/Accessories" style={{ flex: "1" }}>
-            <Button type="text" className="homeMedTopButton" block>
-            Accessories
-            </Button>
-          </Link>
+                <Button onClick={onClose2} type="text" className="homeMedTopButton1" block>
+                Accessories
+                </Button>
+              </Link>
+
+              
             </div>
           </div>
         </Drawer>
