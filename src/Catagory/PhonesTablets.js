@@ -3,7 +3,7 @@ import "./PhonesTablets.css";
 import Footer from "../Components/Footer";
 import OffersCard from "../Card/OffersCard";
 
-import { Button, Flex, Drawer, Select } from "antd";
+import { Button, Flex, Drawer, Select, Space, Input } from "antd";
 import { FilterOutlined } from "@ant-design/icons";
 
 import iphone from "../Image/iphone15-pro-64.webp";
@@ -52,7 +52,35 @@ export default function PhonesTablets() {
             display: "flex",
           }}
         >
-          <div className="phonesTabletsLeftBox">Left</div>
+          <div className="phonesTabletsLeftBox">
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Price Range</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Input">
+                <Space.Compact size="large">
+                  <Input placeholder="Minimum" />
+                  <Input placeholder="Maximum" />
+                </Space.Compact>
+              </div>
+              <div className="phonesTabletsLeft-FilterBox-ButtonDiv">
+                <Button danger>Filter</Button>
+              </div>
+            </div>
+
+            <div className="phonesTabletsLeft-FilterBox">
+              <p className="phonesTabletsLeft-FilterBox-Text">Price Range</p>
+              <div className="phonesTabletsLeft-FilterBox-Line" />
+              <div className="phonesTabletsLeft-FilterBox-Input">
+                <Space.Compact size="large">
+                  <Input placeholder="Minimum" />
+                  <Input placeholder="Maximum" />
+                </Space.Compact>
+              </div>
+              <div className="phonesTabletsLeft-FilterBox-ButtonDiv">
+                <Button danger>Filter</Button>
+              </div>
+            </div>
+          </div>
           <div className="phonesTabletsRightBox">
             {/* Header */}
             <div className="phonesTabletsRight-Header">
