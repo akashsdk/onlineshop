@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Footer.css";
 
-import { Flex, Radio, Button } from "antd";
+import { Button, Drawer, Space, Input, message } from "antd";
 
 import phoneLogo from "../Icon/phone-call.png";
 import location from "../Icon/google-maps.png";
@@ -11,12 +11,31 @@ import {
   InstagramOutlined,
   YoutubeOutlined,
   WhatsAppOutlined,
+  UserOutlined,
+  MailOutlined,
+  MessageOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
+  const [open, setOpen] = useState(false);
+  const [placement] = useState("bottom");
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
+  const [messageApi, contextHolder] = message.useMessage();
+  const success = () => {
+    messageApi.open({
+      type: "success",
+      content: "Send to Success",
+    });
+  };
+
   return (
     <div>
+      {contextHolder}
       {/* Box 1 (Up to 1000px) */}
       <div className="box box1">
         <div className="footerBox">
@@ -486,10 +505,59 @@ export default function Footer() {
         <div className="container">
           <p>
             &copy; {new Date().getFullYear()} Tasnim Shahriar Akash | All rights
-            reserved
+            reserved{" "}
+            <Button
+              danger
+              onClick={() => {
+                setOpen(true);
+              }}
+              style={{
+                color: "#fb6565",
+                border: "none",
+                backgroundColor: "transparent",
+                marginTop: "-35px",
+                fontSize: "18px",
+                marginLeft: "-10px",
+              }}
+            >
+              Feedback
+            </Button>
           </p>
         </div>
       </footer>
+      
+      {/* Drawer */}
+      <Drawer
+        title="Feedback Form, We would love to hear your feedback on our website."
+        placement={placement}
+        width={500}
+        onClose={onClose}
+        open={open}
+        extra={
+          <Space>
+            <Button onClick={onClose} style={{ borderColor: "#fb6565" }}>
+              Cancel
+            </Button>
+          </Space>
+        }
+      >
+        <div className="feedbackOpenBox">
+          <br />
+          <Input placeholder="Name" prefix={<UserOutlined />} />
+          <br />
+          <br />
+          <Input placeholder="Email" prefix={<MailOutlined />} />
+          <br />
+          <br />
+          <Input placeholder="Feedback" prefix={<MessageOutlined />} />
+          <br />
+          <br />
+          <Button onClick={success} style={{ borderColor: "aqua" }}>
+            Send
+          </Button>
+          <br />
+        </div>
+      </Drawer>
     </div>
   );
 }

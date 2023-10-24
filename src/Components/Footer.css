@@ -14,18 +14,15 @@
   width: 100%;
 }
 
-.footerFlex{
 
-  
-}
 
-.footerBox{
-flex: 1;
+.footerBox {
+  flex: 1;
 }
-.footerBoxText{
+.footerBoxText {
   color: #0cebef;
 }
-.footerBoxButton{
+.footerBoxButton {
   height: 50px;
   width: 250px;
   border-radius: 30px;
@@ -35,31 +32,30 @@ flex: 1;
   align-items: center;
   margin-bottom: 20px;
 }
-.footerBoxButton:hover{
+.footerBoxButton:hover {
   border: 1.5px solid aqua;
 }
-.footerNumberText{
+.footerNumberText {
   font-size: 28px;
   color: #ffffff;
   margin-left: 10px;
 }
-.footerBox2Div{
+.footerBox2Div {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.footerBox2DivButton{
+.footerBox2DivButton {
   color: #ffffff;
 }
-.footerBox2DivButtonText{
+.footerBox2DivButtonText {
   margin-top: -0px;
 }
-.footerBox2DivButtonText:hover{
+.footerBox2DivButtonText:hover {
   color: aqua;
 }
 .box {
-  
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
@@ -71,12 +67,26 @@ flex: 1;
 .box3 {
   display: none;
 }
-@media  only screen and (max-width: 1000px) {
-  .footerFlex{
-   display: flex;
-   flex-direction:column ;
-   justify-content: center;
-   align-items: center;
+
+.feedbackBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.feedbackOpenBox {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1000px) {
+  .footerFlex {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   .box2 {
     display: flex;
@@ -90,8 +100,9 @@ flex: 1;
   .box3 {
     display: none;
   }
-  
-
+  .feedbackOpenBox {
+    width: 80%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .box3 {
@@ -107,5 +118,7 @@ flex: 1;
   .box1 {
     display: none;
   }
+  .feedbackOpenBox {
+    width: 100%;
+  }
 }
-
